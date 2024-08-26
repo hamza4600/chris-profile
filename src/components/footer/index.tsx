@@ -27,7 +27,7 @@ const Footer = () => {
                 Ready to Start Your Project?
               </p>
               <p className="text-secondary text-center text-[20px] md:text-[24px] font-normal leading-[1.2em] tracking-[-0.5px]">
-                Let's bring your design vision to life.
+                Let s bring your design vision to life.
               </p>
             </div>
 
