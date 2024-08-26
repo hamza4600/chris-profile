@@ -10,8 +10,8 @@ export default function Home() {
         backgroundColor: "rgb(10, 10, 10)"
       }}
     >
-      <HomeSectionOne />
-      <HomeSectionTwo />
+      {/* <HomeSectionOne />
+      <HomeSectionTwo /> */}
     </main>
   );
 }
