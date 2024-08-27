@@ -50,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} ${satoshiVariable.className}`}>
-        <main id="main" className="flex flex-nowrap overflow-visible flex-col items-center justify-start">
+        <main id="main" className="flex flex-nowrap overflow-visible flex-col items-center justify-start dark:bg-primary bg-[#ffffff]">
           <Navbar />
           {children}
           <Footer />

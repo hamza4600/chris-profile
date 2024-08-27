@@ -6,6 +6,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       backgroundImage: {
@@ -20,12 +21,15 @@ const config: Config = {
         "primary": "rgb(209, 218, 224)",
         "secondary": "rgb(179, 194, 203)",
         "tertiary": "#e6e6e6",
+        "quaternary": "#0f151f"
       },
       colors: {
-        "primary-green": "#4D6043",
-        "secondary-green": "#AFAFAF",
-        "tertiary-green": "#4D6043",
-      },
+        lightBackground: '#f8f9fa', 
+        darkBackground: '#2b2e3b', 
+        "primary": "#000000",
+        "secondary": "#ffffff",
+        tertiary: "#0f151f"
+      }
     },
   },
   plugins: [],

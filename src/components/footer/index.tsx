@@ -23,11 +23,11 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center gap-12">
             <div className="flex flex-col gap-2.5">
-              <p className="md:text-[38px] text-[30px] font-normal leading-[1.2em] tracking-[-0.7px] text-primary">
+              <p className="md:text-[38px] text-[30px] font-normal leading-[1.2em] tracking-[-0.7px] dark:text-primary text-black">
                 Ready to Start Your Project?
               </p>
-              <p className="text-secondary text-center text-[20px] md:text-[24px] font-normal leading-[1.2em] tracking-[-0.5px]">
-                Let s bring your design vision to life.
+              <p className="dark:text-secondary text-black text-center text-[20px] md:text-[24px] font-normal leading-[1.2em] tracking-[-0.5px]">
+                Let&apos;s bring your design vision to life.
               </p>
             </div>
 
@@ -37,11 +37,11 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-start max-md:flex-col max-md:gap-8 max-md:text-[12px] justify-between text-tertiary pb-[80px]">
+      <div className="flex items-start max-md:flex-col max-md:gap-8 max-md:text-[12px] justify-between dark:text-tertiary text-black pb-[80px]">
         <p className="max-md:text-center max-md:w-full">Nicey Studio © Goran Babarogic 2023</p>
         <div className="flex gap-4 items-center max-md:w-full max-md:justify-between">
           {links.map((link) => (
-            <Link key={link.name} href={link.href} className="text-tertiary">
+            <Link key={link.name} href={link.href} className="dark:text-tertiary text-black">
               {link.name}
             </Link>
           ))}

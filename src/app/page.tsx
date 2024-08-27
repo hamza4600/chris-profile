@@ -1,17 +1,11 @@
-import HomeSectionOne from "@/components/section/HomeSectionOne";
-import HomeSectionTwo from "@/components/section/HomeSectionTwo";
+import IntroSection1 from "@/components/section/IntroSection1";
+import SkillsSection from "@/components/section/SkillsSection";
 
 export default function Home() {
   return (
-    <main
-      className="min-h-screen "
-      // apply this color rgb(10, 10, 10)
-      style={{
-        backgroundColor: "rgb(10, 10, 10)"
-      }}
-    >
-      {/* <HomeSectionOne />
-      <HomeSectionTwo /> */}
+    <main className="min-h-screen w-full max-w-[1080px]">
+      <IntroSection1 />
+      <SkillsSection />
     </main>
   );
 }
