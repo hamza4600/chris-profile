@@ -30,3 +30,21 @@ export const skills = [
         name: "Tailwind CSS",
     },
 ]
+
+export const experience = [
+    {
+        name: "Flyr Hospitality",
+        position: "Software Engineer",
+        duration: "2022 - Present",
+    },
+    {
+        name: "Flyr Hospitality",
+        position: "Software Engineer",
+        duration: "2022 - Present",
+    },
+    {
+        name: "Flyr Hospitality",
+        position: "Software Engineer",
+        duration: "2022 - Present",
+    },
+]
