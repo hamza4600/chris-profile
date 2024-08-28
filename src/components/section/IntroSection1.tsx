@@ -17,8 +17,8 @@ const IntroSection1 = () => {
           <button className="absolute top-20 w-24 text-[12px] h-[28px] dark:bg-secondary bg-primary rounded-md text-primary dark:text-black font-medium">
             Expert
           </button>
-          <h1 className="text-4xl font-bold dark:text-primary text-quaternary">Hello, I'm Hamza</h1>
-          <p className="text-lg dark:text-secondary text-quaternary">I'm a software engineer</p>
+          <h1 className="text-4xl font-bold dark:text-primary text-quaternary">Hello, I m Hamza</h1>
+          <p className="text-lg dark:text-secondary text-quaternary">I m a software engineer</p>
         </div>
         <div className="flex gap-3 items-center">
           <Button size="large">

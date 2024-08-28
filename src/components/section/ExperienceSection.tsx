@@ -10,7 +10,10 @@ const ExperienceSection = () => {
         </p>
         <div className="flex flex-col gap-4">
           {experience.map((exp, idx) => (
-            <div className="flex flex-col gap-4 font-hanken">
+            <div 
+            className="flex flex-col gap-4 font-hanken"
+              key={idx}
+            >
               <div className="flex justify-between items-center max-md:flex-col max-md:gap-4">
                 <p className="dark:text-primary text-black md:text-[32px] text-[20px] leading-[1.2em] -tracking-[0.5px] font-hanken">
                   {exp.name}
