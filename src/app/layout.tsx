@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import localFont from "next/font/local";
 import Footer from "@/components/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Hanken_Grotesk({ subsets: ["latin"], variable: "--font-hanken" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -42,11 +42,13 @@ const satoshiVariable = localFont({
   variable: "--font-satoshi",
 });
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  console.log(inter)
   return (
     <html lang="en">
       <body className={`${inter.className} ${satoshiVariable.className}`}>

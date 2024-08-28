@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../Atoms/Button";
 
+// bg-gradient-to-r from-gray-800 via-gray-900 to-black
 const IntroSection1 = () => {
   return (
     <div className="pb-12 pt-16 px-8 max-w-[1800px] mx-auto">

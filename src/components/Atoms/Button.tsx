@@ -23,7 +23,7 @@ const Button: React.FC<ButtonProps> = ({
   const baseStyles = 'font-satoshi dark:bg-transparent bg-primary text-[#ffffff] font-medium rounded-full box-shadow-[rgba(47, 43, 67, 0.1)_0px_-1px_0px_0px_inset,_rgba(47, 43, 67, 0.1)_0px_1px_3px_0px]';
 
   const variantStyles = {
-    primary: 'border border-[0.1px] border-solid  border-gray-50 opacity-[1]',
+    primary: 'border border-[0.1px] border-solid  border-gray-50 border-opacity-50',
     secondary: 'bg-gray-200 text-gray-800',
     outline: 'bg-transparent border',
   };

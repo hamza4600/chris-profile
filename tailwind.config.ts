@@ -9,6 +9,18 @@ const config: Config = {
   darkMode: 'class',
   theme: {
     extend: {
+      backgroundSize: {
+        '300%': '300%',
+      },
+      animation: {
+        'shine-text': 'shine-text 3s linear infinite',
+      },
+      keyframes: {
+        'shine-text': {
+          '0%': { backgroundPosition: '0% 50%' },
+          '100%': { backgroundPosition: '100% 50%' },
+        },
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -16,6 +28,7 @@ const config: Config = {
       },
       fontFamily: {
         satoshi: ["var(--font-satoshi)", "sans-serif"],
+        hanken: ["var(--font-hanken)", "sans-serif"],
       },
       textColor: {
         "primary": "rgb(209, 218, 224)",
@@ -28,7 +41,8 @@ const config: Config = {
         darkBackground: '#2b2e3b', 
         "primary": "#000000",
         "secondary": "#ffffff",
-        tertiary: "#0f151f"
+        tertiary: "#0f151f",
+        "random": "rgb(209, 218, 224)"
       }
     },
   },
