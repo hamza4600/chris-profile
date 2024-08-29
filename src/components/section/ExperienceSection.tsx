@@ -28,7 +28,7 @@ const ExperienceSection = () => {
                 </div>
               </div>
               {/* make this line thin as possible */}
-              <div className="h-[1px] relative overflow-hidden w-full bg-random opacity-90" />
+              <div className="h-[1px] relative overflow-hidden w-full bg-random !opacity-90" />
             </div>
           ))}
         </div>
