@@ -1,6 +1,7 @@
 import ExperienceSection from "@/components/section/ExperienceSection";
 import IconAutoScroll from "@/components/section/IconAutoScroll";
 import IntroSection1 from "@/components/section/IntroSection1";
+import ParallaxSection from "@/components/section/ParallaxSection";
 import ShinningSectionText from "@/components/section/ShinningSectionText";
 import SkillsSection from "@/components/section/SkillsSection";
 
@@ -24,6 +25,7 @@ export default function Home() {
         <IconAutoScroll icons={icons} />
       </section>
       <ShinningSectionText />
+      <ParallaxSection />
       <SkillsSection />
       <ExperienceSection />
     </main>
