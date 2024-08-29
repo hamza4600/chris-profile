@@ -13,7 +13,7 @@ const SkillsSection = () => {
         {skills.map((skill, i) => (
           <div
             key={i}
-            className="px-3 py-2 font-medium border border-black dark:border-[#ffffff] rounded-[8px] dark:text-primary text-[#000000]"
+            className="px-3 py-2 font-medium border !border-opacity-50 border-black dark:border-[#ffffff] rounded-[8px] dark:text-primary text-[#000000]"
           >
             <p>{skill.name}</p>
           </div>

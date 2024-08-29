@@ -74,7 +74,7 @@ const ParallaxSection: React.FC = () => {
     <div className="relative h-[400vh]">
       {items.map((item, index) => (
         <ParallaxItem key={index} index={index}>
-          <div className="bg-[#0f151f] px-8 w-full max-w-[1080px] h-fit rounded-[24px] shadow-md py-[60px] opacity-100 md:px-10">
+          <div className="dark:bg-[#0f151f] bg-[#fbfbfb] px-8 w-full max-w-[1080px] h-fit rounded-[24px] shadow-md py-[60px] opacity-100 md:px-10">
             <div className="flex justify-between max-lg:flex-col">
               <div className="flex flex-col lg:justify-between h-full lg:min-h-[380px] lg:max-w-[480px] w-full">
                 <div>
