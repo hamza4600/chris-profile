@@ -2,7 +2,7 @@ import React from "react";
 
 const ShinningSectionText = () => {
   return ( 
-    <div className="max-w-[640px] flex flex-wrap gap-4 items-center justify-center dark:text-[#ffffff] text-[#000000] py-20 mx-auto text-center md:text-[24px] text-[20px] leading-[36px] tracking-[-0.5px]">
+    <div className="max-w-[640px] flex flex-wrap gap-4 items-center justify-center dark:text-[#ffffff] text-[#000000] pt-20 mx-auto text-center md:text-[24px] text-[20px] leading-[36px] tracking-[-0.5px]">
       <span>Web designer and expert in </span>
       <span className="mb-3 relative inline-block px-3 py-1 text-transparent bg-clip-text bg-gradient-to-l from-primary via-white to-primary bg-300% animate-shine-text rounded-full">
         UX/UI Design
