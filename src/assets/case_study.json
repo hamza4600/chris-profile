@@ -1,0 +1,72 @@
+{
+  "case_study": [
+    {
+      "url": "modernizing-a-subscription-management-platform-1",
+      "title": "Modernizing a Subscription Management Platform",
+      "description": "Complete overhaul of a subscription management platform to improve usability, streamline workflows, and enhance overall user experience. The goal was to create a more intuitive and efficient platform for both administrators and end-users.",
+      "image": "https://framerusercontent.com/modules/tvLzYhFzkfLTWopFsSPL/GLOnKXWTM9WxI45Gzf7p/assets/1024/RA6Ph3mIjGZTgKxZQA3kn1jXc.jpg",
+      "rate": "4.5",
+      "review": "12",
+      "link": "/1",
+      "location": {
+        "city": "Ottawa, Ontario, Canada",
+        "country": "Ottawa, Ontario, Canada",
+        "founded": "2012",
+        "industry": "Subscription Management Platform",
+        "company_size": "100-500 employees",
+        "company_revenue": "$100M-$500M",
+        "challenge": "The challenge was to modernize a subscription management platform that was outdated and difficult to use. The platform had a complex structure that was difficult to navigate, and it lacked the features that modern users expect. The goal was to create a more intuitive and efficient platform for both administrators and end-users.",
+        "result": "The platform was redesigned to be more user-friendly and efficient. The platform was also redesigned to be more user-friendly and efficient."
+      },
+      "process": {
+        "research": "The research phase involved analyzing the current platform and its users to identify areas for improvement. The goal was to understand the users' needs and pain points, and to identify the platform's strengths and weaknesses.",
+        "design": "The design phase involved creating a new platform that was more user-friendly and efficient. The platform was designed to be more user-friendly and efficient. The platform was also designed to be more user-friendly and efficient.",
+        "development": "The development phase involved creating a new platform that was more user-friendly and efficient. The platform was developed to be more user-friendly and efficient. The platform was also developed to be more user-friendly and efficient.",
+        "testing": "The testing phase involved testing the new platform to ensure that it was working as expected. The platform was tested to ensure that it was working as expected. The platform was also tested to ensure that it was working as expected.",
+        "deployment": "The deployment phase involved deploying the new platform to the users. The platform was deployed to the users. The platform was also deployed to the users."
+      },
+      "stack": {
+        "icons": [
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+        ]
+      },
+      "conclusion": "The platform was redesigned to be more user-friendly and efficient. The platform was also redesigned to be more user-friendly and efficient."
+    },
+    {
+      "url": "modernizing-a-subscription-management-platform-2",
+      "title": "Modernizing a Subscription Management Platform",
+      "description": "Complete overhaul of a subscription management platform to improve usability, streamline workflows, and enhance overall user experience. The goal was to create a more intuitive and efficient platform for both administrators and end-users.",
+      "image": "https://framerusercontent.com/modules/tvLzYhFzkfLTWopFsSPL/GLOnKXWTM9WxI45Gzf7p/assets/1024/RA6Ph3mIjGZTgKxZQA3kn1jXc.jpg",
+      "rate": "4.5",
+      "review": "12",
+      "link": "/1",
+      "location": {
+        "city": "Ottawa, Ontario, Canada",
+        "country": "Ottawa, Ontario, Canada",
+        "founded": "2012",
+        "industry": "Subscription Management Platform",
+        "company_size": "100-500 employees",
+        "company_revenue": "$100M-$500M",
+        "challenge": "The challenge was to modernize a subscription management platform that was outdated and difficult to use. The platform had a complex structure that was difficult to navigate, and it lacked the features that modern users expect. The goal was to create a more intuitive and efficient platform for both administrators and end-users.",
+        "result": "The platform was redesigned to be more user-friendly and efficient. The platform was also redesigned to be more user-friendly and efficient."
+      },
+      "process": {
+        "research": "The research phase involved analyzing the current platform and its users to identify areas for improvement. The goal was to understand the users' needs and pain points, and to identify the platform's strengths and weaknesses.",
+        "design": "The design phase involved creating a new platform that was more user-friendly and efficient. The platform was designed to be more user-friendly and efficient. The platform was also designed to be more user-friendly and efficient.",
+        "development": "The development phase involved creating a new platform that was more user-friendly and efficient. The platform was developed to be more user-friendly and efficient. The platform was also developed to be more user-friendly and efficient.",
+        "testing": "The testing phase involved testing the new platform to ensure that it was working as expected. The platform was tested to ensure that it was working as expected. The platform was also tested to ensure that it was working as expected.",
+        "deployment": "The deployment phase involved deploying the new platform to the users. The platform was deployed to the users. The platform was also deployed to the users."
+      },
+      "stack": {
+        "icons": [
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+        ]
+      },
+      "conclusion": "The platform was redesigned to be more user-friendly and efficient. The platform was also redesigned to be more user-friendly and efficient."
+    }
+  ]
+}

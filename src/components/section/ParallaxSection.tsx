@@ -1,8 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Button from "../Atoms/Button";
 import Image from "next/image";
+import Link from "next/link";
 interface ParallaxItemProps {
   children: React.ReactNode;
   index: number;
@@ -23,7 +25,7 @@ const ParallaxItem: React.FC<ParallaxItemProps> = ({ children, index }) => {
     <motion.div
       ref={ref}
       style={{ y }}
-      className="sticky top-0 h-screen flex max-w-[1080px] mx-auto w-full items-center justify-center lg:px-8 px-4"
+      className="sticky top-0 min-h-screen flex max-w-[1080px] mx-auto w-full items-center justify-center lg:px-8 px-4"
     >
       {children}
     </motion.div>
@@ -40,6 +42,7 @@ const ParallaxSection: React.FC = () => {
         "https://framerusercontent.com/images/8ZlsEfjDITR5nOu3Yn61F22cbg.jpg?scale-down-to=2048",
       rate: "4.5",
       review: "12",
+      link: "/case_study/modernizing-a-subscription-management-platform-1"
     },
     {
       title: "Modernizing a Subscription Management Platform",
@@ -49,6 +52,7 @@ const ParallaxSection: React.FC = () => {
         "https://framerusercontent.com/images/8ZlsEfjDITR5nOu3Yn61F22cbg.jpg?scale-down-to=2048",
       rate: "4.5",
       review: "12",
+      link: "/case_study/modernizing-a-subscription-management-platform-2"
     },
     {
       title: "Modernizing a Subscription Management Platform",
@@ -58,6 +62,7 @@ const ParallaxSection: React.FC = () => {
         "https://framerusercontent.com/images/8ZlsEfjDITR5nOu3Yn61F22cbg.jpg?scale-down-to=2048",
       rate: "4.5",
       review: "12",
+      link: "/3"
     },
     {
       title: "Modernizing a Subscription Management Platform",
@@ -67,6 +72,7 @@ const ParallaxSection: React.FC = () => {
         "https://framerusercontent.com/images/8ZlsEfjDITR5nOu3Yn61F22cbg.jpg?scale-down-to=2048",
       rate: "4.5",
       review: "12",
+      link: "/4"
     },
   ];
 
@@ -86,7 +92,7 @@ const ParallaxSection: React.FC = () => {
                   </p>
                 </div>
 
-                <Button className="max-w-[160px] max-lg:mt-6">View Case Study</Button>
+                <Button className="max-w-[160px] max-lg:mt-6"><Link className="text-white" href={item.link}>View Case Study</Link></Button>
               </div>
               <div className="flex flex-col items-start justify-start gap-6 max-lg:mt-12">
                 <img
