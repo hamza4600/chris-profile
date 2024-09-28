@@ -33,18 +33,18 @@ export const skills = [
 
 export const experience = [
     {
-        name: "Flyr Hospitality",
-        position: "Software Engineer",
-        duration: "2022 - Present",
+        name: "Design Lead",
+        position: "Geonode",
+        duration: "Jan 2024 - Present",
     },
     {
-        name: "Flyr Hospitality",
-        position: "Software Engineer",
-        duration: "2022 - Present",
+        name: "Lead UI/UX Designer",
+        position: "Truely",
+        duration: "Jan 2024 - Present",
     },
     {
-        name: "Flyr Hospitality",
-        position: "Software Engineer",
-        duration: "2022 - Present",
+        name: "Software Engineer",
+        position: "Genode",
+        duration: "Jan 2024 - Present",
     },
 ]

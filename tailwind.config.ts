@@ -28,7 +28,7 @@ const config: Config = {
       },
       fontFamily: {
         satoshi: ["var(--font-satoshi)", "sans-serif"],
-        hanken: ["var(--font-hanken)", "sans-serif"],
+        hanken: ["var(--font-hanken-grotesk)", "sans-serif"],
       },
       textColor: {
         "primary": "rgb(209, 218, 224)",

@@ -8,7 +8,7 @@ const DesktopNav = () => {
   return (
     <div className="flex gap-4 max-lg:hidden items-center">
     {links.map((link) => (
-        <Link key={link.name} href={link.href} className="text-black font-medium dark:text-white leading-[1em]">
+        <Link key={link.name} href={link.href} className="text-black font-medium dark:text-primary leading-[1em]">
             {link.name}
         </Link>
     ))}
