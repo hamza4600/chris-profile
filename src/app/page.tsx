@@ -1,4 +1,5 @@
 import ExperienceSection from "@/components/section/ExperienceSection";
+import FAQSection from "@/components/section/FAQSection";
 import IconAutoScroll from "@/components/section/IconAutoScroll";
 import IntroSection1 from "@/components/section/IntroSection1";
 import ParallaxSection from "@/components/section/ParallaxSection";
@@ -28,6 +29,7 @@ export default function Home() {
       <ParallaxSection />
       <SkillsSection />
       <ExperienceSection />
+      <FAQSection />
     </main>
   );
 }

@@ -14,7 +14,7 @@ const MobileNav: React.FC = () => {
         <div className="lg:hidden">
             <button onClick={toggleMenu} className="z-50 relative">
                 <motion.svg
-                className={'z-[5000] relative'}
+                    className={'z-[5000] relative'}
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -22,23 +22,21 @@ const MobileNav: React.FC = () => {
                     xmlns="http://www.w3.org/2000/svg"
                 >
                     <motion.path
-                        d="M3 6H21"
+                        d={isOpen ? "M6 6L18 18" : "M3 6H21"}
                         className={'dark:stroke-white stroke-black'}
                         stroke="white"
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
                         transition={{ duration: 0.3 }}
                     />
                     <motion.path
-                        d="M3 18H21"
+                        d={isOpen ? "M18 6L6 18" : "M3 18H21"}
                         className={'dark:stroke-white stroke-black'}
                         stroke="white"
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        animate={isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
                         transition={{ duration: 0.3 }}
                     />
                     <motion.path

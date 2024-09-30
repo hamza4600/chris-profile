@@ -5,7 +5,10 @@ import Navbar from "@/components/navbar";
 import localFont from "next/font/local";
 import Footer from "@/components/footer";
 
-const inter = Hanken_Grotesk({ subsets: ["latin"], variable: "--font-hanken" });
+const hankenGrotesk = Hanken_Grotesk({ 
+  subsets: ["latin"], 
+  variable: "--font-hanken-grotesk"
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -48,11 +51,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  console.log(inter)
   return (
     <html lang="en">
-      <body className={`${inter.className} ${satoshiVariable.className}`}>
-        <main id="main" className="flex flex-nowrap overflow-visible flex-col items-center justify-start dark:bg-tertiary bg-[#ffffff]">
+      <body className={`${satoshiVariable.variable} ${hankenGrotesk.variable} font-sans`}>
+        <main id="main" className="flex flex-nowrap font-satoshi overflow-visible flex-col items-center justify-start dark:bg-tertiary bg-[#ffffff]">
           <Navbar />
           {children}
           <Footer />

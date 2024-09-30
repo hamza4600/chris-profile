@@ -19,7 +19,7 @@ const links = [
 const Footer = () => {
   return (
     <footer className="w-full flex flex-col max-w-[1080px] px-8">
-      <div className="pt-[40px] pb-[128px]">
+      <div className="md:pt-[40px] pt-[68px] pb-[128px]">
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center gap-12">
             <div className="flex flex-col gap-2.5">
@@ -37,11 +37,11 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-start max-md:flex-col max-md:gap-8 max-md:text-[12px] justify-between dark:text-tertiary text-black pb-[80px]">
+      <div className="flex items-start max-md:flex-col max-md:gap-8 max-md:text-[12px] justify-between dark:text-white text-black pb-[80px]">
         <p className="max-md:text-center max-md:w-full">Nicey Studio © Goran Babarogic 2023</p>
         <div className="flex gap-4 items-center max-md:w-full max-md:justify-between">
           {links.map((link) => (
-            <Link key={link.name} href={link.href} className="dark:text-tertiary text-black">
+            <Link key={link.name} href={link.href} className="dark:text-white text-black">
               {link.name}
             </Link>
           ))}
