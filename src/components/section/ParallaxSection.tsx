@@ -25,7 +25,7 @@ const ParallaxItem: React.FC<ParallaxItemProps> = ({ children, index }) => {
     <motion.div
       ref={ref}
       style={{ y }}
-      className="sticky top-0 md:h-[68vh] h-screen flex max-w-[1080px] mx-auto w-full items-center justify-center lg:px-8 px-4"
+      className="sticky top-0 md:h-[68vh] h-[108vh] flex max-w-[1080px] mx-auto w-full items-center justify-center lg:px-8 px-4"
     >
       {children}
     </motion.div>
@@ -113,7 +113,7 @@ const ParallaxSection: React.FC = () => {
                   </p>
                 </div>
 
-                <Button className="max-w-[160px] max-lg:mt-6"><Link className="text-black" href={item.link}>View Case Study</Link></Button>
+                <Button className="max-w-[160px] max-lg:mt-6 bg-black" ><Link className="text-white" href={item.link}>View Case Study</Link></Button>
               </div>
               <div className="flex flex-col items-start justify-start gap-6 max-lg:mt-12">
                 <img

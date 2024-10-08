@@ -5,7 +5,7 @@ import Button from "../Atoms/Button";
 // bg-gradient-to-r from-gray-800 via-gray-900 to-black
 const IntroSection1 = () => {
   return (
-    <div className="pb-12 pt-6 md:pt-24 md:pb-20 px-8 max-w-[1800px] mx-auto">
+    <div className="pt-6 md:pt-24 md:pb-20 pb-6 px-8 max-w-[1800px] mx-auto">
       <div className="flex flex-col items-center justify-center gap-8">
         <div className="flex flex-col gap-6 items-center justify-center relative">
           <div className="w-24 h-24 mb-4 rounded-full overflow-hidden relative">
@@ -22,7 +22,7 @@ const IntroSection1 = () => {
           <p className="text-lg dark:text-secondary text-quaternary">I m a software engineer</p>
         </div>
         <div className="flex gap-3 items-center max-md:flex-col">
-          <Button size="large" className="font-normal">
+          <Button size="large" className="font-normal" glow>
             Download CV
           </Button>
           <Button size="large" className="font-normal">

@@ -8,6 +8,7 @@ interface ButtonProps {
   size?: 'small' | 'medium' | 'large';
   className?: string;
   type?: 'button' | 'submit' | 'reset';
+  glow?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -18,23 +19,30 @@ const Button: React.FC<ButtonProps> = ({
   size = 'medium',
   className = '',
   type = 'button',
+  glow = false,
 }) => {
+  const baseStyles = 'relative font-satoshi bg-[#1a1a1a] text-white font-medium transition-all duration-300';
   
-  const baseStyles = 'font-satoshi dark:bg-transparent bg-primary text-[#ffffff] font-medium rounded-full box-shadow-[rgba(47, 43, 67, 0.1)_0px_-1px_0px_0px_inset,_rgba(47, 43, 67, 0.1)_0px_1px_3px_0px]';
-
-  const variantStyles = {
-    primary: 'border border-[0.1px] border-solid  border-gray-50 border-opacity-50',
-    secondary: 'bg-gray-200 text-gray-800',
-    outline: 'bg-transparent border',
-  };
-
   const sizeStyles = {
-    small: 'h-[24px] px-3',
-    medium: 'px-4 py-2 text-base',
-    large: 'h-[48px] px-6',
+    small: 'px-3 py-1 text-sm',
+    medium: 'px-4 py-2',
+    large: 'px-6 py-3 text-lg',
   };
 
-  const buttonClasses = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
+  const glowStyles = `
+    border border-[#333333] hover:border-[#444444]
+    rounded-full
+    ${glow ? 'animate-glow hover:animate-none' : ''}
+    hover:bg-[#2a2a2a]
+    transition-all duration-300
+  `;
+
+  const buttonClasses = `
+    ${baseStyles}
+    ${sizeStyles[size]}
+    ${glowStyles}
+    ${className}
+  `;
 
   return (
     <button

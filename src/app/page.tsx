@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <main className="min-h-screen w-full max-w-[1080px]">
       <IntroSection1 />
-      <section className="pb-8 px-8 pt-16">
+      <section className="md:pb-8 pb-4 px-8 pt-16">
         <IconAutoScroll icons={icons} />
       </section>
       <ShinningSectionText />
