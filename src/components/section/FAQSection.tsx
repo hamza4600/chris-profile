@@ -35,8 +35,8 @@ const FAQSection = () => {
   }, [active]);
 
   return (
-    <div className="md:pt-[64px] md:pb-[128px] pb-[32px] pt-[48px] max-md:px-8">
-      <p className="text-[38px] text-primary max-md:text-[30px]">
+    <div className="md:pt-16 md:pb-[128px] py-12 max-md:px-8">
+      <p className="text-[38px] dark:text-primary text-black max-md:text-[30px]">
         Frequently asked questions
       </p>
       <div className="space-y-8 max-md:mt-12 mt-8">
@@ -46,11 +46,10 @@ const FAQSection = () => {
             key={index}
           >
             <button
-              className="text-[28px] max-md:text-[24px] text-start text-secondary font-medium flex justify-between items-center"
+              className="text-[28px] max-md:text-[24px] text-start dark:text-secondary text-black font-medium flex justify-between items-center"
               onClick={() => handleClick(index)}
             >
               <span className="max-md:max-w-[320px]">
-
               {item.question}
               </span>
               {/* <span

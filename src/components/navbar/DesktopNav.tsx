@@ -12,7 +12,7 @@ const DesktopNav = () => {
             {link.name}
         </Link>
     ))}
-    <Button size="small" className="text-[16px] dark:text-white text-black dark:bg-transparent bg-white leading-[1em]">
+    <Button size="small" className="text-[16px] dark:text-white text-black dark:bg-transparent leading-[1em]">
         Get in Touch
     </Button>
 </div>
