@@ -1,30 +1,24 @@
 'use client'
 import React, { useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
 
 const ThemeToggle = () => {
-    const [theme, setTheme] = useState('light');
+    const [mounted, setMounted] = useState(false);
+	const { theme, setTheme } = useTheme();
 
     useEffect(() => {
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-            setTheme('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-            setTheme('light');
-        }
-    }, []);
+		setMounted(true);
+	}, []);
 
     const toggleTheme = () => {
         if (theme === 'light') {
-            document.documentElement.classList.add('dark');
-            localStorage.setItem('theme', 'dark');
             setTheme('dark');
         } else {
-            document.documentElement.classList.remove('dark');
-            localStorage.setItem('theme', 'light');
             setTheme('light');
         }
     };
+
+    if (!mounted) return null;
 
     return (
         <label className="flex items-center cursor-pointer">

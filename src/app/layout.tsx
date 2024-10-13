@@ -4,9 +4,10 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import localFont from "next/font/local";
 import Footer from "@/components/footer";
+import { Providers } from "./providers";
 
-const hankenGrotesk = Hanken_Grotesk({ 
-  subsets: ["latin"], 
+const hankenGrotesk = Hanken_Grotesk({
+  subsets: ["latin"],
   variable: "--font-hanken-grotesk"
 });
 
@@ -22,9 +23,9 @@ export const metadata: Metadata = {
     siteName: "Hamza Khan's Portfolio",
     images: [
       {
-        url: "https://hamza-v2.vercel.app/hamza.jpg",
-        width: 1200,
-        height: 630,
+        url: "https://hamza-v2.vercel.app/look.png",
+        width: 1800,
+        height: 945,
         alt: "Hamza Khan - Web Developer & Designer",
       },
     ],
@@ -88,12 +89,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${satoshiVariable.variable} ${hankenGrotesk.variable} font-sans`}>
         <main id="main" className="flex flex-nowrap font-satoshi overflow-visible flex-col items-center justify-start dark:bg-black bg-[#ffffff]">
-          <Navbar />
-          {children}
-          <Footer />
+          <Providers>
+            <Navbar />
+            {children}
+            <Footer />
+          </Providers>
         </main>
       </body>
     </html>
