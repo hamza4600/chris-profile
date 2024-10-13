@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   description: "Experienced web developer and designer specializing in creating beautiful, responsive, and user-friendly websites. Proficient in React, Next.js, TypeScript, and modern web technologies. Passionate about crafting digital experiences that blend creativity with functionality.",
   keywords: "web developer, web designer, React, Next.js, TypeScript, frontend development, UI/UX design",
   authors: [{ name: "Hamza Khan", url: "https://www.yourwebsite.com" }],
+  icons: {
+    icon: "/icon.png",
+  },
   openGraph: {
     title: "Hamza Khan | Web Developer & Designer",
     description: "Experienced web developer and designer specializing in creating beautiful, responsive, and user-friendly websites. Proficient in React, Next.js, TypeScript, and modern web technologies.",
@@ -91,6 +94,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${satoshiVariable.variable} ${hankenGrotesk.variable} font-sans`}>
+        <link rel="icon" href="/icon.png" />
         <main id="main" className="flex flex-nowrap font-satoshi overflow-visible flex-col items-center justify-start dark:bg-black bg-[#ffffff]">
           <Providers>
             <Navbar />

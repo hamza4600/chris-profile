@@ -62,6 +62,7 @@ const ParallaxSection: React.FC = () => {
 
   const items = [
     {
+      industry: "Finance",
       title: "Modernizing a Subscription Management Platform",
       description:
         "With user-centered approach, the goals was to create an intuitive interface for effortless financial management while incorporating gamification.",
@@ -69,9 +70,10 @@ const ParallaxSection: React.FC = () => {
         "https://framerusercontent.com/images/8ZlsEfjDITR5nOu3Yn61F22cbg.jpg?scale-down-to=2048",
       rate: "4.5",
       review: "12",
-      link: "/case_study/modernizing-a-subscription-management-platform-1"
+      link: "/work/modernizing-a-subscription-management-platform-1"
     },
     {
+      industry: "Finance",
       title: "Modernizing a Subscription Management Platform",
       description:
         "With user-centered approach, the goals was to create an intuitive interface for effortless financial management while incorporating gamification.",
@@ -79,9 +81,10 @@ const ParallaxSection: React.FC = () => {
         "https://framerusercontent.com/images/8ZlsEfjDITR5nOu3Yn61F22cbg.jpg?scale-down-to=2048",
       rate: "4.5",
       review: "12",
-      link: "/case_study/modernizing-a-subscription-management-platform-2"
+      link: "/work/modernizing-a-subscription-management-platform-2"
     },
     {
+      industry: "Finance",
       title: "Modernizing a Subscription Management Platform",
       description:
         "With user-centered approach, the goals was to create an intuitive interface for effortless financial management while incorporating gamification.",
@@ -92,6 +95,7 @@ const ParallaxSection: React.FC = () => {
       link: "/3"
     },
     {
+      industry: "Finance",
       title: "Modernizing a Subscription Management Platform",
       description:
         "With user-centered approach, the goals was to create an intuitive interface for effortless financial management while incorporating gamification.",
@@ -117,9 +121,12 @@ const ParallaxSection: React.FC = () => {
             <div className="flex justify-between max-md:flex-col">
               <div className="flex flex-col lg:justify-between h-full lg:min-h-[380px] lg:max-w-[480px] w-full">
                 <div>
-                  <p className="text-[#000000] md:text-[30px] text-[26px] -tracking-[0.5px] leading-[1.4em]">
+                  <h3 className="text-[#000000] md:text-[20px] text-[16px] -tracking-[0.5px] leading-[1.4em] mb-2 font-medium bg-white w-fit rounded-full px-3 py-1">
+                    {item.industry}
+                  </h3>
+                  <h1 className="text-[#000000] md:text-[30px] text-[26px] -tracking-[0.5px] leading-[1.4em]">
                     {item.title}
-                  </p>
+                  </h1>
                   <p className="mt-2.5 text-[#000000] md:text-[18px] leading-[1.4em] -tracking-[0.3px]">
                     {item.description}
                   </p>
@@ -127,7 +134,7 @@ const ParallaxSection: React.FC = () => {
 
                 <Button className="max-w-[160px] max-lg:mt-6 bg-black" ><Link className="text-white" href={item.link}>View Case Study</Link></Button>
               </div>
-              <div className="flex flex-col items-start justify-start gap-6 mt-12 max-lg:mt-6">
+              <div className="flex flex-col items-start justify-start gap-6 max-lg:mt-6">
                 <div className="w-full max-w-full rounded-lg overflow-hidden">
                 <img
                   style={{
