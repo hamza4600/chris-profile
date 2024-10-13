@@ -29,6 +29,36 @@ export const skills = [
     {
         name: "Tailwind CSS",
     },
+    {
+        name: "Node.js",
+    },
+    {
+        name: "Express.js",
+    },
+    {
+        name: "GraphQL",
+    },
+    {
+        name: "MongoDB",
+    },
+    {
+        name: "PostgreSQL",
+    },
+    {
+        name: "Redux",
+    },
+    {
+        name: "Vue.js",
+    },
+    {
+        name: "Angular",
+    },
+    {
+        name: "Docker",
+    },
+    {
+        name: "AWS",
+    },
 ]
 
 export const experience = [

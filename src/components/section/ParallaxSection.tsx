@@ -25,7 +25,7 @@ const ParallaxItem: React.FC<ParallaxItemProps> = ({ children, index }) => {
     <motion.div
       ref={ref}
       style={{ y }}
-      className="sticky top-0 md:h-[68vh] h-[108vh] flex max-w-[1080px] mx-auto w-full items-center justify-center lg:px-8 px-4"
+      className="sticky top-0 sm:top-20  md:h-[70vh] h-[100vh] flex max-w-[1080px] mx-auto w-full items-center justify-center lg:px-8 px-4"
     >
       {children}
     </motion.div>
@@ -45,7 +45,7 @@ const ParallaxSection: React.FC = () => {
   ];
 
   const getRandomColor = () => {
-    return lightModeColors[Math.floor(Math.random() * lightModeColors.length)];
+    return lightModeColors[Math.floor(Math.random() * lightModeColors.length + 1 )];
   };
 
   const items = [
@@ -102,7 +102,7 @@ const ParallaxSection: React.FC = () => {
             className="bg-[#fbfbfb] px-8 w-full max-w-[1080px] h-fit rounded-[24px] shadow-md py-[60px] opacity-100 md:px-10"
             style={{ backgroundColor: item.backgroundColor }}
           >
-            <div className="flex justify-between max-lg:flex-col">
+            <div className="flex justify-between max-md:flex-col">
               <div className="flex flex-col lg:justify-between h-full lg:min-h-[380px] lg:max-w-[480px] w-full">
                 <div>
                   <p className="text-[#000000] md:text-[30px] text-[26px] -tracking-[0.5px] leading-[1.4em]">
@@ -116,15 +116,17 @@ const ParallaxSection: React.FC = () => {
                 <Button className="max-w-[160px] max-lg:mt-6 bg-black" ><Link className="text-white" href={item.link}>View Case Study</Link></Button>
               </div>
               <div className="flex flex-col items-start justify-start gap-6 max-lg:mt-12">
+                <div className="w-full max-w-full rounded-lg overflow-hidden">
                 <img
                   style={{
                     objectPosition: "center center",
                     imageRendering: "auto",
                   }}
-                  className="lg:max-w-[420px] w-full lg:min-h-[240px] max-w-full min-h-[200px] object-cover rounded-lg"
+                  className="md:max-w-[420px] w-full max-md:min-h-[240px] max-w-full min-h-[200px] object-cover"
                   src={item.image}
                   alt={item.title}
-                />
+                  />
+                  </div>
                 <div className="flex items-center md:gap-16 flex-row w-full max-w-full gap-3">
                   <p className="flex gap-3 flex-col">
                     <span className="text-[#000000] md:text-[20px] text-[18px] leading-[1.4em] -tracking-[0.5px]">

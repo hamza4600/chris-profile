@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "../Atoms/Button";
@@ -9,6 +9,11 @@ const MobileNav: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  // scroll should be disabled when menu is open
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+  }, [isOpen]);
 
   return (
     <div className="lg:hidden">
@@ -59,17 +64,17 @@ const MobileNav: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -100 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 left-0 w-full h-screen dark:bg-[#0f151f] bg-white dark:text-white text-black z-40 flex flex-col items-center justify-center"
+            className="fixed top-0 left-0 w-full h-screen dark:bg-[#0f151f] bg-white dark:text-white text-black z-40 flex flex-col items-center "
           >
-            <nav className="flex flex-col items-center space-y-6">
+            <nav className="flex flex-col gap-8 items-center mt-[16vh]">
               {links.map((link) => (
                 <Link key={link.name} href={link.href}>
-                  <span className="dark:text-white text-black text-2xl">
+                  <span className="dark:text-white text-black text-2xl p-3">
                     {link.name}
                   </span>
                 </Link>
               ))}
-              <Button size="small" className="mt-4">
+              <Button size="medium">
                 Get in Touch
               </Button>
             </nav>
