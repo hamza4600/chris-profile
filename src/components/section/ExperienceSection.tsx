@@ -3,11 +3,11 @@ import { experience } from "@/constants";
 
 const ExperienceSection = () => {
   return (
-    <div className="max-w-[1080px] mx-auto md:px-8 pt-[32px] pb-[48px] sm:pb-[64px] ">
+    <section id="experience" className="max-w-[1080px] mx-auto md:px-8 pt-[32px] pb-[48px] sm:pb-[64px] ">
       <div className="flex flex-col gap-12">
-        <p className="dark:text-primary max-md:text-center font-satoshi text-black md:text-[38px] text-[30px] leading-[1.2em] -tracking-[0.5px]">
+        <h1 className="dark:text-primary max-md:text-center font-satoshi text-black md:text-[38px] text-[30px] leading-[1.2em] -tracking-[0.5px]">
           Experience
-        </p>
+        </h1>
         <div className="flex flex-col gap-4">
           {experience.map((exp, idx) => (
             <div 
@@ -33,7 +33,7 @@ const ExperienceSection = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

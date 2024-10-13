@@ -45,10 +45,10 @@ const FAQSection = () => {
   }, [active]);
 
   return (
-    <div className="md:pt-16 md:pb-[128px] py-12 px-8">
-      <p className="text-[38px] dark:text-primary text-black max-md:text-[30px] mb-4 sm:mb-8 font-medium">
+    <section id="faq" className="md:pt-16 md:pb-[128px] py-12 px-8">
+      <h1 className="text-[38px] dark:text-primary text-black max-md:text-[30px] mb-4 sm:mb-8 font-medium">
         Frequently asked questions
-      </p>
+      </h1>
       <div className="space-y-4 sm:space-y-8 max-md:mt-8 mt-4">
         {faqData.map((item, index) => (
           <div
@@ -110,7 +110,7 @@ const FAQSection = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

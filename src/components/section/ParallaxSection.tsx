@@ -42,10 +42,22 @@ const ParallaxSection: React.FC = () => {
     '#E6F6FF', // Light Sky Blue
     '#FFF0F0', // Light Salmon
     '#F0FFF4', // Light Honeydew
+    '#F5F5F5', // Light Gray
+    '#E8E8E8', // Soft Gray
+    '#F0EAE2', // Beige
+    '#E6E6FA', // Lavender Mist
+    '#F0F8FF', // Alice Blue
+    '#F5FFFA', // Mint Cream
+    '#FFF5EE', // Seashell
+    '#F8F8FF', // Ghost White
+    '#F0FFFF', // Azure
+    '#F5F5DC', // Beige
+    '#FAFAD2', // Light Goldenrod Yellow
+    '#FAEBD7', // Antique White
   ];
 
   const getRandomColor = () => {
-    return lightModeColors[Math.floor(Math.random() * lightModeColors.length + 1 )];
+    return lightModeColors[Math.floor(Math.random() * (lightModeColors.length - 1))];
   };
 
   const items = [
@@ -95,11 +107,11 @@ const ParallaxSection: React.FC = () => {
   }));
 
   return (
-    <div className="relative md:h-[280vh] font-satoshi">
+    <section id="work" className="relative md:h-[280vh] font-satoshi">
       {items.map((item, index) => (
         <ParallaxItem key={index} index={index}>
           <div 
-            className="bg-[#fbfbfb] px-8 w-full max-w-[1080px] h-fit rounded-[24px] shadow-md py-[60px] opacity-100 md:px-10"
+            className="bg-[#fbfbfb] px-8 w-full max-w-[1080px] h-fit rounded-[24px] shadow-md opacity-100 md:px-10 md:py-[60px] py-[30px]"
             style={{ backgroundColor: item.backgroundColor }}
           >
             <div className="flex justify-between max-md:flex-col">
@@ -115,7 +127,7 @@ const ParallaxSection: React.FC = () => {
 
                 <Button className="max-w-[160px] max-lg:mt-6 bg-black" ><Link className="text-white" href={item.link}>View Case Study</Link></Button>
               </div>
-              <div className="flex flex-col items-start justify-start gap-6 max-lg:mt-12">
+              <div className="flex flex-col items-start justify-start gap-6 mt-12 max-lg:mt-6">
                 <div className="w-full max-w-full rounded-lg overflow-hidden">
                 <img
                   style={{
@@ -150,7 +162,7 @@ const ParallaxSection: React.FC = () => {
           </div>
         </ParallaxItem>
       ))}
-    </div>
+    </section>
   );
 };
 

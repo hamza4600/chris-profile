@@ -29,15 +29,15 @@ const IconAutoScroll: React.FC<IconAutoScrollProps> = ({ icons, speed = 3 }) => 
           }}
         >
           {[...icons, ...icons].map((icon, index) => (
-            <span 
+            <div 
               key={index} 
               className="inline-block mx-4 dark:text-primary text-black"
               style={{
                 flex: '0 0 auto',
               }}
             >
-              {icon}
-            </span>
+              <img src={icon} alt="icon" width={48} height={48} />
+            </div>
           ))}
         </motion.div>
       </div>

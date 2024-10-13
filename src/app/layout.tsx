@@ -90,7 +90,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${satoshiVariable.variable} ${hankenGrotesk.variable} font-sans`}>
-        <main id="main" className="flex flex-nowrap font-satoshi overflow-visible flex-col items-center justify-start dark:bg-tertiary bg-[#ffffff]">
+        <main id="main" className="flex flex-nowrap font-satoshi overflow-visible flex-col items-center justify-start dark:bg-black bg-[#ffffff]">
           <Navbar />
           {children}
           <Footer />

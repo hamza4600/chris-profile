@@ -24,15 +24,15 @@ const IntroSection1 = () => {
             Verified Expert
           </button>
           <div className="flex flex-col gap-6 items-center justify-center max-md:text-center max-w-[600px]">
-            <h1 className="text-[36px] sm:text-5xl  dark:text-primary text-quaternary text-shadow-lg text-center leading-[42px] sm:leading-[55px]">Designed for Designers to showcase their work</h1>
-            <p className="text-[20px] sm:text-2xl dark:text-secondary text-quaternary text-center max-w-[500px]">Helping startups and brands to craft expressive and engaging solutions for their software needs.</p>
+            <h1 className="text-[32px] sm:text-5xl  dark:text-primary text-quaternary text-shadow-lg text-center leading-[42px] sm:leading-[55px]">Elevate Your Vision: Where Design Meets Digital Brilliance</h1>
+            <p className="text-[18px] sm:text-2xl dark:text-secondary text-quaternary text-center max-w-[500px]">Helping startups and brands to craft expressive and engaging solutions for their software needs.</p>
           </div>
         </div>
         <div className="flex gap-3 items-center flex-row">
-          <Button size="large" className="font-normal">
+        <Button size="large" className="font-normal text-sm sm:text-base px-3 py-2 sm:px-4 sm:py-3">
             Download CV
           </Button>
-          <Button size="large" className="font-normal">
+          <Button size="large" className="font-normal text-sm sm:text-base px-3 py-2 sm:px-4 sm:py-3">
             Contact me
           </Button>
         </div>
