@@ -22,7 +22,7 @@ const ThemeToggle = () => {
 
     return (
         <label className="flex items-center cursor-pointer">
-        <div className="relative">
+        <div className="relative sm:scale-100 scale-90">
             <input
                 type="checkbox"
                 className="sr-only"

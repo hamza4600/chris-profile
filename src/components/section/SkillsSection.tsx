@@ -3,8 +3,7 @@ import { skills } from "@/constants";
 
 const SkillsSection = () => {
   return (
-    <section id="skills" className="md:pb-20 w-full pt-8 md:mt-20 max-w-[1080px] mx-auto px-8 pb-16 ">
-
+    <section id="skills" className="md:pb-20 w-full pt-8 md:mt-20 max-w-[1080px] mx-auto px-4 sm:px-8 pb-8 ">
     <div className="flex flex-col gap-12 max-md:items-center max-md:justify-center">
       <h1 className="dark:text-primary text-[#000000] md:text-[38px] text-[30px] leading-[1.2em] -tracking-[0.5px]">
         Skills

@@ -3,11 +3,14 @@ import React from "react";
 import Button from "../Atoms/Button";
 import Image from "next/image";
 
-// bg-gradient-to-r from-gray-800 via-gray-900 to-black
-const IntroSection1 = () => {
+interface IntroSection1Props {
+  title: string;
+  description: string;
+}
+const IntroSection1 = ({ title, description }: IntroSection1Props) => {
   return (
-    <div className="pt-6 md:pt-24 md:pb-20 pb-6 px-8 max-w-[1800px] mx-auto">
-      <div className="flex flex-col items-center justify-center gap-9">
+    <div className="pt-6 md:pt-24 md:pb-16 pb-10 px-8 max-w-[1800px] mx-auto">
+      <div className="flex flex-col items-center justify-center gap-6 sm:gap-9">
         <div className="flex flex-col gap-6 items-center justify-center relative">
           <div className="w-[90px] h-[90px] mb-4 rounded-full overflow-hidden relative sm:w-[100px] sm:h-[100px]">
             <Image
@@ -23,9 +26,9 @@ const IntroSection1 = () => {
           <button className="absolute top-[5rem] text-[12px] sm:text-[14px] px-2 py-1 sm:px-3 sm:py-2 dark:bg-secondary bg-primary rounded-md text-primary dark:text-black font-medium font-inter sm:top-[5.5rem]">
             Verified Expert
           </button>
-          <div className="flex flex-col gap-6 items-center justify-center max-md:text-center max-w-[600px]">
-            <h1 className="text-[32px] sm:text-5xl  dark:text-primary text-quaternary text-shadow-lg text-center leading-[42px] sm:leading-[55px]">Elevate Your Vision: Where Design Meets Digital Brilliance</h1>
-            <p className="text-[18px] sm:text-2xl dark:text-secondary text-quaternary text-center max-w-[500px]">Helping startups and brands to craft expressive and engaging solutions for their software needs.</p>
+          <div className="flex flex-col gap-6 items-center justify-center max-md:text-center max-w-full sm:max-w-[600px]">
+            <h1 className="text-[30px] sm:text-5xl  dark:text-primary text-quaternary text-shadow-lg text-center leading-[42px] sm:leading-[55px]">{title}</h1>
+            <p className="text-[18px] sm:text-2xl dark:text-secondary text-quaternary text-center max-w-full sm:max-w-[500px]">{description}</p>
           </div>
         </div>
         <div className="flex gap-3 items-center flex-row">

@@ -12,7 +12,7 @@ const IconAutoScroll: React.FC<IconAutoScrollProps> = ({ icons, speed = 1 }) => 
   const { theme } = useTheme();
   return (
     <section aria-label="Icon Auto Scroll"
-      className="flex w-full h-full max-w-full max-h-full place-items-center m-0 p-2.5 list-none opacity-100 overflow-hidden"
+      className="flex w-full h-full max-w-full max-h-full place-items-center m-0 list-none opacity-100 overflow-hidden"
       style={{
         maskImage: theme === 'dark' ? 'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%)' : '',
       }}

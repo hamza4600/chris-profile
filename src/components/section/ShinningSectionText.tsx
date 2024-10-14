@@ -2,15 +2,15 @@ import React from "react";
 
 // Tailwind CSS styles object
 const styles = {
-  container: `max-w-[640px] pt-16 pb-2 md:pt-20 mx-auto text-center flex flex-wrap gap-4 items-center justify-center dark:text-white text-black md:text-[24px] text-[20px] leading-[36px] tracking-[-0.5px] sm:px-0 px-4 sm:pb-20`,
+  container: `max-w-[640px] pt-10 sm:pt-16 pb-2 md:pt-20 mx-auto text-center flex flex-wrap gap-4 items-center justify-center dark:text-white text-black md:text-[24px] text-[20px] leading-[36px] tracking-[-0.5px] px-6 sm:pb-20`,
   shiningBorder: `border border-[#e6e6e6] dark:border-[#ffffff33] rounded-full`,
   shiningTextContainer: `
   border border-[#e6e6e6] dark:border-[#ffffff33] rounded-full
 `,
 shiningText: `
-  px-3 py-1  bg-clip-text
+  px-2 py-1 sm:px-3 sm:py-1 bg-clip-text
   bg-gradient-to-l from-primary via-white to-primary bg-300%
-    animate-shine-text rounded-full 
+    animate-shine-text rounded-full sm:text-[24px] text-[20px]
   `,
     inlineWrapper: ` `, // Keeps elements in the same line
 

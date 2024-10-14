@@ -5,6 +5,7 @@ import IntroSection1 from "@/components/section/IntroSection1";
 import ParallaxSection from "@/components/section/ParallaxSection";
 import ShinningSectionText from "@/components/section/ShinningSectionText";
 import SkillsSection from "@/components/section/SkillsSection";
+
 const icons = [
   "https://framerusercontent.com/images/hqIVsN8SplywoxNsCXdrELqh3Uc.png",
   "https://framerusercontent.com/images/ZCcbDAFfIHYrHLOqtVLKQXAIGY.png",
@@ -31,8 +32,11 @@ const icons = [
 export default function Home() {
   return (
     <main className="min-h-screen w-full max-w-[1080px]">
-      <IntroSection1 />
-      <section className="md:pb-8 pb-4 px-8 pt-16">
+      <IntroSection1 
+        title="Elevate Your Vision: Where Design Meets Digital Brilliance" 
+        description="Helping startups and brands to craft expressive and engaging solutions for their software needs." 
+      />
+      <section className="md:pb-8 pb-4 px-6 pt-6 md:pt-8 sm:px-8">
         <IconAutoScroll icons={icons} />
       </section>
       <ShinningSectionText />

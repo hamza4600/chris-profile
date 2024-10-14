@@ -3,8 +3,8 @@ import { experience } from "@/constants";
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="max-w-[1080px] mx-auto md:px-8 pt-[32px] pb-[48px] sm:pb-[64px] ">
-      <div className="flex flex-col gap-12">
+    <section id="experience" className="max-w-[1080px] mx-auto md:px-8 pt-[32px] pb-[32px] sm:pb-[64px] ">
+      <div className="flex flex-col sm:gap-12 gap-8">
         <h1 className="dark:text-primary max-md:text-center font-satoshi text-black md:text-[38px] text-[30px] leading-[1.2em] -tracking-[0.5px]">
           Experience
         </h1>
@@ -27,8 +27,6 @@ const ExperienceSection = () => {
                   </p>
                 </div>
               </div>
-              {/* make this line thin as possible */}
-              {/* <div className="h-[1px] relative overflow-hidden w-full bg-random !opacity-90" /> */}
             </div>
           ))}
         </div>

@@ -28,6 +28,7 @@ const Index = (props: { params: { case_study: string } }) => {
   if (!caseStudyData) {
     return <div>Case study not found</div>;
   }
+  
   return (
     <div className="min-h-screen mx-auto">
     <Header title={caseStudyData.title} description={caseStudyData.description} />

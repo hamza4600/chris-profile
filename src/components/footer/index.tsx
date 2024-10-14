@@ -18,14 +18,14 @@ const links = [
 
 const Footer = () => {
   return (
-    <footer className="w-full flex flex-col max-w-[1080px] px-8 pb-[40px] sm:pb-[100px]">
-      <div className="md:pt-[40px] pt-[68px] pb-[68px] sm:pb-[120px]">
+    <footer className="w-full flex flex-col max-w-[1080px] px-6 pb-[40px] sm:pb-[100px]">
+      <div className="md:pt-[40px] sm:pt-[68px] pt-[40px] pb-[68px] sm:pb-[120px]">
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center gap-12">
             <div className="flex flex-col gap-2.5">
-              <p className="md:text-[38px] text-[30px] font-normal leading-[1.2em] tracking-[-0.7px] dark:text-primary text-black">
+              <h1 className="md:text-[38px] text-[30px] font-normal leading-[1.2em] tracking-[-0.7px] dark:text-primary text-black">
                 Ready to Start Your Project?
-              </p>
+              </h1>
               <p className="dark:text-secondary text-black text-center text-[20px] md:text-[24px] font-normal leading-[1.2em] tracking-[-0.5px]">
                 Let&apos;s bring your design vision to life.
               </p>

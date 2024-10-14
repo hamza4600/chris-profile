@@ -65,6 +65,7 @@ const MobileNav: React.FC = () => {
             exit={{ opacity: 0, y: -100 }}
             transition={{ duration: 0.3 }}
             className="fixed top-0 left-0 w-full h-screen dark:bg-[#0f151f] bg-white dark:text-white text-black z-40 flex flex-col items-center "
+            onClick={() => setIsOpen(false)}
           >
             <nav className="flex flex-col gap-8 items-center mt-[16vh]">
               {links.map((link) => (

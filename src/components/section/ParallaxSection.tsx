@@ -31,6 +31,90 @@ const ParallaxItem: React.FC<ParallaxItemProps> = ({ children, index }) => {
     </motion.div>
   );
 };
+interface CardProps {
+  item: {
+    industry: string;
+    title: string;
+    description: string;
+    image: string;
+    rate: string;
+    review: string;
+    link: string;
+    backgroundColor: string;
+  };
+}
+
+const Card: React.FC<CardProps> = ({ item }) => (
+  <div
+    className="bg-[#fbfbfb] w-full max-w-[1080px] rounded-[24px] shadow-md opacity-100 md:px-10 px-4 md:py-[60px] py-[30px]"
+    style={{ backgroundColor: item.backgroundColor }}
+  >
+    <div className="flex justify-between max-md:flex-col">
+      <CardContent item={item} />
+      <CardMedia item={item} />
+    </div>
+  </div>
+);
+const CardContent: React.FC<CardProps> = ({ item }) => (
+  <div className="flex flex-col lg:justify-between h-full lg:min-h-[380px] lg:max-w-[480px] w-full">
+    <div>
+      <h3 className="text-black md:text-[20px] text-[16px] -tracking-[0.5px] leading-[1.4em] mb-2 font-medium bg-white w-fit rounded-full px-3 py-1">
+        {item.industry}
+      </h3>
+      <h1 className="text-black md:text-[30px] text-[26px] -tracking-[0.5px] leading-[1.4em]">
+        {item.title}
+      </h1>
+      <p className="mt-2.5 text-black md:text-[18px] leading-[1.4em] -tracking-[0.3px]">
+        {item.description}
+      </p>
+    </div>
+    <Button className="sm:max-w-[160px] sm:mt-6 mt-4 font-normal sm:font-medium text-sm sm:text-base px-3 py-2 sm:px-4 sm:py-3 max-w-fit">
+      <Link className="text-white" href={item.link}>View Case Study</Link>
+    </Button>
+  </div>
+);
+
+const CardMedia: React.FC<CardProps> = ({ item }) => (
+  <div className="flex flex-col items-start justify-start gap-6 max-lg:mt-6">
+    <div className="w-full max-w-full rounded-lg overflow-hidden">
+      <img
+        className="md:max-w-[420px] w-full max-md:min-h-[240px] min-h-[200px] object-cover"
+        src={item.image}
+        alt={item.title}
+        style={{ objectPosition: "center center", imageRendering: "auto" }}
+      />
+    </div>
+    <CardStats rate={item.rate} review={item.review} />
+  </div>
+);
+
+interface CardStatsProps {
+  rate: string;
+  review: string;
+}
+
+const CardStats: React.FC<CardStatsProps> = ({ rate, review }) => (
+  <div className="flex items-center md:gap-16 flex-row w-full max-w-full gap-3">
+    <StatItem label="Engagement" value={rate} />
+    <StatItem label="User Satisfaction" value={review} />
+  </div>
+);
+
+interface StatItemProps {
+  label: string;
+  value: string;
+}
+
+const StatItem: React.FC<StatItemProps> = ({ label, value }) => (
+  <p className="flex sm:gap-3 gap-2 flex-col">
+    <span className="text-black md:text-[20px] text-[18px] leading-[1.4em] -tracking-[0.5px]">
+      {label}
+    </span>
+    <span className="text-black md:text-[42px] font-medium text-[30px]">
+      {value}
+    </span>
+  </p>
+);
 
 const ParallaxSection: React.FC = () => {
   const lightModeColors = [
@@ -114,59 +198,7 @@ const ParallaxSection: React.FC = () => {
     <section id="work" className="relative md:h-[280vh] font-satoshi">
       {items.map((item, index) => (
         <ParallaxItem key={index} index={index}>
-          <div 
-            className="bg-[#fbfbfb] px-8 w-full max-w-[1080px] h-fit rounded-[24px] shadow-md opacity-100 md:px-10 md:py-[60px] py-[30px]"
-            style={{ backgroundColor: item.backgroundColor }}
-          >
-            <div className="flex justify-between max-md:flex-col">
-              <div className="flex flex-col lg:justify-between h-full lg:min-h-[380px] lg:max-w-[480px] w-full">
-                <div>
-                  <h3 className="text-[#000000] md:text-[20px] text-[16px] -tracking-[0.5px] leading-[1.4em] mb-2 font-medium bg-white w-fit rounded-full px-3 py-1">
-                    {item.industry}
-                  </h3>
-                  <h1 className="text-[#000000] md:text-[30px] text-[26px] -tracking-[0.5px] leading-[1.4em]">
-                    {item.title}
-                  </h1>
-                  <p className="mt-2.5 text-[#000000] md:text-[18px] leading-[1.4em] -tracking-[0.3px]">
-                    {item.description}
-                  </p>
-                </div>
-
-                <Button className="max-w-[160px] max-lg:mt-6 bg-black" ><Link className="text-white" href={item.link}>View Case Study</Link></Button>
-              </div>
-              <div className="flex flex-col items-start justify-start gap-6 max-lg:mt-6">
-                <div className="w-full max-w-full rounded-lg overflow-hidden">
-                <img
-                  style={{
-                    objectPosition: "center center",
-                    imageRendering: "auto",
-                  }}
-                  className="md:max-w-[420px] w-full max-md:min-h-[240px] max-w-full min-h-[200px] object-cover"
-                  src={item.image}
-                  alt={item.title}
-                  />
-                  </div>
-                <div className="flex items-center md:gap-16 flex-row w-full max-w-full gap-3">
-                  <p className="flex gap-3 flex-col">
-                    <span className="text-[#000000] md:text-[20px] text-[18px] leading-[1.4em] -tracking-[0.5px]">
-                      Engagement
-                    </span>
-                    <span className="text-[#000000] md:text-[42px] font-medium text-[32px]">
-                      {item.rate}
-                    </span>
-                  </p>
-                  <p className="flex gap-3 flex-col">
-                    <span className="text-[18px] text-[#000000] md:text-[20px] leading-[1.4em] -tracking-[0.5px]">
-                      User Satisfaction
-                    </span>
-                    <span className="text-[#000000] md:text-[42px] font-medium text-[32px]">
-                      {item.review}
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <Card item={item} />
         </ParallaxItem>
       ))}
     </section>

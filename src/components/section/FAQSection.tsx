@@ -24,93 +24,89 @@ const faqData = [
   },
 ];
 
-const FAQSection = () => {
-  const [active, setActive] = useState<number | null>(null);
-  const answerRefs = useRef<(HTMLParagraphElement | null)[]>([]);
+const ChevronIcon: React.FC<{ isOpen: boolean }> = ({ isOpen }) => (
+  <svg
+    className={`transform transition-transform duration-300 ${
+      isOpen ? "rotate-180" : "rotate-0"
+    }`}
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M6 9L12 15L18 9"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+interface FAQItem {
+  question: string;
+  answer: string;
+}
 
-  const handleClick = (index: number) => {
-    setActive((prevActive) => (prevActive === index ? null : index));
+interface FAQAccordionProps {
+  item: FAQItem;
+  isActive: boolean;
+  onToggle: () => void;
+  index: number;
+}
+
+const FAQAccordion: React.FC<FAQAccordionProps> = ({ item, isActive, onToggle, index }) => {
+  return (
+    <div className="border-b border-gray-200 dark:border-gray-700 pb-4 sm:pb-8">
+      <button
+        className="w-full text-left text-lg sm:text-2xl text-black dark:text-secondary flex justify-between items-center"
+        onClick={onToggle}
+        aria-expanded={isActive}
+        aria-controls={`faq-answer-${index}`}
+      >
+        <span className="pr-4">{item.question}</span>
+        <ChevronIcon isOpen={isActive} />
+      </button>
+      <div
+        className={`mt-2 overflow-hidden transition-all duration-300 ease-in-out ${
+          isActive ? "max-h-96" : "max-h-0"
+        }`}
+      >
+        <p className="text-base sm:text-lg text-secondary leading-relaxed">
+          {item.answer}
+        </p>
+      </div>
+    </div>
+  );
+};
+
+
+
+const FAQSection = () => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const handleToggle = (index: number) => {
+    setActiveIndex(prevIndex => prevIndex === index ? null : index);
   };
 
-  useEffect(() => {
-    answerRefs.current.forEach((ref, index) => {
-      if (ref) {
-        if (active === index) {
-          ref.style.maxHeight = `${ref.scrollHeight}px`;
-        } else {
-          ref.style.maxHeight = "0px";
-        }
-      }
-    });
-  }, [active]);
-
   return (
-    <section id="faq" className="md:pt-16 md:pb-[128px] py-12 px-8">
-      <h1 className="text-[38px] dark:text-primary text-black max-md:text-[30px] mb-4 sm:mb-8 ">
-        Frequently asked questions
-      </h1>
-      <div className="space-y-4 sm:space-y-8 max-md:mt-8 mt-4">
-        {faqData.map((item, index) => (
-          <div
-            className="flex border-b border-[#e6e6e6] dark:border-[#ffffff33] flex-col gap-4 pb-4 sm:pb-8"
-            key={index}
-          >
-            <button
-              className="text-[28px] max-md:text-[24px] text-start dark:text-secondary text-black flex justify-between items-center"
-              onClick={() => handleClick(index)}
-            >
-              <span className="max-md:max-w-[320px]">
-              {item.question}
-              </span>
-              {/* <span
-                className={`transform transition-transform duration-300 ${
-                  active === index ? "rotate-180" : ""
-                }`}
-              > */}
-              <svg
-                className={`${  
-                  active === index ? "rotate-180" : "rotate-0"
-                } transform transition-transform duration-300`}
-                width="28px"
-                height="28px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  {" "}
-                  <path
-                    d="M6 9L12 15L18 9"
-                    stroke="#ededed"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>{" "}
-                </g>
-              </svg>
-              {/* </span> */}
-            </button>
-            <p
-              ref={(el) => {
-                if (el) {
-                  answerRefs.current[index] = el;
-                }
-              }}
-              className="text-[20px] sm:text-[24px] text-secondary leading-[28px] sm:leading-[36px] tracking-[-0.5px] overflow-hidden transition-all duration-300 ease-in-out"
-              style={{ maxHeight: "0px" }}
-            >
-              {item.answer}
-            </p>
-          </div>
-        ))}
-      </div>
-    </section>
+    <section id="faq" className="py-12 md:py-16 px-6 sm:px-8">
+    <h1 className="text-3xl md:text-4xl text-black dark:text-primary mb-4 sm:mb-8">
+      Frequently asked questions
+    </h1>
+    <div className="space-y-4 sm:space-y-8 mt-4 md:mt-8">
+      {faqData.map((item, index) => (
+        <FAQAccordion
+          index={index}
+          key={index}
+          item={item}
+          isActive={activeIndex === index}
+          onToggle={() => handleToggle(index)}
+        />
+      ))}
+    </div>
+  </section>
   );
 };
 
