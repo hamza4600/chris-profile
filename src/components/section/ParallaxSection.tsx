@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Button from "../Atoms/Button";
 import Link from "next/link";
+
 interface ParallaxItemProps {
   children: React.ReactNode;
   index: number;
@@ -49,39 +50,40 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ item }) => (
   <div
-    className="bg-[#fbfbfb] w-full max-w-[1080px] rounded-[24px] shadow-md opacity-100 md:px-10 px-4 md:py-[60px] py-[30px]"
-    style={{ backgroundColor: item.backgroundColor }}
-  >
-    <div className="flex justify-between max-md:flex-col">
-      <CardContent item={item} />
-      <CardMedia item={item} />
+      className={`w-full max-w-[1080px] rounded-[24px] shadow-md opacity-100 md:px-10 px-4 md:py-[60px] py-[20px] dark:bg-[#0a0a0a] bg-[#fbfbfb] text-white dark:text-white border dark:border-white/[0.14] border-gray-200 `}
+    >
+      <div className="flex justify-between max-md:flex-col">
+        <CardContent item={item} />
+        <CardMedia item={item} />
+      </div>
     </div>
-  </div>
 );
 const CardContent: React.FC<CardProps> = ({ item }) => (
   <div className="flex flex-col lg:justify-between h-full lg:min-h-[380px] lg:max-w-[480px] w-full">
-    <div>
-      <h3 className="text-black md:text-[20px] text-[16px] leading-[1.4em] mb-2 font-medium bg-white w-fit rounded-full px-3 py-1">
-        {item.industry}
-      </h3>
-      <h1 className="text-black md:text-[30px] text-[26px] -tracking-[0.5px] leading-[1.4em]">
-        {item.title}
-      </h1>
-      <p className="mt-2.5 text-black md:text-[18px] leading-[1.4em] -tracking-[0.3px]">
-        {item.description}
-      </p>
-    </div>
-    <Button className="sm:max-w-[160px] sm:mt-6 mt-4 font-normal sm:font-medium text-sm sm:text-base px-3 py-2 sm:px-4 sm:py-3 max-w-fit">
-      <Link className="text-white" href={item.link}>View Case Study</Link>
-    </Button>
+  <div>
+    <h3 className={`md:text-[20px] text-[16px] mb-2 w-fit rounded-full px-3 py-1 
+      dark:bg-[hsla(0,0%,10%,1)] bg-[#fbfbfb] dark:text-primary text-black border dark:border-white/[0.14] border-gray-200
+    `}>
+      {item.industry}
+    </h3>
+    <h1 className="md:text-[30px] text-[20px] sm:text-[26px] -tracking-[0.5px] sm:leading-[1.4em] dark:text-white text-black">
+      {item.title}
+    </h1>
+    <p className="mt-2.5 md:text-[18px] dark:text-primary text-black">
+      {item.description}
+    </p>
   </div>
+  <Button className="sm:max-w-[160px] sm:mt-6 mt-4 font-normal sm:font-medium text-sm sm:text-base px-3 py-2 sm:px-4 sm:py-3 max-w-fit">
+    <Link className="text-white" href={item.link}>View Case Study</Link>
+  </Button>
+</div>
 );
 
 const CardMedia: React.FC<CardProps> = ({ item }) => (
   <div className="flex flex-col items-start justify-start gap-6 max-lg:mt-6">
     <div className="w-full max-w-full rounded-lg overflow-hidden">
       <img
-        className="md:max-w-[420px] w-full max-md:min-h-[240px] min-h-[200px] object-cover"
+        className="md:max-w-[420px] w-full md:min-h-[240px] min-h-[200px] object-cover"
         src={item.image}
         alt={item.title}
         style={{ objectPosition: "center center", imageRendering: "auto" }}
@@ -108,17 +110,19 @@ interface StatItemProps {
   value: string;
 }
 
-const StatItem: React.FC<StatItemProps> = ({ label, value }) => (
-  <p className="flex sm:gap-3 gap-2 flex-col">
-    <span className="text-black md:text-[20px] text-[18px] leading-[1.4em] -tracking-[0.5px]">
-      {label}
-    </span>
-    <span className="text-black md:text-[42px] font-medium text-[30px]">
-      {value}
-    </span>
-  </p>
-);
-
+const StatItem: React.FC<StatItemProps> = ({ label, value }) => {
+  
+  return (
+    <p className="flex sm:gap-3 gap-2 flex-col">
+      <span className={`md:text-[20px] text-[18px] leading-[1.4em] -tracking-[0.5px] text-black dark:text-primary`}>
+        {label}
+      </span>
+      <span className={`md:text-[42px] font-medium text-[30px] text-black dark:text-primary`}>
+        {value}
+      </span>
+    </p>
+  );
+};
 const ParallaxSection: React.FC = () => {
   const lightModeColors = [
     '#F0F4F8', // Light Blue Gray
@@ -196,7 +200,7 @@ const ParallaxSection: React.FC = () => {
     ...item,
     backgroundColor: getRandomColor(),
   }));
-
+  
   return (
     <section id="work" className="relative font-satoshi flex flex-col gap-8">
       {items.map((item, index) => (

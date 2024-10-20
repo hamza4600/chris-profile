@@ -70,7 +70,7 @@ const MobileNav: React.FC = () => {
             <nav className="flex flex-col gap-8 items-center mt-[16vh]">
               {links.map((link) => (
                 <Link key={link.name} href={link.href}>
-                  <span className="dark:text-white text-black text-2xl p-3">
+                  <span className="dark:text-white text-black text-2xl p-3 hover:bg-gray-100 dark:hover:bg-[hsla(0,0%,10%,1)] rounded-md">
                     {link.name}
                   </span>
                 </Link>

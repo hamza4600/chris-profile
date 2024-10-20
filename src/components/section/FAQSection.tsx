@@ -91,7 +91,7 @@ const FAQAccordion: React.FC<FAQAccordionProps> = ({ item, isActive, onToggle, i
           }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
-          <p className="text-base sm:text-lg text-secondary leading-relaxed mt-2" aria-label={item.answer}>
+          <p className="text-base sm:text-lg dark:text-primary text-black leading-relaxed mt-2" aria-label={item.answer}>
             {item.answer}
           </p>
         </motion.div>
