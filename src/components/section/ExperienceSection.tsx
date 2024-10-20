@@ -3,7 +3,7 @@ import { experience } from "@/constants";
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="max-w-[1080px] mx-auto md:px-8 pt-[32px] pb-[32px] sm:pb-[64px] ">
+    <section id="experience" className="max-w-[1080px] mx-auto pt-[32px] pb-[32px] sm:pb-[64px] px-6 sm:px-8">
       <div className="flex flex-col sm:gap-12 gap-8">
         <h1 className="dark:text-primary max-md:text-center font-satoshi text-black md:text-[38px] text-[30px] leading-[1.2em] -tracking-[0.5px]">
           Experience
@@ -11,10 +11,10 @@ const ExperienceSection = () => {
         <div className="flex flex-col gap-4">
           {experience.map((exp, idx) => (
             <div 
-            className="flex flex-col gap-4 font-hanken border-b border-[#e6e6e6] dark:border-[#ffffff33] md:pb-6 md:pt-3 pt-1 pb-4"
+            className="flex flex-col gap-4 font-hanken border-b border-[#e6e6e6] dark:border-[#ffffff33] pb-4"
               key={idx}
             >
-              <div className="flex justify-between items-center max-md:flex-col max-md:gap-4">
+              <div className="flex justify-between items-center max-md:gap-4">
                 <p className="dark:text-primary text-black md:text-[32px] text-[20px] leading-[1.2em] -tracking-[0.5px] font-hanken">
                   {exp.name}
                 </p>
@@ -22,9 +22,9 @@ const ExperienceSection = () => {
                   <p className="dark:text-primary text-black md:text-[32px] text-[20px] leading-[1.2em] -tracking-[0.5px]">
                     {exp.position}
                   </p>
-                  <p className="dark:text-primary text-black md:text-[18px] text-[14px] leading-[1.2em] -tracking-[0.5px]">
+                  <span className="dark:text-primary text-black md:text-[18px] text-[14px] leading-[1.2em] -tracking-[0.5px]">
                     {exp.duration}
-                  </p>
+                  </span>
                 </div>
               </div>
             </div>

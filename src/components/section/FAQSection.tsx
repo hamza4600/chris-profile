@@ -1,5 +1,6 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState} from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const faqData = [
   {
@@ -24,11 +25,9 @@ const faqData = [
   },
 ];
 
-const ChevronIcon: React.FC<{ isOpen: boolean }> = ({ isOpen }) => (
+const ChevronIcon: React.FC = () => (
   <svg
-    className={`transform transition-transform duration-300 ${
-      isOpen ? "rotate-180" : "rotate-0"
-    }`}
+    className={`transform transition-transform duration-300`}
     width="24"
     height="24"
     viewBox="0 0 24 24"
@@ -58,30 +57,49 @@ interface FAQAccordionProps {
 
 const FAQAccordion: React.FC<FAQAccordionProps> = ({ item, isActive, onToggle, index }) => {
   return (
-    <div className="border-b border-gray-200 dark:border-gray-700 pb-4 sm:pb-8">
-      <button
-        className="w-full text-left text-lg sm:text-2xl text-black dark:text-secondary flex justify-between items-center"
-        onClick={onToggle}
-        aria-expanded={isActive}
-        aria-controls={`faq-answer-${index}`}
+    <div className="border-b border-gray-200 dark:border-gray-700 pb-4 sm:pb-6">
+    <button
+      className="w-full text-left text-lg sm:text-2xl text-black dark:text-primary flex justify-between items-center"
+      onClick={onToggle}
+      aria-expanded={isActive}
+      aria-controls={`faq-answer-${index}`}
+    >
+      <h2 
+        className="pr-4 text-[20px] sm:text-[24px]" 
+        aria-label={item.question}
       >
-        <span className="pr-4">{item.question}</span>
-        <ChevronIcon isOpen={isActive} />
-      </button>
-      <div
-        className={`mt-2 overflow-hidden transition-all duration-300 ease-in-out ${
-          isActive ? "max-h-96" : "max-h-0"
-        }`}
+        {item.question}
+      </h2>
+      <motion.div
+        initial={false}
+        animate={{ rotate: isActive ? 180 : 0 }}
+        transition={{ duration: 0.3 }}
       >
-        <p className="text-base sm:text-lg text-secondary leading-relaxed">
-          {item.answer}
-        </p>
-      </div>
-    </div>
+        <ChevronIcon />
+      </motion.div>
+    </button>
+    <AnimatePresence initial={false}>
+      {isActive && (
+        <motion.div
+          key={`content-${index}`}
+          initial="collapsed"
+          animate="expanded"
+          exit="collapsed"
+          variants={{
+            expanded: { opacity: 1, height: "auto" },
+            collapsed: { opacity: 0, height: 0 }
+          }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+        >
+          <p className="text-base sm:text-lg text-secondary leading-relaxed mt-2" aria-label={item.answer}>
+            {item.answer}
+          </p>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  </div>
   );
 };
-
-
 
 const FAQSection = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -91,11 +109,11 @@ const FAQSection = () => {
   };
 
   return (
-    <section id="faq" className="py-12 md:py-16 px-6 sm:px-8">
-    <h1 className="text-3xl md:text-4xl text-black dark:text-primary mb-4 sm:mb-8">
+    <section id="faq" className="py-12 md:py-16 px-6 sm:px-8 flex flex-col sm:gap-12 gap-8">
+    <h1 className="text-3xl md:text-4xl text-black dark:text-primary sm:text-start text-center">
       Frequently asked questions
     </h1>
-    <div className="space-y-4 sm:space-y-8 mt-4 md:mt-8">
+    <div className="space-y-4 sm:space-y-6">
       {faqData.map((item, index) => (
         <FAQAccordion
           index={index}

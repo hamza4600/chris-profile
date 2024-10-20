@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import React, { useEffect, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Button from "../Atoms/Button";
-import Image from "next/image";
 import Link from "next/link";
 interface ParallaxItemProps {
   children: React.ReactNode;
@@ -19,13 +18,17 @@ const ParallaxItem: React.FC<ParallaxItemProps> = ({ children, index }) => {
     offset: ["start end", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", `${2 * index}%`]);
+  const yRange = useTransform(scrollYProgress, [0, 1], ["0%", `${10 * index}%`]);
+  const y = useSpring(yRange, { stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
 
   return (
     <motion.div
       ref={ref}
       style={{ y }}
-      className="sticky top-0 sm:top-20  md:h-[70vh] h-[100vh] flex max-w-[1080px] mx-auto w-full items-center justify-center lg:px-8 px-4"
+      className="sticky top-0 sm:top-20 md:h-[70vh] h-[100vh] flex max-w-[1080px] mx-auto w-full items-center justify-center lg:px-8 px-4"
     >
       {children}
     </motion.div>
@@ -58,7 +61,7 @@ const Card: React.FC<CardProps> = ({ item }) => (
 const CardContent: React.FC<CardProps> = ({ item }) => (
   <div className="flex flex-col lg:justify-between h-full lg:min-h-[380px] lg:max-w-[480px] w-full">
     <div>
-      <h3 className="text-black md:text-[20px] text-[16px] -tracking-[0.5px] leading-[1.4em] mb-2 font-medium bg-white w-fit rounded-full px-3 py-1">
+      <h3 className="text-black md:text-[20px] text-[16px] leading-[1.4em] mb-2 font-medium bg-white w-fit rounded-full px-3 py-1">
         {item.industry}
       </h3>
       <h1 className="text-black md:text-[30px] text-[26px] -tracking-[0.5px] leading-[1.4em]">
@@ -195,7 +198,7 @@ const ParallaxSection: React.FC = () => {
   }));
 
   return (
-    <section id="work" className="relative md:h-[280vh] font-satoshi">
+    <section id="work" className="relative font-satoshi flex flex-col gap-8">
       {items.map((item, index) => (
         <ParallaxItem key={index} index={index}>
           <Card item={item} />
