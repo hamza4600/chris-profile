@@ -38,8 +38,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex items-start max-md:flex-col max-md:gap-8 max-md:text-[12px] justify-between dark:text-white text-black">
-        <div className="flex flex-col gap-4">
-          <p className="max-md:text-center max-md:w-full">Hamza Khan ©
+        <div className="flex sm:flex-col flex-row sm:gap-4 gap-2 items-center justify-between sm:w-auto w-full">
+          <p>Hamza Khan ©
             <span className="font-bold ml-1">2024</span>
           </p>
           <div className="flex items-center gap-2">

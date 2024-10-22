@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Button from "../Atoms/Button";
 import Link from "next/link";
+import { BlueTick, caseStudies } from "./data";
 
 interface ParallaxItemProps {
   children: React.ReactNode;
@@ -44,19 +45,20 @@ interface CardProps {
     rate: string;
     review: string;
     link: string;
-    backgroundColor: string;
+    tags: string[];
   };
 }
 
 const Card: React.FC<CardProps> = ({ item }) => (
-  <div
+  <Link
+      href={item.link}
       className={`w-full max-w-[1080px] rounded-[24px] shadow-md opacity-100 md:px-10 px-4 md:py-[60px] py-[20px] dark:bg-[#0a0a0a] bg-[#fbfbfb] text-white dark:text-white border dark:border-white/[0.14] border-gray-200 `}
     >
       <div className="flex justify-between max-md:flex-col">
         <CardContent item={item} />
         <CardMedia item={item} />
       </div>
-    </div>
+    </Link>
 );
 const CardContent: React.FC<CardProps> = ({ item }) => (
   <div className="flex flex-col lg:justify-between h-full lg:min-h-[380px] lg:max-w-[480px] w-full">
@@ -72,9 +74,17 @@ const CardContent: React.FC<CardProps> = ({ item }) => (
     <p className="mt-2.5 md:text-[18px] dark:text-primary text-black">
       {item.description}
     </p>
+    <div className="flex flex-col sm:gap-3 gap-2 mt-2.5">
+      {item.tags.map((tag, index) => (
+        <div className="flex items-center gap-2 rounded-full px-3 py-1 bg-[#fbfbfb] dark:bg-[hsla(0,0%,10%,1)] border dark:border-white/[0.14] border-gray-200 w-fit" key={index}>
+          <BlueTick />
+          <p key={index} className="md:text-[18px] dark:text-primary text-black ">{tag}</p>
+        </div>
+      ))}
+    </div>
   </div>
-  <Button className="sm:max-w-[160px] sm:mt-6 mt-4 font-normal sm:font-medium text-sm sm:text-base px-3 py-2 sm:px-4 sm:py-3 max-w-fit">
-    <Link className="text-white" href={item.link}>View Case Study</Link>
+  <Button className="hidden sm:block sm:max-w-[160px] sm:mt-6 mt-4 font-normal sm:font-medium text-sm sm:text-base px-3 py-2 sm:px-4 sm:py-3 max-w-fit">
+    <div className="text-white">View Case Study</div>
   </Button>
 </div>
 );
@@ -124,86 +134,9 @@ const StatItem: React.FC<StatItemProps> = ({ label, value }) => {
   );
 };
 const ParallaxSection: React.FC = () => {
-  const lightModeColors = [
-    '#F0F4F8', // Light Blue Gray
-    '#FEEAFA', // Light Pink
-    '#E6F3EC', // Light Mint Green
-    '#FFF4E6', // Light Peach
-    '#F3E8FF', // Light Lavender
-    '#E6F6FF', // Light Sky Blue
-    '#FFF0F0', // Light Salmon
-    '#F0FFF4', // Light Honeydew
-    '#F5F5F5', // Light Gray
-    '#E8E8E8', // Soft Gray
-    '#F0EAE2', // Beige
-    '#E6E6FA', // Lavender Mist
-    '#F0F8FF', // Alice Blue
-    '#F5FFFA', // Mint Cream
-    '#FFF5EE', // Seashell
-    '#F8F8FF', // Ghost White
-    '#F0FFFF', // Azure
-    '#F5F5DC', // Beige
-    '#FAFAD2', // Light Goldenrod Yellow
-    '#FAEBD7', // Antique White
-  ];
-
-  const getRandomColor = () => {
-    return lightModeColors[Math.floor(Math.random() * (lightModeColors.length - 1))];
-  };
-
-  const items = [
-    {
-      industry: "Finance",
-      title: "Modernizing a Subscription Management Platform",
-      description:
-        "With user-centered approach, the goals was to create an intuitive interface for effortless financial management while incorporating gamification.",
-      image:
-        "https://framerusercontent.com/images/8ZlsEfjDITR5nOu3Yn61F22cbg.jpg?scale-down-to=2048",
-      rate: "4.5",
-      review: "12",
-      link: "/work/modernizing-a-subscription-management-platform-1"
-    },
-    {
-      industry: "Finance",
-      title: "Modernizing a Subscription Management Platform",
-      description:
-        "With user-centered approach, the goals was to create an intuitive interface for effortless financial management while incorporating gamification.",
-      image:
-        "https://framerusercontent.com/images/8ZlsEfjDITR5nOu3Yn61F22cbg.jpg?scale-down-to=2048",
-      rate: "4.5",
-      review: "12",
-      link: "/work/modernizing-a-subscription-management-platform-2"
-    },
-    {
-      industry: "Finance",
-      title: "Modernizing a Subscription Management Platform",
-      description:
-        "With user-centered approach, the goals was to create an intuitive interface for effortless financial management while incorporating gamification.",
-      image:
-        "https://framerusercontent.com/images/8ZlsEfjDITR5nOu3Yn61F22cbg.jpg?scale-down-to=2048",
-      rate: "4.5",
-      review: "12",
-      link: "/3"
-    },
-    {
-      industry: "Finance",
-      title: "Modernizing a Subscription Management Platform",
-      description:
-        "With user-centered approach, the goals was to create an intuitive interface for effortless financial management while incorporating gamification.",
-      image:
-        "https://framerusercontent.com/images/8ZlsEfjDITR5nOu3Yn61F22cbg.jpg?scale-down-to=2048",
-      rate: "4.5",
-      review: "12",
-      link: "/4"
-    },
-  ].map(item => ({
-    ...item,
-    backgroundColor: getRandomColor(),
-  }));
-  
   return (
     <section id="work" className="relative font-satoshi flex flex-col gap-8">
-      {items.map((item, index) => (
+      {caseStudies.map((item, index) => (
         <ParallaxItem key={index} index={index}>
           <Card item={item} />
         </ParallaxItem>
