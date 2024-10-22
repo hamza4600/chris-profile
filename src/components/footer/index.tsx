@@ -18,7 +18,7 @@ const links = [
 
 const Footer = () => {
   return (
-    <footer className="w-full flex flex-col max-w-[1080px] px-6 pb-[30px] sm:pb-[100px]">
+    <footer className="w-full flex flex-col max-w-[1080px] px-6 pb-[30px] sm:pb-[100px] relative">
       <div className="md:pt-[40px] sm:pt-[68px] pt-[20px] pb-[68px] sm:pb-[120px]">
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center gap-12">
@@ -38,9 +38,19 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex items-start max-md:flex-col max-md:gap-8 max-md:text-[12px] justify-between dark:text-white text-black">
-        <p className="max-md:text-center max-md:w-full">Hamza Khan © 
-          <span className="font-bold ml-1">2024</span>
-        </p>
+        <div className="flex flex-col gap-4">
+          <p className="max-md:text-center max-md:w-full">Hamza Khan ©
+            <span className="font-bold ml-1">2024</span>
+          </p>
+          <div className="flex items-center gap-2">
+            <div
+              className="animate-blink"
+            >
+              <div className="w-3 h-3 rounded-full bg-[rgb(120,227,122)]" title="Open for work"></div>
+            </div>
+            <p className="max-md:text-center max-md:w-full">Open for work</p>
+          </div>
+        </div>
         <div className="flex gap-4 items-center max-md:w-full max-md:justify-between">
           {links.map((link) => (
             <Link key={link.name} href={link.href} className="dark:text-white text-black">

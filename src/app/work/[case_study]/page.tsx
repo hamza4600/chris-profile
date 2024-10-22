@@ -28,19 +28,19 @@ const Index = (props: { params: { case_study: string } }) => {
   if (!caseStudyData) {
     return <div>Case study not found</div>;
   }
-  
+
   return (
-    <div className="min-h-screen mx-auto">
-    <Header title={caseStudyData.title} description={caseStudyData.description} />
-    <MainImage image={caseStudyData.image} title={caseStudyData.title} />
-    <div className="flex justify-center gap-8 p-8 max-w-[800px] mx-auto">
-      <ProjectDetails location={caseStudyData.location} />
-      <ChallengeAndResult challenge={caseStudyData.location.challenge} result={caseStudyData.location.result} />
+    <div className="min-h-screen mx-auto max-w-[1080px] px-6 md:px-8 pt-8 sm:pt-16">
+      <Header title={caseStudyData.title} description={caseStudyData.description} />
+      <MainImage image={caseStudyData.image} title={caseStudyData.title} />
+      <div className="sm:mt-12 mt-8">
+        {/* <ProjectDetails location={caseStudyData.location} /> */}
+        <ChallengeAndResult challenge={caseStudyData.location.challenge} result={caseStudyData.location.result} />
+      </div>
+      <Process process={caseStudyData.process} />
+      <Stack stack={caseStudyData.stack} />
+      <Conclusion conclusion={caseStudyData.conclusion} />
     </div>
-    <Process process={caseStudyData.process} />
-    <Stack stack={caseStudyData.stack} />
-    <Conclusion conclusion={caseStudyData.conclusion} />
-  </div>
   );
 };
 
