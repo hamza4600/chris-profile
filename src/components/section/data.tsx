@@ -1,11 +1,11 @@
 export const caseStudies = [
     {
-      industry: "Finance",
-      title: "Subscription Management Platform",
+      industry: "Travel Toure",
+      title: "Web App for Travel Tour Business",
       description:
-        "With user-centered approach, the goals was to create an intuitive interface for effortless financial management.",
+        "The goal was to create a seamless and intuitive travel booking platform that enhances the user experience.",
       image:
-        "https://framerusercontent.com/images/8ZlsEfjDITR5nOu3Yn61F22cbg.jpg?scale-down-to=2048",
+        "/traval.png",
       rate: "4.5",
       review: "12",
       link: "/work/modernizing-a-subscription-management-platform-1",
