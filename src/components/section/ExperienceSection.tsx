@@ -15,10 +15,10 @@ const ExperienceSection = () => {
               key={idx}
             >
               <div className="flex justify-between items-center max-md:gap-4">
-                <p className="dark:text-primary text-black md:text-[32px] text-[20px] leading-[1.2em] -tracking-[0.5px] font-hanken">
+                <h2 className="dark:text-primary text-black md:text-[32px] text-[20px] leading-[1.2em] -tracking-[0.5px] font-hanken">
                   {exp.name}
-                </p>
-                <div className="flex flex-col gap-2 max-md:gap-4 max-md:items-center">
+                </h2>
+                <div className="flex flex-col gap-2 max-md:gap-4 max-md:items-center items-end">
                   <p className="dark:text-primary text-black md:text-[32px] text-[20px] leading-[1.2em] -tracking-[0.5px]">
                     {exp.position}
                   </p>

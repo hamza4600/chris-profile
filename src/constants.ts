@@ -67,18 +67,23 @@ export const skills = [
 
 export const experience = [
     {
-        name: "Design Lead",
-        position: "Geonode",
+        name: "Full Stack Developer",
+        position: "Black Acre Global",
         duration: "Jan 2024 - Present",
     },
     {
-        name: "Lead UI/UX Designer",
-        position: "Truely",
-        duration: "Jan 2024 - Present",
+        name: "Lead Frontend Developer",
+        position: "Black And Black Creative",
+        duration: "Jan 2023 - Dec 2023",
+    },
+    {
+        name: "Frontend Developer",
+        position: "Gubloo Technologies",
+        duration: "Jan 2022 - Dec 2022",
     },
     {
         name: "Software Engineer",
-        position: "Genode",
-        duration: "Jan 2024 - Present",
+        position: "BlocTak Technologies",
+        duration: "Jan 2021 - Dec 2021",
     },
 ]

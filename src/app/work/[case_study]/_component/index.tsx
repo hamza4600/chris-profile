@@ -84,7 +84,7 @@ const Stack = ({ stack }: { stack: { icons: string[] } }) => (
 );
 
 const Conclusion = ({ conclusion }: { conclusion: string }) => (
-  <div className="mx-auto md:pb-16 sm:pb-12 pb-8">
+  <div className="mx-auto pb-8">
     <h2 className="md:text-[38px] sm:text-[28px] text-[24px] leading-[1.4em] dark:text-primary text-black -tracking-[0.5px] mb-4">
       Conclusion
     </h2>

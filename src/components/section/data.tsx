@@ -1,15 +1,15 @@
 export const caseStudies = [
     {
       industry: "Travel Toure",
-      title: "Web App for Travel Tour Business",
+      title: "Travel Booking Website",
       description:
         "The goal was to create a seamless and intuitive travel booking platform that enhances the user experience.",
       image:
         "/traval.png",
       rate: "4.5",
       review: "12",
-      link: "/work/modernizing-a-subscription-management-platform-1",
-      tags: ["UX Design", "Design System", "Result-Driven"]
+      link: "/work/dynamic-multilingual-travel-website",
+      tags: ["Multi Language", "SEO Friendly ", "Customizable Content"]
     },
     {
       industry: "Travel",
