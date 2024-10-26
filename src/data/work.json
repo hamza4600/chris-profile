@@ -2,14 +2,14 @@
     "work": [
       {
         "seo": {
-            "title": "PromoTravel Multilingual Travel Website Built with Next.js & Sanity | Portfolio Project",
-            "description": "A feature-rich, multilingual travel booking website built using Next.js and Sanity CMS. With dynamic pages, customizable content, and SEO optimization, this project delivers a seamless user experience across multiple languages.",
-            "keywords": ["Next.js travel website, multilingual booking platform, customizable content, SEO-friendly web design, Sanity CMS, travel tech, dynamic pages, global tourism website, responsive travel site, modern web development."],
-            "image": "/traval.png"
+          "title": "PromoTravel – Multilingual Travel Booking Website with Next.js & Sanity",
+          "description": "A multilingual travel booking site designed for a global audience, with dynamic content, fast performance, and seamless SEO optimization for user-friendly booking.",
+          "keywords": ["Next.js travel site, multilingual booking, customizable content, SEO-friendly design, Sanity CMS, global tourism platform, responsive travel website, modern web development"],
+          "image": "/travel.png"
         },
-        "url": "dynamic-multilingual-travel-website",
+        "url": "promo-travel-website",
         "title": "PromoTravel Multilingual Travel Website – Powered by Next.js & Sanity",
-        "description": "This project involved creating a cutting-edge multilingual travel booking platform built using Next.js for its fast, scalable architecture and Sanity for content management. The website supports three languages—English, Spanish, and Portuguese—providing a seamless and intuitive experience for global users. With dynamic pages, SEO-friendly design, and customizable sections across all pages.",
+        "description": "A modern travel booking website with a multilingual experience, featuring customizable content and a fast, user-friendly interface. Built with Next.js for performance and Sanity CMS for easy content management.",
         "image": "/travel-gif.gif",
         "rate": "4.5",
         "review": "12",
@@ -17,96 +17,192 @@
         "live_link": "https://www.promotravel.tours/en",
         "location": {
           "city": "Ottawa, Ontario, Canada",
-          "country": "Ottawa, Ontario, Canada",
+          "country": "Canada",
           "founded": "2012",
           "industry": "Subscription Management Platform",
           "company_size": "100-500 employees",
           "company_revenue": "$100M-$500M",
-          "challenge": "The goal of this project was to build a travel booking website that would provide a multilingual experience to global users while maintaining high standards for usability and SEO. The challenge was creating dynamic, customizable pages that could be managed easily by the content team while ensuring fast load times and optimized performance across different languages.",
-          "result": "The website was built with a robust technology stack using Next.js to handle dynamic content and Sanity as a headless CMS for easy data uploading and content management. The platform supports multilingual content, customizable layouts, and SEO optimization for each language. The final result is a user-friendly and scalable travel booking platform that meets the needs of both travelers and administrators."
+          "challenge": "This project aimed to deliver a user-friendly, multilingual booking experience for travelers worldwide, ensuring SEO-friendly, dynamic, and customizable pages that would perform consistently across all languages.",
+          "result": "Using Next.js for fast, dynamic pages and Sanity CMS for flexible content management, we built a scalable platform that supports multilingual content, customizable layouts, and SEO for each language. This resulted in a user-friendly and robust travel booking website that’s optimized for both users and administrators."
         },
-      
         "process": {
-          "research": "I started with an in-depth analysis of the requirements and user behavior, identifying key areas where usability could be improved. We also studied SEO best practices to ensure the platform would rank well in search engines for travel-related queries across multiple languages.",
-          "design": "The design focused on creating a visually appealing, responsive interface with clear navigation paths. Customizability was a key focus to allow the admin to easily update content as needed, with a clean and intuitive design that adapts to different languages and regions.",
-          "development": " Built using Next.js, we ensured that the platform could handle server-side rendering for SEO optimization and faster load times. Sanity was used to manage content dynamically, making it simple for the admin team to update information in real-time without the need for code changes.",
-          "testing": " The platform underwent rigorous testing for performance, accessibility, and usability. Multiple test scenarios ensured that the site was responsive, fast, and fully functional across all devices, languages, and regions.",
-          "deployment": " The final product was deployed seamlessly, and the platform was integrated with powerful tools to manage SEO performance and monitor user behavior. The site is now live and operational, serving global travelers with smooth navigation and dynamic content."
+          "research": "Our research focused on understanding user needs and SEO best practices to design a platform that would rank well for travel searches across multiple languages.",
+          "design": "The design prioritized a visually appealing, responsive interface that’s easy to navigate and customizable, allowing administrators to update content quickly for various regions.",
+          "development": "We chose Next.js to support server-side rendering and fast loading, while Sanity CMS enables easy, real-time content updates without coding.",
+          "testing": "We conducted extensive testing across devices, languages, and regions to ensure the platform is fast, accessible, and fully functional for all users.",
+          "deployment": "After successful deployment, the platform was equipped with tools for SEO and user analytics to keep the site optimized and aligned with business goals."
         },
         "stack": {
-          "icons": [
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-          ],
           "technologies": [
             {
               "items": [
                 {
                   "highlighted": true,
                   "title": "Next.js",
-                  "content": "for server-side rendering and dynamic page creation."
+                  "content": "enabling dynamic pages and optimized server-side rendering."
                 },
                 {
                   "highlighted": true,
                   "title": "Sanity CMS",
-                  "content": "for flexible content management."
+                  "content": "providing flexible, easy-to-update content management."
                 },
                 {
                   "highlighted": true,
                   "title": "React.js",
-                  "content": "for a fast and dynamic front-end experience."
+                  "content": "offering a smooth, fast front-end experience."
                 },
                 {
                   "highlighted": true,
                   "title": "Styled Components",
-                  "content": "for styling the UI components."
+                  "content": "adding stylish and adaptable UI components."
                 }
               ]
             }
           ]
         },
-        "conclusion": "Travel Booking Website transformed the client’s digital presence, also increased the number of bookings by 30% offering a fast, SEO-optimized, and fully customizable platform that caters to an international audience. With smooth content management powered by Sanity and a highly performant architecture using Next.js, this project stands as a benchmark for modern web development in the travel industry."
+        "conclusion": "The PromoTravel website redefined the client’s digital presence and boosted bookings by 30%. With its SEO-optimized, multilingual, and highly customizable platform, PromoTravel now sets a high standard in the travel industry, making it easier for global users to explore and book trips.",
+        "duration": "Rapid Development – Delivered in 1 month"
+      },      
+      {
+        "seo": {
+          "title": "Splits59 E-commerce Store – High-Performance Online Shopping Experience",
+          "metaDescription": "Discover Splits59's online store, built on Shopify APIs for seamless shopping. Fast performance, easy navigation, and secure payments create the ideal shopping experience.",
+          "keywords": ["e-commerce store", "Shopify integration", "online shopping", "Splits59", "Shopify APIs"],
+          "image": "/splits59.png"
+        },
+        "url": "splits59-e-commerce-store",
+        "title": "Splits59 E-commerce Store – High-Performance Online Shopping Experience",
+        "description": "High-performance e-commerce store for Splits59 using Headless Shopify Storefront APIs , Next.js , Contentful CMS and Other 3rd Party Apps including Klaviyo , Gladly , GlobalE , Hotjar and TryNow",
+        "live_link": "https://www.splits59.com",
+        "image": "/splits59-gif.gif",
+        "location": {
+          "city": "Los Angeles",
+          "country": "United States",
+          "founded": "2010",
+          "industry": "Activewear",
+          "company_size": "50-200 employees",
+          "company_revenue": "$20M-$50M",
+          "challenge": "Splits59 needed a modern, high-speed online store that could handle high traffic and deliver a smooth, engaging shopping experience for activewear enthusiasts. We set out to build an intuitive, mobile-friendly site with Shopify’s advanced APIs.",
+          "result": "The result is a sleek, high-performance site that offers seamless navigation, detailed product pages, and secure payment options. By leveraging Shopify's Storefront API, the site achieved faster load times and a responsive interface that boosted conversions and improved the overall user experience."
+        },
+        "process": {
+          "research": "We analyzed competitors and e-commerce trends to understand the best features and designs for activewear shoppers. Our goal was to identify key user preferences for browsing, product discovery, and checkout processes.",
+          "design": "Designed an engaging UI that highlights products, enhances mobile experience, and makes navigation simple. Every page was crafted to be visually appealing and functional, keeping the user journey at the forefront.",
+          "development": "Built with Shopify Storefront APIs to ensure fast load times, real-time inventory updates, and secure payment integration. Developed custom components to improve UX and make the shopping experience enjoyable from start to finish.",
+          "testing": "Performed extensive testing across all devices and browsers to ensure smooth navigation, fast load times, and no friction in the checkout process. This helped identify any issues early and optimize for high performance.",
+          "deployment": "Launched the store with a scalable infrastructure to handle heavy traffic, ensuring fast performance and minimal downtime. Integrated analytics to continuously track and improve conversion rates and user engagement."
+        },
+        "stack": {
+          "technologies": [
+            {
+              "items": [
+                {
+                  "highlighted": true,
+                  "title": "Shopify Storefront API",
+                  "content": "Powering a seamless, real-time shopping experience with dynamic product data."
+                },
+                {
+                  "highlighted": true,
+                  "title": "Next.js",
+                  "content": "Creating an interactive, responsive front end for engaging user interactions and fast performance."
+                },
+                {
+                  "highlighted": true,
+                  "title": "Contentful CMS",
+                  "content": "Providing flexible, easy-to-update content management."
+                },
+                {
+                  "highlighted": true,
+                  "title": "Emotion Styled Components",
+                  "content": "Adding stylish and adaptable UI components."
+                },
+                {
+                  "highlighted": true,
+                  "title": "GraphQL",
+                  "content": "Efficiently querying product data and enabling smooth navigation between pages."
+                },
+                {
+                  "highlighted": true,
+                  "title": "Vercel",
+                  "content": "Ensuring reliable hosting and fast content delivery for all users."
+                }
+              ]
+            }
+          ]
+        },
+        "conclusion": "The Splits59 e-commerce store is a sleek, high-conversion platform that highlights activewear in an elegant, user-focused design. By leveraging Shopify’s powerful APIs and modern tech stack, we created a shopping experience that is fast, intuitive, and perfectly tailored to Splits59’s audience, resulting in increased sales and customer satisfaction.",
+        "duration": "Project Completed in 2 Months"
       },
       {
         "seo": {
-            "metaDescription": "Learn about Your Company's mission, vision, and the dedicated team behind our innovative digital solutions.",
-            "keywords": ["about us", "company mission", "tech team", "digital innovation"],
-            "image": "https://framerusercontent.com/modules/tvLzYhFzkfLTWopFsSPL/GLOnKXWTM9WxI45Gzf7p/assets/1024/RA6Ph3mIjGZTgKxZQA3kn1jXc.jpg"
+          "title": "KJ's Auto Hail Repair – Quality Auto Hail Damage Repair Services",
+          "metaDescription": "Explore KJ's Auto Hail Repair website, designed for a seamless user experience to connect customers with top-notch auto hail repair services. Professional and trust-building web design.",
+          "keywords": ["auto hail repair", "car hail damage repair", "KJ's Auto Hail Repair", "auto repair services", "vehicle restoration"],
+          "image": "/kjs.jpg"
         },
-        "url": "modernizing-a-subscription-management-platform-2",
-        "title": "Modernizing a Subscription Management Platform",
-        "description": "Complete overhaul of a subscription management platform to improve usability, streamline workflows, and enhance overall user experience. The goal was to create a more intuitive and efficient platform for both administrators and end-users.",
-        "image": "https://framerusercontent.com/modules/tvLzYhFzkfLTWopFsSPL/GLOnKXWTM9WxI45Gzf7p/assets/1024/RA6Ph3mIjGZTgKxZQA3kn1jXc.jpg",
-        "rate": "4.5",
-        "review": "12",
-        "link": "/1",
+        "url": "kjs-auto-hail-repair",
+        "title": "KJ's Auto Hail Repair – Quality Auto Hail Damage Repair Services",
+        "description": "A professional and customer-focused website for KJ's Auto Hail Repair, showcasing their expertise in hail damage repair. Built with a focus on user engagement and converting site visitors into customers.",
+        "live_link": "https://kjsautohailrepair.com",
+        "image": "/kjs.gif",
         "location": {
-          "city": "Ottawa, Ontario, Canada",
-          "country": "Ottawa, Ontario, Canada",
-          "founded": "2012",
-          "industry": "Subscription Management Platform",
-          "company_size": "100-500 employees",
-          "company_revenue": "$100M-$500M",
-          "challenge": "The challenge was to modernize a subscription management platform that was outdated and difficult to use. The platform had a complex structure that was difficult to navigate, and it lacked the features that modern users expect. The goal was to create a more intuitive and efficient platform for both administrators and end-users.",
-          "result": "The platform was redesigned to be more user-friendly and efficient. The platform was also redesigned to be more user-friendly and efficient."
+          "city": "Dallas",
+          "country": "United States",
+          "founded": "2015",
+          "industry": "Automotive Repair",
+          "company_size": "10-50 employees",
+          "company_revenue": "$1M-$5M",
+          "challenge": "KJ's Auto Hail Repair needed a compelling website to attract customers and showcase their expertise in repairing hail damage. The goal was to build a site that builds trust and simplifies the process for potential clients to request services.",
+          "result": "The website successfully established an online presence that conveys professionalism and reliability. With clear service descriptions, testimonials, and a straightforward contact form, the site helped increase customer inquiries and service bookings."
         },
         "process": {
-          "research": "The research phase involved analyzing the current platform and its users to identify areas for improvement. The goal was to understand the users' needs and pain points, and to identify the platform's strengths and weaknesses.",
-          "design": "The design phase involved creating a new platform that was more user-friendly and efficient. The platform was designed to be more user-friendly and efficient. The platform was also designed to be more user-friendly and efficient.",
-          "development": "The development phase involved creating a new platform that was more user-friendly and efficient. The platform was developed to be more user-friendly and efficient. The platform was also developed to be more user-friendly and efficient.",
-          "testing": "The testing phase involved testing the new platform to ensure that it was working as expected. The platform was tested to ensure that it was working as expected. The platform was also tested to ensure that it was working as expected.",
-          "deployment": "The deployment phase involved deploying the new platform to the users. The platform was deployed to the users. The platform was also deployed to the users."
+          "development": "Developed the site with a responsive design, optimizing it for mobile and desktop views. Implemented structured content to make services easily discoverable and encourage visitor engagement.",
+          "testing": "Conducted testing across devices and browsers to ensure consistent quality and usability. Verified all contact forms and interactive elements for seamless operation.",
+          "deployment": "Launched with a robust hosting setup to ensure the site could handle traffic efficiently. Integrated analytics to monitor visitor engagement and measure conversion rates over time."
         },
         "stack": {
-          "icons": [
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+          "technologies": [
+            {
+              "items": [
+                {
+                  "highlighted": true,
+                  "title": "Tailwind CSS",
+                  "content": "Used for creating a responsive, visually appealing structure and layout."
+                },
+                {
+                  "highlighted": true,
+                  "title": "React.js",
+                  "content": "Creating an interactive, responsive front end for engaging user interactions and fast performance."
+                },
+                {
+                  "highlighted": true,
+                  "title": "Firebase",
+                  "content": "Firebase was used for database"
+                },
+                {
+                  "highlighted": true,
+                  "title": "SEO Optimization Tools",
+                  "content": "Ensured the site ranked well in search results, driving organic traffic."
+                },
+                {
+                  "highlighted": true,
+                  "title": "Google Analytics",
+                  "content": "Integrated for tracking user engagement and conversion metrics."
+                },
+                {
+                  "highlighted": true,
+                  "title": "Netlify",
+                  "content": "Provided reliable and scalable hosting for high performance and security."
+                }
+              ]
+            }
           ]
         },
-        "conclusion": "The platform was redesigned to be more user-friendly and efficient. The platform was also redesigned to be more user-friendly and efficient."
+        "conclusion": "The KJ's Auto Hail Repair website is a professional platform that effectively conveys trust and quality. By using a combination of WordPress, responsive design, and SEO optimization, the site has helped attract more customers and enhance the business's digital presence.",
+        "duration": "Project Completed in 1.5 Months"
       }
+            
+
     ]
   }
   

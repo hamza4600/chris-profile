@@ -42,10 +42,9 @@ interface CardProps {
     title: string;
     description: string;
     image: string;
-    rate: string;
-    review: string;
     link: string;
     tags: string[];
+    metrics?: { title: string; description: string }[];
   };
 }
 
@@ -83,56 +82,45 @@ const CardContent: React.FC<CardProps> = ({ item }) => (
       ))}
     </div>
   </div>
-  <Button className="hidden sm:block sm:max-w-[160px] sm:mt-6 mt-4 font-normal sm:font-medium text-sm sm:text-base px-3 py-2 sm:px-4 sm:py-3 max-w-fit">
-    <div className="text-white">View Case Study</div>
+  <Button className="hidden sm:block  sm:mt-6 mt-4 font-normal sm:font-medium text-sm sm:text-base px-3 py-2 sm:px-4 sm:py-3 max-w-fit">
+    <div className="text-white">See the Success Story</div>
   </Button>
 </div>
 );
 
 const CardMedia: React.FC<CardProps> = ({ item }) => (
-  <div className="flex flex-col items-start justify-start gap-6 max-lg:mt-6">
-    <div className="w-full max-w-full rounded-lg overflow-hidden">
+  <div className="flex flex-col items-start gap-6 max-lg:mt-6 justify-between">
+    <div className="md:max-w-[420px] w-full md:min-h-[240px] min-h-[200px] rounded-lg overflow-hidden flex-1">
       <img
-        className="md:max-w-[420px] w-full md:min-h-[240px] min-h-[200px] object-cover"
+        className=" object-cover w-full h-full"
         src={item.image}
         alt={item.title}
         style={{ objectPosition: "center center", imageRendering: "auto" }}
       />
     </div>
-    <CardStats rate={item.rate} review={item.review} />
+    <CardStats metrics={item.metrics} />
   </div>
 );
 
 interface CardStatsProps {
-  rate: string;
-  review: string;
+  metrics?: { title: string; description: string }[];
 }
 
-const CardStats: React.FC<CardStatsProps> = ({ rate, review }) => (
+const CardStats: React.FC<CardStatsProps> = ({ metrics }) => (
   <div className="flex items-center md:gap-16 flex-row w-full max-w-full gap-3">
-    <StatItem label="Engagement" value={rate} />
-    <StatItem label="User Satisfaction" value={review} />
+    {Array.isArray(metrics) && metrics.map((metric, index) => (
+      <div className="flex sm:gap-3 gap-2 flex-col" key={index}>
+      <h2 className={`md:text-[18px] dark:text-primary text-black`}>
+        {metric.title}
+      </h2>
+      <span className={`md:text-[26px] dark:text-primary text-black`}>
+        {metric.description}
+      </span>
+    </div>
+    ))}
   </div>
 );
 
-interface StatItemProps {
-  label: string;
-  value: string;
-}
-
-const StatItem: React.FC<StatItemProps> = ({ label, value }) => {
-  
-  return (
-    <p className="flex sm:gap-3 gap-2 flex-col">
-      <span className={`md:text-[20px] text-[18px] leading-[1.4em] -tracking-[0.5px] text-black dark:text-primary`}>
-        {label}
-      </span>
-      <span className={`md:text-[42px] font-medium text-[30px] text-black dark:text-primary`}>
-        {value}
-      </span>
-    </p>
-  );
-};
 const ParallaxSection: React.FC = () => {
   return (
     <section id="work" className="relative font-satoshi flex flex-col gap-8">

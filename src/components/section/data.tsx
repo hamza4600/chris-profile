@@ -1,52 +1,41 @@
 export const caseStudies = [
-    {
-      industry: "Travel Toure",
-      title: "Travel Booking Website",
-      description:
-        "The goal was to create a seamless and intuitive travel booking platform that enhances the user experience.",
-      image:
-        "/traval.png",
-      rate: "4.5",
-      review: "12",
-      link: "/work/dynamic-multilingual-travel-website",
-      tags: ["Multi Language", "SEO Friendly ", "Customizable Content"]
-    },
-    {
-      industry: "Travel",
-      title: "Travel Booking Platform",
-      description:
-        "The goal was to create a seamless and intuitive travel booking platform that enhances the user experience.",
-      image:
-        "https://framerusercontent.com/images/8ZlsEfjDITR5nOu3Yn61F22cbg.jpg?scale-down-to=2048",
-      rate: "4.5",
-      review: "12",
-      link: "/work/modernizing-a-subscription-management-platform-2",
-      tags: ["Market Research", "Challenges", "Revision"]
-    },
-    {
-      industry: "E-commerce",
-      title: "E-commerce Store",
-      description:
-        "The goal was to create a seamless and intuitive e-commerce store that enhances the user experience.",
-      image:
-        "https://framerusercontent.com/images/8ZlsEfjDITR5nOu3Yn61F22cbg.jpg?scale-down-to=2048",
-      rate: "4.5",
-      review: "12",
-      link: "/3",
-      tags: [ "Shopify", "Product Catalog", "Payment Gateway"]
-    },
-    {
-      industry: "Healthcare",
-      title: "Healthcare Platform",
-      description:
-        "The goal was to create a seamless and intuitive healthcare platform that enhances the user experience.",
-      image:
-        "https://framerusercontent.com/images/8ZlsEfjDITR5nOu3Yn61F22cbg.jpg?scale-down-to=2048",
-      rate: "4.5",
-      review: "12",
-      link: "/4",
-      tags: ["UX Design", "Design System", "Result-Driven"]
-    },
+  {
+    "industry": "Travel & Tourism",
+    "title": "Travel Booking Website",
+    "description": "Developed a smooth and user-friendly travel booking platform with an intuitive interface, customizable content, and multi-language support.",
+    "image": "/travel.png",
+    "metrics": [
+      { "title": "Increased Traffic", "description": "40%" },
+      { "title": "User Satisfaction", "description": "90%" }
+    ],
+    "link": "/work/promo-travel-website",
+    "tags": ["SEO Optimized", "Customizable Pages",  "High Conversion Rate"]
+  },
+  {
+    "industry": "E-commerce",
+    "title": "Splits59 E-commerce Store",
+    "description": "High-performance e-commerce store for Splits59 using Headless Shopify Storefront APIs , Next.js , Contentful CMS and Other 3rd Party Apps",
+    "image": "/splits59.png",
+    "metrics": [
+      { "title": "Increased Traffic", "description": "40%" },
+      { "title": "User Satisfaction", "description": "90%" }
+    ],
+    "link": "/work/splits59-e-commerce-store",
+    "tags": ["Shopify Headless Storefront", "Currency Selector", "Payment Gateway"]
+  },  
+  {
+    "industry": "Automotive Services",
+    "title": "KJ's Auto Hail Repair Website",
+    "description": "To attract customers needing quality auto hail damage repair. The site showcases services, customer testimonials, and the repair process, establishing trust and convenience.",
+    "image": "/kjs.jpg",
+    "metrics": [
+      { "title": "Increased Traffic", "description": "40%" },
+      { "title": "User Satisfaction", "description": "90%" }
+    ],
+    "link": "/work/kjs-auto-hail-repair",
+    "tags": ["Automotive Repair", "Service Showcase", "Lead Generation",]
+  }
+  
   ]
 
 export const BlueTick = () => (
