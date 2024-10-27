@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 interface TechnologyItem {
   highlighted: boolean;
   title: string;
@@ -22,17 +20,6 @@ export const TechStack: React.FC<TechStackProps> = ({ stack }) => {
   return (
     <section className="my-8">
       <h2 className="md:text-[38px] sm:text-[28px] text-[24px] leading-[1.4em] dark:text-primary text-black -tracking-[0.5px]">Core Technologies</h2>
-      {/* <div className="flex flex-wrap gap-4 mb-6">
-        {stack.icons.map((icon, index) => (
-          <Image
-            key={index}
-            src={icon}
-            alt={`Technology icon ${index + 1}`}
-            width={40}
-            height={40}
-          />
-        ))}
-      </div> */}
       {stack.technologies.map((tech, index) => (
         <div key={index} className="mb-4 mt-4">
           <ul className=" ">

@@ -1,61 +1,94 @@
 import workData from '@/data/work.json';
 import type { Metadata } from "next";
-import { Header, MainImage, ProjectDetails, ChallengeAndResult, Process, Stack, Conclusion } from './_component';
-import { KeyFeatures, TechStack } from './_component/TechStack';
+import { Header, MainImage, Conclusion } from './_component';
 import Link from 'next/link';
 import Button from '@/components/Atoms/Button';
+import { getCaseSeoBySlug, getCaseStudyDetailsBySlug } from '@/sanity/lib/caseStudy';
+import { urlFor } from '@/sanity/lib/image';
+import RichText from './_component/RichText';
+import { redirect } from 'next/navigation';
 
-function getCaseStudyData(caseStudyName: string) {
-  return workData.work.find((item) => item.url === caseStudyName);
+interface SeoData {
+  seo: {
+    title: string;
+    description: string;
+    keyword: string;
+    image: string;
+  };
 }
+
+export const revalidate = 600;
 
 export async function generateMetadata(
   { params }: { params: { case_study: string } }
 ): Promise<Metadata> {
-  const caseStudyData = getCaseStudyData(params.case_study);
+
+  const caseStudyData: any | SeoData = await getCaseSeoBySlug(params.case_study);
+
   return {
     title: caseStudyData?.seo.title || 'Case Study',
     description: caseStudyData?.seo.description || 'A detailed case study of our work',
-    keywords: caseStudyData?.seo.keywords || [],
+    keywords: caseStudyData?.seo.keyword || '',
     openGraph: {
-      title: caseStudyData?.seo.title,
-      description: caseStudyData?.seo.description,
-      images: [{ url: caseStudyData?.seo.image || '' }],
+      title: caseStudyData?.seo.title || 'Case Study',
+      description: caseStudyData?.seo.description || 'A detailed case study of our work',
+      images: [{ url: caseStudyData?.seo.image ? urlFor(caseStudyData.seo.image).url() : '' }],
     },
   };
 }
 
-const Index = (props: { params: { case_study: string } }) => {
-  const caseStudyData = getCaseStudyData(props.params.case_study);
+const CaseStudyPage = async (props: { params: { case_study: string } }) => {
 
-  if (!caseStudyData) {
+  const data: any = await getCaseStudyDetailsBySlug(props.params.case_study);
+  const { heroSection, content, image, conclusion, duration, previewLink } = data;
+
+  // if no slug return to home page
+  if (!props.params.case_study) {
+    return redirect('/');
+  }
+
+  if (!data) {
     return <div>Case study not found</div>;
   }
 
+  const imgUrl = heroSection.image ? urlFor(heroSection.image)?.url() : '';
+
   return (
     <div className="min-h-screen mx-auto max-w-[1080px] px-6 md:px-8 pt-8 sm:pt-16 mb-12">
-      <Header title={caseStudyData.title} description={caseStudyData.description} />
-      <MainImage image={caseStudyData.image} title={caseStudyData.title} />
-      <div className="sm:mt-12 mt-8">
-        {/* <ProjectDetails location={caseStudyData.location} /> */}
-        <ChallengeAndResult challenge={caseStudyData.location.challenge} result={caseStudyData.location.result} />
-      </div>
-      <Process process={caseStudyData.process as any} />
-      {/* <Stack stack={caseStudyData.stack} /> */}
-      <TechStack stack={caseStudyData.stack as any} />
-      {/* <KeyFeatures features={caseStudyData.key_features} /> */}
-      <Conclusion conclusion={caseStudyData.conclusion} />
-        <Link 
-        href={caseStudyData.live_link as string} 
-        target="_blank"
-        >
-          <Button size="medium" className=" font-medium">
-            Preview Project
-          </Button>
-        </Link>
+      {
+        heroSection && (
+          <Header title={heroSection.title} description={heroSection.description} />
+        )
+      }
+      {
+        imgUrl && (
+          <MainImage image={imgUrl} title={heroSection.alt} />
+        )
+      }
+      {
+        content && (
+          <RichText content={content} />
+        )
+      }
+      {
+        conclusion && (
+          <Conclusion conclusion={conclusion} />
+        )
+      }
+      {
+        previewLink && (
+          <Link
+            href={previewLink as string}
+            target="_blank"
+          >
+            <Button size="medium" className=" font-medium">
+              Preview Project
+            </Button>
+          </Link>
+        )
+      }
     </div>
   );
 };
 
-export default Index;
-
+export default CaseStudyPage;

@@ -2,9 +2,10 @@ import ExperienceSection from "@/components/section/ExperienceSection";
 import FAQSection from "@/components/section/FAQSection";
 import IconAutoScroll from "@/components/section/IconAutoScroll";
 import IntroSection1 from "@/components/section/IntroSection1";
-import ParallaxSection from "@/components/section/ParallaxSection";
+import ParallaxSection from "@/components/section/ParallexSec";
 import ShinningSectionText from "@/components/section/ShinningSectionText";
 import SkillsSection from "@/components/section/SkillsSection";
+import { getAllCaseStudies } from "@/sanity/lib/caseStudy";
 
 const icons = [
   "https://framerusercontent.com/images/hqIVsN8SplywoxNsCXdrELqh3Uc.png",
@@ -29,7 +30,11 @@ const icons = [
   "https://framerusercontent.com/images/axEbQrKhpYjJigPMinun2ajkc.png",
 ]
 
-export default function Home() {
+export const revalidate = 3000;
+export default async function Home() {
+  
+  const caseStudies = await getAllCaseStudies();
+
   return (
     <main className="min-h-screen w-full max-w-[1080px]">
       <IntroSection1 
@@ -40,7 +45,7 @@ export default function Home() {
         <IconAutoScroll icons={icons} />
       </section>
       <ShinningSectionText />
-      <ParallaxSection />
+      <ParallaxSection caseStudies={caseStudies} />
       <SkillsSection />
       <ExperienceSection />
       <FAQSection />
