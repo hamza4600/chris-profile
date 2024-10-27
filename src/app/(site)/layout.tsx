@@ -58,26 +58,26 @@ export const metadata: Metadata = {
 const satoshiVariable = localFont({
   src: [
     {
-      path: "../fonts/satoshi/Satoshi-Variable.woff2",
+      path: "../../fonts/satoshi/Satoshi-Variable.woff2",
       style: "normal",
     },
     {
-      path: "../fonts/satoshi/Satoshi-Black.woff2",
+      path: "../../fonts/satoshi/Satoshi-Black.woff2",
       style: "black",
       weight: "900",
     },
     {
-      path: "../fonts/satoshi/Satoshi-Bold.woff2",
+      path: "../../fonts/satoshi/Satoshi-Bold.woff2",
       style: "bold",
       weight: "700",
     },
     {
-      path: "../fonts/satoshi/Satoshi-Light.woff2",
+      path: "../../fonts/satoshi/Satoshi-Light.woff2",
       style: "light",
       weight: "300",
     },
     {
-      path: "../fonts/satoshi/Satoshi-Medium.woff2",
+      path: "../../fonts/satoshi/Satoshi-Medium.woff2",
       style: "medium",
       weight: "500",
     },
@@ -91,6 +91,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  console.log("Layout rendered");
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${satoshiVariable.variable} ${hankenGrotesk.variable} font-sans`}>
