@@ -24,3 +24,5 @@ Adding Form for clients
 
 Sanity fro Blogs 
 Add more content 
+
+content should be in the wat like we can tell all about us and easy what we want to target and waht we want to get Client , Industries 

@@ -40,7 +40,7 @@ const Index = (props: { params: { case_study: string } }) => {
         {/* <ProjectDetails location={caseStudyData.location} /> */}
         <ChallengeAndResult challenge={caseStudyData.location.challenge} result={caseStudyData.location.result} />
       </div>
-      <Process process={caseStudyData.process} />
+      <Process process={caseStudyData.process as any} />
       {/* <Stack stack={caseStudyData.stack} /> */}
       <TechStack stack={caseStudyData.stack as any} />
       {/* <KeyFeatures features={caseStudyData.key_features} /> */}

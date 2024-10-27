@@ -14,7 +14,7 @@ export const caseStudies = [
   {
     "industry": "E-commerce",
     "title": "Splits59 E-commerce Store",
-    "description": "High-performance e-commerce store for Splits59 using Headless Shopify Storefront APIs , Next.js , Contentful CMS and Other 3rd Party Apps",
+    "description": "High-performance e-commerce store for Splits59 using Heap/dless Shopify Storefront APIs , Next.js , Contentful CMS and Other 3rd Party Apps",
     "image": "/splits59.png",
     "metrics": [
       { "title": "Increased Traffic", "description": "40%" },
