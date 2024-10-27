@@ -102,9 +102,9 @@ const FAQAccordion: React.FC<FAQAccordionProps> = ({ item, isActive, onToggle, i
   );
 };
 
-const FAQSection = () => {
+const FAQSection = ({ sectionTitle, faqItems }: { sectionTitle: string, faqItems: FAQItem[] }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
+  console.log(faqItems);
   const handleToggle = (index: number) => {
     setActiveIndex(prevIndex => prevIndex === index ? null : index);
   };
@@ -112,10 +112,10 @@ const FAQSection = () => {
   return (
     <section id="faq" className="py-12 md:py-16 px-6 sm:px-8 flex flex-col sm:gap-12 gap-8">
     <h1 className="text-3xl md:text-4xl text-black dark:text-primary sm:text-start text-center">
-      Frequently asked questions
+      {sectionTitle}
     </h1>
     <div className="space-y-4 sm:space-y-6">
-      {faqData.map((item, index) => (
+      {faqItems.map((item, index) => (
         <FAQAccordion
           index={index}
           key={index}

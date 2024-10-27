@@ -1,4 +1,3 @@
-import workData from '@/data/work.json';
 import type { Metadata } from "next";
 import { Header, MainImage, Conclusion } from './_component';
 import Link from 'next/link';
@@ -7,6 +6,7 @@ import { getCaseSeoBySlug, getCaseStudyDetailsBySlug } from '@/sanity/lib/caseSt
 import { urlFor } from '@/sanity/lib/image';
 import RichText from './_component/RichText';
 import { redirect } from 'next/navigation';
+import OtherCaseStudies from './_component/OtherCaseStudies';
 
 interface SeoData {
   seo: {
@@ -40,7 +40,7 @@ export async function generateMetadata(
 const CaseStudyPage = async (props: { params: { case_study: string } }) => {
 
   const data: any = await getCaseStudyDetailsBySlug(props.params.case_study);
-  const { heroSection, content, image, conclusion, duration, previewLink } = data;
+  const { heroSection, content, image, conclusion, duration, previewLink, otherCaseStudies } = data;
 
   // if no slug return to home page
   if (!props.params.case_study) {
@@ -85,6 +85,11 @@ const CaseStudyPage = async (props: { params: { case_study: string } }) => {
               Preview Project
             </Button>
           </Link>
+        )
+      }
+      {
+        otherCaseStudies && (
+          <OtherCaseStudies otherCaseStudies={otherCaseStudies} />
         )
       }
     </div>

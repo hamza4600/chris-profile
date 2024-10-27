@@ -1,4 +1,3 @@
-// get all case studies
 import { fetchSanityData } from "./client";
 
 const query = `*[_type == "caseStudy" && showOnHomePage == true]{
@@ -20,15 +19,17 @@ export const getCaseSeoBySlug = async (slug: string) => {
   return seoData;
 };
 
-// ... existing code ...
-
 const caseStudyDetailsQuery = `*[_type == "caseStudy" && slug.current == $slug]{
     heroSection,
     content,
     image,
     conclusion,
     duration,
-    previewLink
+    previewLink,
+    otherCaseStudies[]->{
+        caseStudyCardData,
+        slug
+    }
 }[0]`
 
 export const getCaseStudyDetailsBySlug = async (slug: string) => {

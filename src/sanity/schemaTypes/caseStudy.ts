@@ -17,6 +17,7 @@ export const caseStudyType = defineType({
             name: "showOnHomePage",
             title: "Show on Home Page",
             type: "boolean",
+            validation: (Rule) => Rule.required(),
         },
         {
             name: "slug",
@@ -26,6 +27,7 @@ export const caseStudyType = defineType({
                 source: "title",
                 maxLength: 96,
             },
+            validation: (Rule) => Rule.required(),
         },
         // card data that include title , decription , tags , image
         {
@@ -43,21 +45,25 @@ export const caseStudyType = defineType({
                     name: "title",
                     title: "Title",
                     type: "string",
+                    validation: (Rule) => Rule.required(),
                 },
                 {
                     name: "description",
                     title: "Description",
                     type: "text",
+                    validation: (Rule) => Rule.required(),
                 },
                 {
                     name: "image",
                     title: "Image",
                     type: "image",
+                    validation: (Rule) => Rule.required(),
                 },
                 {
                     name: "alt",
                     title: "Alt",
                     type: "string",
+                    validation: (Rule) => Rule.required(),
                 },
             ],
         },
@@ -80,16 +86,30 @@ export const caseStudyType = defineType({
             name: "conclusion",
             title: "Conclusion",
             type: "text",
+            validation: (Rule) => Rule.required(),
         },
         {
             name: "duration",
             title: "Duration",
             type: "string",
+            validation: (Rule) => Rule.required(),
         },
         {
             name: "previewLink",
             title: "Preview Link",
             type: "url",
         },
+        // other Case Studies
+        {
+            name: "otherCaseStudies",
+            title: "Other Case Studies",
+            type: "array",
+            of: [{ type: "reference", to: [{ type: "caseStudy" }] }],
+        },
     ],
+    preview: {
+        select: {
+            title: "caseStudyCardData.title",
+        },
+    },
 });

@@ -1,11 +1,13 @@
 import ExperienceSection from "@/components/section/ExperienceSection";
 import FAQSection from "@/components/section/FAQSection";
 import IconAutoScroll from "@/components/section/IconAutoScroll";
-import IntroSection1 from "@/components/section/IntroSection1";
+import IntroSection from "@/components/section/IntroSection1";
 import ParallaxSection from "@/components/section/ParallexSec";
 import ShinningSectionText from "@/components/section/ShinningSectionText";
 import SkillsSection from "@/components/section/SkillsSection";
-import { getAllCaseStudies } from "@/sanity/lib/caseStudy";
+import { getHomePageData, getHomePageSeoData } from "@/sanity/lib/homePage";
+import { urlFor } from "@/sanity/lib/image";
+import { Metadata } from "next";
 
 const icons = [
   "https://framerusercontent.com/images/hqIVsN8SplywoxNsCXdrELqh3Uc.png",
@@ -30,25 +32,53 @@ const icons = [
   "https://framerusercontent.com/images/axEbQrKhpYjJigPMinun2ajkc.png",
 ]
 
-export const revalidate = 3000;
+export const revalidate = 300;
+
+export async function generateMetadata(
+  { params }: { params: { case_study: string } }
+): Promise<Metadata> {
+
+  const seoData = await getHomePageSeoData();
+  console.log(seoData);
+  return {
+    title: seoData?.seo.metaTitle || 'Home',
+    description: seoData?.seo.metaDescription || 'A detailed case study of our work',
+    keywords: seoData?.seo.keywords || '',
+    openGraph: {
+      title: seoData?.seo.metaTitle || 'Home',
+      description: seoData?.seo.metaDescription || 'A detailed case study of our work',
+      images: [{ url: seoData?.seo.ogImage ? urlFor(seoData.seo.ogImage).url() : '' }],
+    },
+  };
+}
+
+
 export default async function Home() {
   
-  const caseStudies = await getAllCaseStudies();
-
+  const homePageData = await getHomePageData();
+  const { heroSection, caseStudiesSection, skillsSection, experienceSection, faqSection } = homePageData;
+  
   return (
     <main className="min-h-screen w-full max-w-[1080px]">
-      <IntroSection1 
-        title="Elevate Your Vision: Where Design Meets Digital Brilliance" 
-        description="Helping startups and brands to craft expressive and engaging solutions for their software needs." 
+      <IntroSection 
+        title={heroSection.heading} 
+        description={heroSection.subheading} 
+        heroImage={heroSection.heroImage}
       />
       <section className="md:pb-8 pb-4 px-6 pt-6 md:pt-8 sm:px-8">
         <IconAutoScroll icons={icons} />
       </section>
       <ShinningSectionText />
-      <ParallaxSection caseStudies={caseStudies} />
+      <ParallaxSection 
+        sectionTitle={caseStudiesSection.sectionTitle}
+        caseStudies={caseStudiesSection.featuredCaseStudies} 
+      />
       <SkillsSection />
       <ExperienceSection />
-      <FAQSection />
+      <FAQSection 
+        sectionTitle={faqSection.sectionTitle}
+        faqItems={faqSection.faqItems}
+      />
     </main>
   );
 }

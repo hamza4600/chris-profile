@@ -2,19 +2,26 @@
 import React from "react";
 import Button from "../Atoms/Button";
 import Image from "next/image";
+import { urlFor } from "@/sanity/lib/image";
 
 interface IntroSection1Props {
   title: string;
   description: string;
+  heroImage: {
+    asset: {
+      url: string;
+    };
+  };
 }
-const IntroSection1 = ({ title, description }: IntroSection1Props) => {
+
+const IntroSection = ({ title, description, heroImage }: IntroSection1Props) => {
   return (
     <div className="pt-6 md:pt-24 md:pb-16 pb-10 px-8 max-w-[1800px] mx-auto">
       <div className="flex flex-col items-center justify-center gap-6 sm:gap-9">
         <div className="flex flex-col gap-6 items-center justify-center relative">
           <div className="w-[90px] h-[90px] mb-4 rounded-full overflow-hidden relative sm:w-[100px] sm:h-[100px]">
             <Image
-              src="/hamza.jpg"
+              src={ urlFor(heroImage).url() }
               alt="Hamza's avatar"
               className="object-cover object-top"
               fill
@@ -44,4 +51,4 @@ const IntroSection1 = ({ title, description }: IntroSection1Props) => {
   );
 };
 
-export default IntroSection1;
+export default IntroSection;
