@@ -3,25 +3,26 @@ import React, { useState} from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const faqData = [
+ 
   {
-    question: "What is the purpose of this website?",
-    answer: "This website is designed to provide information about our company, showcase our products and services, and offer support to our customers.",
+    question: "How do you approach challenging projects?",
+    answer: "Software and solution development can be complex. We are equipped to work using agile, waterfall, or a client-driven development approach, adapting to the unique needs of each project.",
   },
   {
-    question: "How can I contact customer support?",
-    answer: "You can contact our customer support team through various channels: by email at support@ourcompany.com, by phone at 1-800-123-4567, or through the live chat feature on our website during business hours.",
+    question: "How long does it typically take to develop an application?",
+    answer: "The timeline for application development varies based on complexity and features. Simple apps may take weeks, while complex ones can take months or longer.",
+  },
+  // {
+  //   question: "Do you offer custom application development services?",
+  //   answer: "Yes, I specialize in custom application development. We tailor our solutions to meet your unique business needs and objectives.",
+  // },
+  {
+    question: "How does you handle confidentiality and sensitive information?",
+    answer: "We prioritize confidentiality, implementing stringent measures to protect all sensitive information shared with us during the project lifecycle.",
   },
   {
-    question: "What payment methods do you accept?",
-    answer: "We accept a wide range of payment methods, including major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers. For specific regional payment options, please check our payment page or contact our sales team.",
-  },
-  {
-    question: "Are your products environmentally friendly?",
-    answer: "We are committed to sustainability and continuously work on improving our environmental impact. Many of our products are made from recycled or sustainable materials, and we strive to use eco-friendly packaging. Check individual product descriptions for specific environmental certifications.",
-  },
-  {
-    question: "Do you offer discounts for bulk orders?",
-    answer: "Yes, we offer discounts for bulk orders. The discount amount depends on the quantity and type of products ordered. Please contact our sales team at sales@ourcompany.com for a custom quote on your bulk order.",
+    question: "Can you integrate third-party services or APIs into our application?",
+    answer: "Yes, I integrate third-party services, APIs, and data sources to enhance functionality and deliver seamless user experiences.",
   },
 ];
 

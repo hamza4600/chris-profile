@@ -18,7 +18,7 @@ const MainImage = ({ image, title }: { image: string; title: string }) => (
     alt={title}
     width={1000}
     height={529}
-    className="sm:mb-12 mb-8 rounded-2xl md:h-[529px] sm:h-auto sm:object-cover object-contain sm:mt-12 mt-8"
+    className="sm:mb-12 mb-8 rounded-2xl sm:object-cover object-contain sm:mt-12 mt-8 w-full"
   />
 );
 

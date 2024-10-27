@@ -34,7 +34,46 @@ export const caseStudies = [
     ],
     "link": "/work/kjs-auto-hail-repair",
     "tags": ["Automotive Repair", "Service Showcase", "Lead Generation",]
+  },
+  {
+    "industry": "Digital Marketing",
+    "title": "MarketEQ Digital Website",
+    "description": "Developed to position MarketEQ Digital as a leader in data-driven digital marketing solutions. The site features their range of services, case studies, and an intuitive design to increase engagement and conversion.",
+    "image": "/marketing.png",
+    "metrics": [
+      { "title": "Increased Lead Generation", "description": "35%" },
+      { "title": "Improved SEO Ranking", "description": "Top 10 for Target Keywords" }
+    ],
+    "link": "/work/marketeq-digital",
+    "tags": ["Digital Marketing", "Lead Generation", "SEO Optimization"]
+  },
+  {
+    "industry": "Athletic Apparel",
+    "title": "RUDIS E-commerce Store",
+    "description": "RUDIS, a premium wrestling and athletic apparel brand. The site highlights their product catalog, integrates with Shopify for streamlined checkout, and provides a responsive and engaging user experience.",
+    "image": "/rudis.png",
+    "metrics": [
+      { "title": "Increased Sales", "description": "25%" },
+      { "title": "User Engagement", "description": "85% satisfaction rate" }
+    ],
+    "link": "/work/rudis-ecommerce-store",
+    "tags": ["Shopify", "E-commerce", "Product Catalog"]
+  },
+  {
+    "industry": "Healthcare Technology",
+    "title": "MyCaregorithm Website",
+    "description": "MyCaregorithm empowers dementia caregivers with resources, guides, and tools for informed decisions.",
+    "image": "/mycare-lg.jpg",
+    "metrics": [
+      { "title": "User Engagement", "description": "70% increase in user engagement" },
+      { "title": "Resource Access", "description": "60% more frequent visits to resource pages" }
+    ],
+    "link": "/work/mycaregorithm",
+    "tags": ["Healthcare", "Education", "Dementia Care"]
   }
+  
+  
+  
   
   ]
 
