@@ -47,15 +47,15 @@ export { Angular, NodeJs, Apollo, SaaS, Redux, Typescript, Gatsby, ReactJs, Nuxt
 
 // create arrayf of alll with name and component
 const stackIcons = [
-    { name: 'Angular', component: Angular },
+    { name: 'ReactJs', component: ReactJs },
+    { name: 'NextJs', component: NextJs },
     { name: 'NodeJs', component: NodeJs },
     { name: 'Apollo', component: Apollo },
     { name: 'SaaS', component: SaaS },
     { name: 'Redux', component: Redux },
+    { name: 'Angular', component: Angular },
     { name: 'Typescript', component: Typescript },
     { name: 'Gatsby', component: Gatsby },
-    { name: 'ReactJs', component: ReactJs },
     { name: 'Nuxtjs', component: Nuxtjs },
     { name: 'Vue', component: Vue },
-    { name: 'NextJs', component: NextJs },
 ]

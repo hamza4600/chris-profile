@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import localFont from "next/font/local";
 import Footer from "@/components/footer";
 import { Providers } from "./providers";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const hankenGrotesk = Hanken_Grotesk({
   subsets: ["latin"],
@@ -104,6 +105,7 @@ export default function RootLayout({
           </Providers>
         </main>
       </body>
+      <GoogleAnalytics gaId="G-QW2SED8TZZ" />
     </html>
   );
 }

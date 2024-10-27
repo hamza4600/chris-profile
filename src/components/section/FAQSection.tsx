@@ -104,7 +104,7 @@ const FAQAccordion: React.FC<FAQAccordionProps> = ({ item, isActive, onToggle, i
 
 const FAQSection = ({ sectionTitle, faqItems }: { sectionTitle: string, faqItems: FAQItem[] }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  console.log(faqItems);
+
   const handleToggle = (index: number) => {
     setActiveIndex(prevIndex => prevIndex === index ? null : index);
   };
