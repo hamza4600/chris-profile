@@ -26,7 +26,7 @@ export const seoType = defineType({
             fieldset: "seoFields",
         },
         {
-            name: "keywords",
+            name: "keyword",
             title: "Keywords",
             type: "string",
             fieldset: "seoFields",
