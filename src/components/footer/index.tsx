@@ -1,18 +1,27 @@
 import Link from "next/link";
 import Button from "../Atoms/Button";
+import { calendlyUrl } from "@/constants";
 
 const links = [
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/hamza-khan-tanoli-845099205/",
   },
+  // {
+  //   name: "RSS",
+  //   href: "https://hamza-v2.vercel.app/feed.xml",
+  // },
+  {
+    name: "Github",
+    href: "https://github.com/hamza4600",
+  },
   {
     name: "Mail",
     href: "mailto:hkhantanoli@gmail.com",
   },
   {
-    name: "Website",
-    href: "https://hamza-v2.vercel.app/",
+    name: "Sitemap",
+    href: "https://hamza-v2.vercel.app/sitemap.xml",
   },
 ];
 
@@ -31,9 +40,11 @@ const Footer = () => {
               </p>
             </div>
 
-            <Button size="large" className="w-[227px] font-medium">
-              Get Started
-            </Button>
+            <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">
+              <Button size="large" className="w-[227px] font-medium">
+                Get Started
+              </Button>
+            </a>
           </div>
         </div>
       </div>
@@ -53,7 +64,7 @@ const Footer = () => {
         </div>
         <div className="flex gap-4 items-center max-md:w-full max-md:justify-between">
           {links.map((link) => (
-            <Link key={link.name} href={link.href} className="dark:text-white text-black">
+            <Link key={link.name} href={link.href} className="dark:text-white text-black hover:underline">
               {link.name}
             </Link>
           ))}

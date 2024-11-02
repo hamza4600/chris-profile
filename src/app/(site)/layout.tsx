@@ -6,6 +6,7 @@ import localFont from "next/font/local";
 import Footer from "@/components/footer";
 import { Providers } from "./providers";
 import { GoogleAnalytics } from '@next/third-parties/google'
+import type { Viewport } from 'next'
 
 const hankenGrotesk = Hanken_Grotesk({
   subsets: ["latin"],
@@ -15,6 +16,11 @@ const hankenGrotesk = Hanken_Grotesk({
 export const metadata: Metadata = {
   title: "Hamza Khan | Web Developer & Designer",
   description: "Experienced web developer and designer specializing in creating beautiful, responsive, and user-friendly websites. Proficient in React, Next.js, TypeScript, and modern web technologies. Passionate about crafting digital experiences that blend creativity with functionality.",
+  alternates: {
+    types: {
+      'application/rss+xml': 'https://hamza-v2.vercel.app/feed.xml',
+    },
+  },
   keywords: "web developer, web designer, React, Next.js, TypeScript, frontend development, UI/UX design",
   authors: [{ name: "Hamza Khan", url: "https://www.yourwebsite.com" }],
   icons: {
@@ -55,6 +61,15 @@ export const metadata: Metadata = {
     },
   },
 };
+
+ 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  // we have dark and light what to do 
+}
 
 const satoshiVariable = localFont({
   src: [

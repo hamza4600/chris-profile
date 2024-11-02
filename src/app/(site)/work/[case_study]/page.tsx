@@ -7,6 +7,9 @@ import { urlFor } from '@/sanity/lib/image';
 import RichText from './_component/RichText';
 import { redirect } from 'next/navigation';
 import OtherCaseStudies from './_component/OtherCaseStudies';
+import { generateCaseStudySchema } from "@/components/Schema";
+import { authorSchema, organizationSchema } from "@/components/Schema";
+import SchemaOrg from "@/components/Schema/SchemaOrg";
 
 interface SeoData {
   seo: {
@@ -38,7 +41,14 @@ export async function generateMetadata(
 const CaseStudyPage = async (props: { params: { case_study: string } }) => {
 
   const data: any = await getCaseStudyDetailsBySlug(props.params.case_study);
-  const { heroSection, content, image, conclusion, duration, previewLink, otherCaseStudies } = data;
+  const { heroSection, content, image, conclusion, duration, previewLink, otherCaseStudies , seo} = data;
+
+  // Generate schemas
+  const schemas = [
+    generateCaseStudySchema(data),
+    authorSchema,
+    // organizationSchema
+  ]
 
   // if no slug return to home page
   if (!props.params.case_study) {
@@ -53,6 +63,7 @@ const CaseStudyPage = async (props: { params: { case_study: string } }) => {
 
   return (
     <div className="min-h-screen mx-auto max-w-[1080px] px-6 md:px-8 pt-8 sm:pt-16 mb-12">
+      <SchemaOrg schemas={schemas} />
       {
         heroSection && (
           <Header title={heroSection.title} description={heroSection.description} />

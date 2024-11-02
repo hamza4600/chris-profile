@@ -47,6 +47,7 @@ export interface HomePageData {
 
 const homePageQuery = groq`
   *[_type == "homePage"][0] {
+    seo,
     heroSection {
       heading,
       subheading,

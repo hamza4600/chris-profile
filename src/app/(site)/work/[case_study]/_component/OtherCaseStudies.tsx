@@ -30,10 +30,10 @@ const truncateText = (text: string, maxLength: number) => {
 
 const OtherCaseStudies: React.FC<OtherCaseStudiesProps> = ({ otherCaseStudies }) => {
     return (
-        <section className="other-case-studies sm:mt-12 mt-0"
+        <section className="other-case-studies sm:mt-12 mt-8"
           id="other-case-studies"
         >
-          <h2 className="md:text-[38px] sm:text-[28px] text-[24px] leading-[1.4em] dark:text-primary text-black -tracking-[0.5px] mb-8 ">Explore some of our latest projects
+          <h2 className="md:text-[38px] sm:text-[28px] text-[24px] leading-[1.4em] dark:text-primary text-black -tracking-[0.5px] mb-8 capitalize ">Explore latest projects
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {otherCaseStudies.map((caseStudy) => (

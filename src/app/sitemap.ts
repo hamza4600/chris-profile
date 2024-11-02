@@ -9,8 +9,17 @@ async function getBlogPosts() {
   return await client.fetch(query)
 }
 
+
+// get case studies 
+async function getCaseStudies() {
+  const query = `*[_type == "caseStudy"] {
+    slug,
+    _updatedAt
+  }`
+  return await client.fetch(query)
+}
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://yourdomain.com'
+  const baseUrl = 'https://hamza-v2.vercel.app/'
 
   // Get dynamic blog posts
   const posts = await getBlogPosts()
@@ -21,6 +30,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }))
 
+  // get case studies 
+  const caseStudies = await getCaseStudies()
+  const caseStudyRoutes = caseStudies.map((caseStudy: any) => ({
+    url: `${baseUrl}/work/${caseStudy.slug.current}`,
+    lastModified: new Date(caseStudy._updatedAt),
+    changeFrequency: 'monthly' as const,
+    priority: 0.9,
+  }))
+
   // Static routes
   const staticRoutes = [
     {
@@ -29,14 +47,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'weekly' as const,
       priority: 1,
     },
-    {
-      url: `${baseUrl}/services/saas`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
+  
     // ... other static routes ...
   ]
 
-  return [...staticRoutes, ...blogRoutes]
+  return [...staticRoutes, ...blogRoutes, ...caseStudyRoutes]
 }

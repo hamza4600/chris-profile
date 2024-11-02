@@ -4,6 +4,7 @@ import Button from "../Atoms/Button";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
 import HappyClient from "./HappyClient";
+import { calendlyUrl } from "@/constants";
 
 interface IntroSection1Props {
   title: string;
@@ -31,7 +32,7 @@ const IntroSection = ({ title, description, heroImage }: IntroSection1Props) => 
               priority
             />
           </div>
-          <button className="absolute top-[5rem] text-[12px] sm:text-[14px] px-2 py-1 sm:px-3 sm:py-2 dark:bg-secondary bg-primary rounded-md text-primary dark:text-black font-medium font-inter sm:top-[5.5rem]">
+          <button className="absolute top-[5rem] text-[12px] sm:text-[14px] px-2 py-1 dark:bg-secondary bg-primary rounded-md text-primary dark:text-black font-medium font-inter sm:top-[5.5rem]">
             Verified Expert
           </button>
           <div className="flex flex-col gap-6 items-center justify-center max-md:text-center max-w-full sm:max-w-[600px]">
@@ -41,12 +42,17 @@ const IntroSection = ({ title, description, heroImage }: IntroSection1Props) => 
         </div>
         <HappyClient />
         <div className="flex gap-3 items-center flex-row">
-        <Button size="large" className="font-normal text-sm sm:text-base px-3 py-2 sm:px-4 sm:py-3">
-            See my work
-          </Button>
-          <Button size="large" className="font-normal text-sm sm:text-base px-3 py-2 sm:px-4 sm:py-3">
+          {/* it will be work page  */}
+          <a href="/#work"> 
+            <Button size="large" className="font-normal text-sm sm:text-base px-3 py-2 sm:px-4 sm:py-3">
+              See my work
+            </Button>
+          </a>
+          <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">
+            <Button size="large" className="font-normal text-sm sm:text-base px-3 py-2 sm:px-4 sm:py-3">
             Contact me
           </Button>
+          </a>
         </div>
       </div>
     </div>

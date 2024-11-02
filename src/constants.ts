@@ -135,16 +135,18 @@ export const experience = [
     {
         name: "Lead Frontend Developer",
         position: "Black And Black Creative",
-        duration: "Jan 2023 - Dec 2023",
+        duration: "Feb 2023 - Dec 2023",
     },
     {
         name: "Frontend Developer",
         position: "Gubloo Technologies",
-        duration: "Jan 2022 - Dec 2022",
+        duration: "May 2022 - Dec 2022",
     },
     {
         name: "Software Engineer",
         position: "BlocTak Technologies",
-        duration: "Jan 2021 - Dec 2021",
+        duration: "March 2021 - April 2022",
     },
 ]
+
+export const calendlyUrl = "https://calendly.com/hamza4600/30min";

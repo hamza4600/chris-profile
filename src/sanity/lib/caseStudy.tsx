@@ -21,8 +21,10 @@ export const getCaseSeoBySlug = async (slug: string) => {
 
 const caseStudyDetailsQuery = `*[_type == "caseStudy" && slug.current == $slug]{
     heroSection,
+    seo,
     content,
     image,
+    slug,
     conclusion,
     duration,
     previewLink,

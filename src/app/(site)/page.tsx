@@ -1,3 +1,6 @@
+import { generateHomePageSchema } from "@/components/Schema";
+import { authorSchema } from "@/components/Schema";
+import SchemaOrg from "@/components/Schema/SchemaOrg";
 import ExperienceSection from "@/components/section/ExperienceSection";
 import FAQSection from "@/components/section/FAQSection";
 import IconAutoScroll from "@/components/section/IconAutoScroll";
@@ -32,32 +35,38 @@ const icons = [
   "https://framerusercontent.com/images/axEbQrKhpYjJigPMinun2ajkc.png",
 ]
 
-export async function generateMetadata(
-  { params }: { params: { case_study: string } }
-): Promise<Metadata> {
+// export async function generateMetadata(
+//   { params }: { params: { case_study: string } }
+// ): Promise<Metadata> {
 
-  const seoData = await getHomePageSeoData();
+//   const seoData = await getHomePageSeoData();
 
-  return {
-    title: seoData?.seo.metaTitle || 'Home',
-    description: seoData?.seo.metaDescription || 'A detailed case study of our work',
-    keywords: seoData?.seo.keywords || '',
-    openGraph: {
-      title: seoData?.seo.metaTitle || 'Home',
-      description: seoData?.seo.metaDescription || 'A detailed case study of our work',
-      images: [{ url: seoData?.seo.ogImage ? urlFor(seoData.seo.ogImage).url() : '' }],
-    },
-  };
-}
+//   return {
+//     title: seoData?.seo.metaTitle || 'Home',
+//     description: seoData?.seo.metaDescription || 'A detailed case study of our work',
+//     keywords: seoData?.seo.keywords || '',
+//     openGraph: {
+//       title: seoData?.seo.metaTitle || 'Home',
+//       description: seoData?.seo.metaDescription || 'A detailed case study of our work',
+//       images: [{ url: seoData?.seo.ogImage ? urlFor(seoData.seo.ogImage).url() : '' }],
+//     },
+//   };
+// }
 
 
 export default async function Home() {
   
   const homePageData = await getHomePageData();
-  const { heroSection, caseStudiesSection, skillsSection, experienceSection, faqSection } = homePageData;
-  
+  const { heroSection, caseStudiesSection, skillsSection, experienceSection, faqSection} = homePageData;
+
+  const schemas = [
+    generateHomePageSchema(homePageData),
+    authorSchema,
+  ]
+
   return (
     <main className="min-h-screen w-full max-w-[1080px]">
+      <SchemaOrg schemas={schemas} />
       <IntroSection 
         title={heroSection.heading} 
         description={heroSection.subheading} 
