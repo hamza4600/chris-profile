@@ -9,8 +9,6 @@ interface ParallaxItemProps {
     index: number;
   }
   
-  // https://framerusercontent.com/images/8ZlsEfjDITR5nOu3Yn61F22cbg.jpg?scale-down-to=2048
-  
   const ParallaxItem: React.FC<ParallaxItemProps> = ({ children, index }) => {
     const ref = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({

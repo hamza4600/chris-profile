@@ -44,28 +44,8 @@ const Header = ({ title, description }: { title: string; description: string }) 
 };
 
 const MainImage = ({ image, title }: { image: string; title: string }) => {
-  const imageRef = useRef(null);
-
-  useEffect(() => {
-    gsap.fromTo(
-      imageRef.current,
-      { opacity: 0, scale: 0.9 },
-      {
-        opacity: 1,
-        scale: 1,
-        duration: 1,
-        scrollTrigger: {
-          trigger: imageRef.current,
-          start: 'top bottom',
-          toggleActions: 'play none none reverse'
-        }
-      }
-    );
-  }, []);
-
   return (
     <Image
-      ref={imageRef}
       src={image ? urlFor(image)?.url() : ''}
       alt={title}
       width={1000}
@@ -76,28 +56,10 @@ const MainImage = ({ image, title }: { image: string; title: string }) => {
     />
   );
 };
+
 const Conclusion = ({ conclusion }: { conclusion: string }) => {
-  const conclusionRef = useRef(null);
-
-  useEffect(() => {
-    gsap.fromTo(
-      conclusionRef.current,
-      { opacity: 0, y: 50 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: conclusionRef.current,
-          start: 'top bottom',
-          toggleActions: 'play none none reverse'
-        }
-      }
-    );
-  }, []);
-
   return (
-    <div className="mx-auto pb-8 mt-8" ref={conclusionRef}>
+    <div className="mx-auto pb-8 mt-8">
       <h2 className="md:text-[38px] sm:text-[28px] text-[24px] leading-[1.4em] dark:text-primary text-black -tracking-[0.5px] mb-4">
         Conclusion
       </h2>

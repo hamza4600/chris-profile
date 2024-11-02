@@ -8,7 +8,6 @@ import SkillsSection from "@/components/section/SkillsSection";
 import { getHomePageData, getHomePageSeoData } from "@/sanity/lib/homePage";
 import { urlFor } from "@/sanity/lib/image";
 import { Metadata } from "next";
-import ScrollLayout from "./ScollLatout";
 
 const icons = [
   "https://framerusercontent.com/images/hqIVsN8SplywoxNsCXdrELqh3Uc.png",
@@ -32,8 +31,6 @@ const icons = [
   "https://framerusercontent.com/images/UhyrGjyOSvUkVZWBmysfZCg6s4.png",
   "https://framerusercontent.com/images/axEbQrKhpYjJigPMinun2ajkc.png",
 ]
-
-export const revalidate = 300;
 
 export async function generateMetadata(
   { params }: { params: { case_study: string } }
@@ -61,8 +58,6 @@ export default async function Home() {
   
   return (
     <main className="min-h-screen w-full max-w-[1080px]">
-      <ScrollLayout>
-
       <IntroSection 
         title={heroSection.heading} 
         description={heroSection.subheading} 
@@ -82,8 +77,6 @@ export default async function Home() {
         sectionTitle={faqSection.sectionTitle}
         faqItems={faqSection.faqItems}
       />
-      </ScrollLayout>
-
     </main>
   );
 }

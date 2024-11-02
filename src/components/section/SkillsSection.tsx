@@ -13,7 +13,7 @@ const SkillsSection = () => {
           <div
             key={i}
             aria-label={skill.name}
-            className="px-3 py-2 font-medium border border-[#e6e6e6] dark:border-[#ffffff33] rounded-[8px] dark:text-primary text-[#000000]"
+            className="sm:px-3 sm:py-2 px-2 py-2  sm:text-[16px] text-[14px] font-medium border border-[#e6e6e6] dark:border-[#ffffff33] rounded-[8px] dark:text-primary text-[#000000]"
           >
             <p>{skill.name}</p>
           </div>
