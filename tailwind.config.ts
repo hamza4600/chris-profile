@@ -12,29 +12,6 @@ const config: Config = {
       backgroundSize: {
         '300%': '300%',
       },
-      animation: {
-        'shine-text': 'shine-text 3s linear infinite',
-        'spin-slow': 'spin 3s linear infinite',
-        'glow': 'glow 1.5s ease-in-out infinite alternate',
-      },
-      keyframes: {
-        'shine-text': {
-          '0%': { backgroundPosition: '0% 50%' },
-          '100%': { backgroundPosition: '100% 50%' },
-        },
-        shine: {
-          '0%': { left: '-100%' },
-          '100%': { left: '200%' },
-        },
-        'glow': {
-          'from': {
-            boxShadow: '0 0 5px #4338ca, 0 0 10px #4338ca, 0 0 15px #4338ca',
-          },
-          'to': {
-            boxShadow: '0 0 10px #6366f1, 0 0 20px #6366f1, 0 0 30px #6366f1',
-          },
-        },
-      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
@@ -44,8 +21,8 @@ const config: Config = {
         hanken: ["var(--font-hanken-grotesk)", "sans-serif"],
       },
       textColor: {
-        "primary": "rgb(209, 218, 224)",
-        "secondary": "rgb(179, 194, 203)",
+        "primary": "rgb(222, 228, 231)",
+        "secondary": "rgb(213, 213, 213)",
         "tertiary": "#e6e6e6",
         "quaternary": "#0f151f"
       },

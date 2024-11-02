@@ -8,6 +8,7 @@ import SkillsSection from "@/components/section/SkillsSection";
 import { getHomePageData, getHomePageSeoData } from "@/sanity/lib/homePage";
 import { urlFor } from "@/sanity/lib/image";
 import { Metadata } from "next";
+import ScrollLayout from "./ScollLatout";
 
 const icons = [
   "https://framerusercontent.com/images/hqIVsN8SplywoxNsCXdrELqh3Uc.png",
@@ -60,6 +61,8 @@ export default async function Home() {
   
   return (
     <main className="min-h-screen w-full max-w-[1080px]">
+      <ScrollLayout>
+
       <IntroSection 
         title={heroSection.heading} 
         description={heroSection.subheading} 
@@ -79,6 +82,8 @@ export default async function Home() {
         sectionTitle={faqSection.sectionTitle}
         faqItems={faqSection.faqItems}
       />
+      </ScrollLayout>
+
     </main>
   );
 }
