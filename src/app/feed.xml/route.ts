@@ -1,7 +1,7 @@
 import { client } from '@/sanity/lib/client';
 import RSS from 'rss';
 
-const baseUrl = 'https://hamza-v2.vercel.app/'
+const baseUrl = 'https://hamza-v2.vercel.app'
 const feed = new RSS({
     title: 'Hamza',
     description: 'A cool website that everyone should check out!',

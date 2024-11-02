@@ -19,7 +19,7 @@ async function getCaseStudies() {
   return await client.fetch(query)
 }
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://hamza-v2.vercel.app/'
+  const baseUrl = 'https://hamza-v2.vercel.app'
 
   // Get dynamic blog posts
   const posts = await getBlogPosts()

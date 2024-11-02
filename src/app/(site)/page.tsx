@@ -1,16 +1,19 @@
 import { generateHomePageSchema } from "@/components/Schema";
 import { authorSchema } from "@/components/Schema";
 import SchemaOrg from "@/components/Schema/SchemaOrg";
-import ExperienceSection from "@/components/section/ExperienceSection";
-import FAQSection from "@/components/section/FAQSection";
 import IconAutoScroll from "@/components/section/IconAutoScroll";
 import IntroSection from "@/components/section/IntroSection1";
-import ParallaxSection from "@/components/section/ParallexSec";
 import ShinningSectionText from "@/components/section/ShinningSectionText";
-import SkillsSection from "@/components/section/SkillsSection";
 import { getHomePageData, getHomePageSeoData } from "@/sanity/lib/homePage";
-import { urlFor } from "@/sanity/lib/image";
-import { Metadata } from "next";
+
+import dynamic from "next/dynamic";
+const ParallaxSection = dynamic(() => import("@/components/section/ParallexSec"));
+const SkillsSection = dynamic(() => import("@/components/section/SkillsSection"));
+const ExperienceSection = dynamic(() => import("@/components/section/ExperienceSection"));
+const FAQSection = dynamic(() => import("@/components/section/FAQSection"));
+
+// import { urlFor } from "@/sanity/lib/image";
+// import { Metadata } from "next";
 
 const icons = [
   "https://framerusercontent.com/images/hqIVsN8SplywoxNsCXdrELqh3Uc.png",

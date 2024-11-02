@@ -1,6 +1,5 @@
 ## Remains in the App 
-
-Added Content fro Case Study  
+  
 AI tools and services 
 
 Setting MInor UI Ux points 
@@ -11,9 +10,7 @@ eye catching stores
 all external links 
 All Case Studies 
 
-
-Deploy it on domain 
-Adding Clanderly for meeting 
+Deploy it on domain  
 Adding Form for clients 
 
 https://hawk-style.com/en/presentations-for-services-and-products/
@@ -42,3 +39,14 @@ Added for better SEO
 /icon
 /LDA for all pages 
 
+## Todo Pages 
+/work page 
+/blog
+/blog/slug
+/category
+/services
+
+## Adding all constant on one file 
+## Adding Best SEO 
+## SEO Audit 
+## Adding all images locally 

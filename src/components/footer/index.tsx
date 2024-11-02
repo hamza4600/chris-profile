@@ -7,10 +7,6 @@ const links = [
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/hamza-khan-tanoli-845099205/",
   },
-  // {
-  //   name: "RSS",
-  //   href: "https://hamza-v2.vercel.app/feed.xml",
-  // },
   {
     name: "Github",
     href: "https://github.com/hamza4600",
@@ -22,6 +18,10 @@ const links = [
   {
     name: "Sitemap",
     href: "https://hamza-v2.vercel.app/sitemap.xml",
+  },
+  {
+    name: "RSS",
+    href: "https://hamza-v2.vercel.app/feed.xml",
   },
 ];
 
