@@ -3,6 +3,7 @@ import React from "react";
 import Button from "../Atoms/Button";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
+import HappyClient from "./HappyClient";
 
 interface IntroSection1Props {
   title: string;
@@ -38,9 +39,10 @@ const IntroSection = ({ title, description, heroImage }: IntroSection1Props) => 
             <p className="text-[18px] sm:text-2xl dark:text-secondary text-quaternary text-center max-w-full sm:max-w-[500px]">{description}</p>
           </div>
         </div>
+        <HappyClient />
         <div className="flex gap-3 items-center flex-row">
         <Button size="large" className="font-normal text-sm sm:text-base px-3 py-2 sm:px-4 sm:py-3">
-            Download CV
+            See my work
           </Button>
           <Button size="large" className="font-normal text-sm sm:text-base px-3 py-2 sm:px-4 sm:py-3">
             Contact me

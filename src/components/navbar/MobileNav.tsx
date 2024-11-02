@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "../Atoms/Button";
 import { links } from "../../constants";
+import { GetInTouch } from "./DesktopNav";
 
 const MobileNav: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -75,9 +76,7 @@ const MobileNav: React.FC = () => {
                   </span>
                 </Link>
               ))}
-              <Button size="medium">
-                Get in Touch
-              </Button>
+              <GetInTouch />
             </nav>
           </motion.div>
         )}

@@ -1,20 +1,56 @@
-import React from 'react'
+'use client'
+
+import React, { useRef, useState } from 'react'
 import { links } from '../../constants'
-import Link from 'next/link'
-import Button from '../Atoms/Button'
-import { motion } from 'framer-motion'
+import NavItem from './navItem'
+
+export const GetInTouch = () => {
+  return (
+    <a
+      href="mailto:hello@mattrothenberg.com"
+      className="text-[16px] dark:text-white text-black dark:bg-[hsla(0,0%,10%,1)] leading-[1em] ml-1 relative hover:bg-gray-100 dark:hover:bg-[hsla(0,0%,13%,1)] dark:hover:text-white rounded-full px-4 py-3 border border-gray-200 dark:border-gray-800  cursor-pointer flex items-center gap-2 group bg-transparent "
+    >
+      {/* light small green dot  */}
+      <div className="w-[6px] h-[6px] bg-green-500 rounded-full"></div>
+      <span className="relative z-10">Let&apos;s Talk</span>
+    </a>
+  )
+}
 
 const DesktopNav = () => {
+  const [selected, setSelected] = useState<number | -1>(-1)
+  const timeoutRef = useRef<number | null>(null)
+
+
+  const handleMouseEnter = (index: number) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current)
+    }
+    setSelected(index)
+  }
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = window.setTimeout(() => {
+      setSelected(-1)
+    }, 200)
+  }
+
   return (
     <div className="flex gap-1 max-lg:hidden items-center">
-      {links.map((link) => (
-        <Link key={link.name} href={link.href} className="text-black text-[18px] px-3 py-4 font-medium dark:text-primary leading-[1em] hover:bg-gray-100 dark:hover:bg-[hsla(0,0%,10%,1)] rounded-md">
-          {link.name}
-        </Link>
-      ))}
-      <Button size="large" className="text-[16px] dark:text-white text-black dark:bg-transparent leading-[1em] ml-1">
-        Get in Touch
-      </Button>
+      {links.map((link) => {
+        const isSelected = selected === link.id
+        return (
+          <NavItem
+            key={link.id}
+            name={link.name}
+            path={link.href}
+            selected={isSelected}
+            onMouseEnter={() => handleMouseEnter(link.id)}
+            onMouseLeave={handleMouseLeave}
+          />
+        )
+      })}
+      <GetInTouch />
     </div>
   )
 }

@@ -39,7 +39,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
 
   const seoData = await getHomePageSeoData();
-  console.log(seoData);
+
   return {
     title: seoData?.seo.metaTitle || 'Home',
     description: seoData?.seo.metaDescription || 'A detailed case study of our work',

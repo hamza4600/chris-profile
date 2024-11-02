@@ -1,15 +1,15 @@
 import React from "react";
-import { skills } from "@/constants";
+import { services, skills } from "@/constants";
 
 const SkillsSection = () => {
   return (
     <section id="skills" className="md:pb-20 w-full pt-8 md:mt-20 max-w-[1080px] mx-auto px-4 sm:px-8 pb-8 ">
     <div className="flex flex-col sm:gap-12 gap-8 max-md:items-center max-md:justify-center">
       <h1 className="dark:text-primary text-[#000000] md:text-[38px] text-[30px] leading-[1.2em] -tracking-[0.5px]">
-        Skills
+        Services
       </h1>
       <div className="flex gap-3 flex-wrap max-md:justify-center">
-        {skills.map((skill, i) => (
+        {services.map((skill, i) => (
           <div
             key={i}
             aria-label={skill.name}
