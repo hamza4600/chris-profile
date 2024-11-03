@@ -20,11 +20,16 @@ const links = [
     name: "Sitemap",
     href: "https://hamza-v2.vercel.app/sitemap.xml",
   },
-  // {
-  //   name: "RSS",
-  //   href: "https://hamza-v2.vercel.app/feed.xml",
-  // },
 ];
+
+const WorkWithMe = () => {
+  return (
+    <div className="flex items-center gap-2 border-gray-200 dark:border-gray-800  cursor-pointer  border rounded-full px-3 py-2">
+        <div className="animate-pulse-green w-2 h-2 scale-100 rounded-full bg-[rgb(120,227,122)]" title="Open for work"></div>
+      <p className="max-md:text-center max-md:w-full">Open for work</p>
+    </div>
+  )
+}
 
 const Footer = () => {
   return (
@@ -50,18 +55,11 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex items-start max-md:flex-col max-md:gap-8 max-md:text-[12px] justify-between dark:text-white text-black">
-        <div className="flex sm:flex-col flex-row sm:gap-4 gap-2 items-center justify-between sm:w-auto w-full">
+        <div className="flex sm:gap-4 gap-2 items-center justify-between sm:w-auto w-full">
           <p>Hamza Khan ©
             <span className="font-bold ml-1">2024</span>
           </p>
-          <div className="flex items-center gap-2">
-            <div
-              className="animate-blink"
-            >
-              <div className="w-3 h-3 rounded-full bg-[rgb(120,227,122)]" title="Open for work"></div>
-            </div>
-            <p className="max-md:text-center max-md:w-full">Open for work</p>
-          </div>
+          <WorkWithMe />
         </div>
         <div className="flex gap-4 items-center max-md:w-full max-md:justify-between">
           {links.map((link) => (
@@ -70,7 +68,7 @@ const Footer = () => {
             </Link>
           ))}
           <a href="/feed.xml" target="_blank" rel="noopener noreferrer">
-          <Rss />
+            <Rss />
           </a>
         </div>
       </div>

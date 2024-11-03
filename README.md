@@ -13,22 +13,17 @@ All Case Studies
 Deploy it on domain  
 Adding Form for clients 
 
-https://hawk-style.com/en/presentations-for-services-and-products/
 SaaS
 Real Estate
 AI & Web3
-
-Sanity fro Blogs 
-Add more content 
+Legal and Law 
 
 content should be in the wat like we can tell all about us and easy what we want to target and waht we want to get Client , Industries 
-
 
 in LDA we will add SEO same in with title , descritpion and img or separte section fot it in future 
 
 in the feed.xml I am using herossection also 
 adding data in constalts like all socila links and urls
-
 
 Added for better SEO
 /sitemap.xml
@@ -44,7 +39,11 @@ Added for better SEO
 /blog
 /blog/slug
 /category
+
+## Next Phase Todos 
+/testimonoals
 /services
+
 
 ## Adding all constant on one file 
 ## Adding Best SEO 
@@ -54,4 +53,5 @@ Added for better SEO
 Ai genarted testimonial 
 
 https://gublootech.com/testimonials
-https://commerce-ui.com/
+https://commerce-ui.com/.
+https://hawk-style.com/en/presentations-for-services-and-products/

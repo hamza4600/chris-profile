@@ -9,6 +9,25 @@ const config: Config = {
   darkMode: 'class',
   theme: {
     extend: {
+      keyframes: {
+        'pulse-green': {
+          '0%': {
+            transform: 'scale(0.95)',
+            boxShadow: '0 0 0 0 rgba(27, 198, 81, 0.7)',
+          },
+          '70%': {
+            transform: 'scale(1)',
+            boxShadow: '0 0 0 8px rgba(27, 198, 81, 0)',
+          },
+          '100%': {
+            transform: 'scale(0.95)',
+            boxShadow: '0 0 0 0 rgba(27, 198, 81, 0)',
+          },
+        },
+      },
+      animation: {
+        'pulse-green': 'pulse-green 1.6s ease infinite',
+      },
       backgroundSize: {
         '300%': '300%',
       },
