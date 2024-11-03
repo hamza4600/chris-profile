@@ -20,6 +20,8 @@ interface SeoData {
   };
 }
 
+// revalidate 60
+// export const revalidate = 600;
 export async function generateMetadata(
   { params }: { params: { case_study: string } }
 ): Promise<Metadata> {
