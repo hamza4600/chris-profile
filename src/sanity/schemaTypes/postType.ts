@@ -8,6 +8,11 @@ export const postType = defineType({
   icon: DocumentTextIcon,
   fields: [
     defineField({
+      name: 'seo',
+      title: 'SEO',
+      type: 'seo',
+    }),
+    defineField({
       name: 'title',
       type: 'string',
     }),

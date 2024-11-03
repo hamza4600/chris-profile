@@ -22,6 +22,7 @@
     "next-themes": "^0.3.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-share-kit": "^1.1.0",
     "rss": "^1.2.2",
     "sanity": "^3.62.2",
     "schema-dts": "^1.1.2",

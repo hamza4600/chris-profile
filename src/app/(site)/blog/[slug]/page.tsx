@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+import React from 'react'
 import Image from 'next/image'
 import { PortableText } from '@portabletext/react'
 import { CalendarDays, Clock, ArrowLeft } from 'lucide-react'
@@ -15,7 +17,44 @@ const post = {
   },
   mainImage: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069&auto=format&fit=crop",
   content: [
-    // Your Portable Text content will go here
+    {
+      _type: 'block',
+      style: 'h1',
+      children: [
+        {
+          _type: 'span',
+          text: 'Hello'
+        }
+      ]
+    },
+    {
+      _type: 'block',
+      style: 'normal',
+      children: [
+        {
+          _type: 'span',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        }
+      ]
+    },
+    {
+      _type: 'block',
+      style: 'normal',
+      markDefs: [
+        {
+          _key: '123',
+          _type: 'link',
+          href: 'https://www.google.com'
+        }
+      ],
+      children: [
+        {
+          _type: 'span',
+          text: 'Google',
+          marks: ['123']
+        }
+      ]
+    }
   ],
   tags: ["Web Development", "Next.js", "React", "TypeScript"]
 }
@@ -26,7 +65,7 @@ export default function BlogPost() {
       {/* Back Button */}
       <Link 
         href="/blog" 
-        className="inline-flex items-center text-primary hover:text-primary/80 mb-8 group"
+        className="inline-flex items-center dark:text-primary text-black dark:hover:text-primary/80 hover:text-black/80 font-medium mb-8 group"
       >
         <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
         Back to Blog
@@ -34,11 +73,11 @@ export default function BlogPost() {
 
       {/* Header */}
       <header className="mb-8">
-        <h1 className="text-4xl font-bold mb-4 dark:text-white text-black">
+        <h1 className="md:text-[38px] leading-[1.2em] tracking-[-0.7px] font-normal text-[30px] dark:text-primary text-black mb-4">
           {post.title}
         </h1>
 
-        <div className="flex items-center gap-6 text-muted-foreground mb-6">
+        <div className="flex items-center font-normal gap-6 dark:text-secondary text-black mb-6">
           <div className="flex items-center gap-2">
             <CalendarDays className="w-4 h-4" />
             <time>
@@ -65,8 +104,8 @@ export default function BlogPost() {
             className="rounded-full"
           />
           <div>
-            <div className="font-medium">{post.author.name}</div>
-            <div className="text-sm text-muted-foreground">{post.author.role}</div>
+            <div className="font-medium dark:text-primary text-black">{post.author.name}</div>
+            <div className="text-sm dark:text-secondary text-black">{post.author.role}</div>
           </div>
         </div>
       </header>
@@ -85,9 +124,8 @@ export default function BlogPost() {
         <PortableText 
           value={post.content}
           components={{
-            // Customize your Portable Text components here
             types: {
-              image: ({value}) => (
+              image: ({value}: {value: {url: string, alt: string}}) => (
                 <div className="relative aspect-video my-8">
                   <Image
                     src={value.url}
@@ -98,8 +136,23 @@ export default function BlogPost() {
                 </div>
               ),
             },
+            block: {
+              normal: ({children}: {children: React.ReactNode}) => (
+                <p className="mb-4 text-black dark:text-primary">{children}</p>
+              ),
+              h1: ({children}: {children: React.ReactNode}) => (
+                <h1 className="md:text-[38px] leading-[1.2em] tracking-[-0.7px] font-normal text-[30px] dark:text-primary text-black mb-4">
+                  {children}
+                </h1>
+              ),
+              h2: ({children}: {children: React.ReactNode}) => (
+                <h2 className="text-xl font-bold mb-4 text-black dark:text-primary">
+                  {children}
+                </h2>
+              ),
+            },
             marks: {
-              link: ({children, value}) => (
+              link: ({children, value}: {children: React.ReactNode, value: {href: string}}) => (
                 <a href={value.href} className="text-primary hover:underline">
                   {children}
                 </a>
@@ -111,7 +164,7 @@ export default function BlogPost() {
 
       {/* Tags */}
       <div className="mt-8 pt-8 border-t">
-        <h2 className="text-lg font-semibold mb-4">Tags</h2>
+        <h2 className="text-[24px] md:text-[28px] leading-[1.2em] tracking-[-0.5px] mb-4 dark:text-primary text-black">Tags</h2>
         <div className="flex flex-wrap gap-2">
           {post.tags.map((tag) => (
             <span 
