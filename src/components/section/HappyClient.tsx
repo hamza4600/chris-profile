@@ -3,19 +3,19 @@ import React from 'react';
 const HappyClient: React.FC = () => {
   const avatars = [
     {
-      src: "https://framerusercontent.com/images/jT8JEDUL0r0ZTJ5sXKEgqXxmU.jpg",
+      src: "/client1.avif",
       alt: "Client 1"
     },
     {
-      src: "https://framerusercontent.com/images/cOuxfQBnoLuVovLZXpfqtZGwY.jpg",
+      src: "/client2.avif",
       alt: "Client 2"
     },
     {
-      src: "https://framerusercontent.com/images/aDtE3OizHT7ZTfAIIitzJnbvc.jpg",
+      src: "/client3.avif",
       alt: "Client 3"
     },
     {
-      src: "https://framerusercontent.com/images/1ZiNllOUv0sM2mv68Xrr4VbiAio.jpg",
+      src: "/client4.avif",
       alt: "Client 4"
     }
   ];
@@ -33,7 +33,7 @@ const HappyClient: React.FC = () => {
               alt={avatar.alt}
               className="w-full h-full object-cover"
               decoding="async"
-              />
+            />
           </div>
         ))}
       </div>

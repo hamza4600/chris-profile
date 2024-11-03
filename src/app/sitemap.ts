@@ -18,6 +18,7 @@ async function getCaseStudies() {
   }`
   return await client.fetch(query)
 }
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://hamza-v2.vercel.app'
 

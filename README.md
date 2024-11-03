@@ -49,4 +49,9 @@ Added for better SEO
 ## Adding all constant on one file 
 ## Adding Best SEO 
 ## SEO Audit 
-## Adding all images locally 
+## Adding all images locally
+
+Ai genarted testimonial 
+
+https://gublootech.com/testimonials
+https://commerce-ui.com/

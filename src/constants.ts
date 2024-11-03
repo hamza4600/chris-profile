@@ -77,13 +77,10 @@ export const services = [
         name: "Backend Development",
     },
     {
-        name: "App Development",
+        name: "AI SaaS",
     },
     {
-        name: "CI/CD",
-    },
-    {
-        name: "Cloud Hosting",
+        name: "Web3 Solutions",
     },
     {
         name: "Webflow",

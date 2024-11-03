@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Button from "../Atoms/Button";
 import { calendlyUrl } from "@/constants";
+import { Rss } from "@/icons/icons";
 
 const links = [
   {
@@ -19,10 +20,10 @@ const links = [
     name: "Sitemap",
     href: "https://hamza-v2.vercel.app/sitemap.xml",
   },
-  {
-    name: "RSS",
-    href: "https://hamza-v2.vercel.app/feed.xml",
-  },
+  // {
+  //   name: "RSS",
+  //   href: "https://hamza-v2.vercel.app/feed.xml",
+  // },
 ];
 
 const Footer = () => {
@@ -68,6 +69,9 @@ const Footer = () => {
               {link.name}
             </Link>
           ))}
+          <a href="/feed.xml" target="_blank" rel="noopener noreferrer">
+          <Rss />
+          </a>
         </div>
       </div>
     </footer>

@@ -3,13 +3,16 @@ import RSS from 'rss';
 
 const baseUrl = 'https://hamza-v2.vercel.app'
 const feed = new RSS({
-    title: 'Hamza',
-    description: 'A cool website that everyone should check out!',
+    title: 'Hamza Khan | Full Stack Developer & Designer',
+    description: 'A cool website that everyone should check out !',
     site_url: baseUrl,
     feed_url: `${baseUrl}/feed.xml`,
-    copyright: `${new Date().getFullYear()} Hamza`,
+    copyright: `${new Date().getFullYear()} Hamza Khan | Full Stack Developer & Designer (hamza4600)`,
     language: 'en',
     pubDate: new Date(),
+    custom_namespaces: {
+        'atom': 'http://www.w3.org/2005/Atom'
+    }
 });
 
 // get case studies 
@@ -29,7 +32,7 @@ export async function GET() {
             title: caseStudy.heroSection.title,
             description: caseStudy.heroSection.description,
             url: `${baseUrl}/work/${caseStudy.slug.current}`,
-            date: new Date(caseStudy._updatedAt),
+            date: new Date(caseStudy._updatedAt),   
         })
     })
     
@@ -37,7 +40,7 @@ export async function GET() {
 
     return new Response(feed.xml({ indent: true }), {
         headers: {
-          'Content-Type': 'application/atom+xml; charset=utf-8',
+           "Content-Type": "text/xml"  // Changed from application/atom+xml
         },
-      });
-  }
+    });
+}

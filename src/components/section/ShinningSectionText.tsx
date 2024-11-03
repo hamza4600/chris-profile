@@ -22,8 +22,8 @@ const ShinningSectionText = () => {
   return (
     <div className={styles.container}>
       <span>Full Stack Developer specializing in</span>
-      <ShiningText text="Next.js" />
-      <ShiningText text="Node.js" />
+      <ShiningText text="AI SaaS" />
+      <ShiningText text="Web3" />
       <span>and</span>
       <ShiningText text="E-commerce" />
 
