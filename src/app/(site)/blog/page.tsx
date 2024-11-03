@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
-import Image from 'next/image'
 
 // Dummy data
 const blogs = [
@@ -39,8 +39,8 @@ export default function BlogPage() {
   return (
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-primary mb-4">Blog</h1>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
+        <h1 className="md:text-[38px] leading-[1.2em] tracking-[-0.7px] font-normal text-[30px] dark:text-primary text-black mb-4">Blog</h1>
+        <p className="dark:text-secondary text-black max-w-2xl md:text-2xl text-[18px] leading-[1.2em] tracking-[-0.5px] mx-auto">
           Insights, thoughts, and discoveries about web development, design, and technology.
         </p>
       </div>
@@ -50,38 +50,42 @@ export default function BlogPage() {
           <Link 
             href={`/blog/${post.slug}`} 
             key={post.id}
-            className="group"
+            className="group flex"
           >
-            <article className="bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="relative h-48 w-full">
+            <article className="flex flex-col bg-white dark:bg-zinc-900/50 rounded-lg w-full overflow-hidden 
+              shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] 
+              dark:shadow-[0_2px_15px_-3px_rgba(0,0,0,0.2),0_10px_20px_-2px_rgba(0,0,0,0.15)] 
+              hover:shadow-[0_8px_17px_-4px_rgba(0,0,0,0.1),0_16px_24px_-2px_rgba(0,0,0,0.06)] 
+              dark:hover:shadow-[0_8px_17px_-4px_rgba(0,0,0,0.3),0_16px_24px_-2px_rgba(0,0,0,0.25)] 
+              transition-shadow duration-300 border border-zinc-200 dark:border-zinc-800">
+              <div className="relative aspect-video w-full overflow-hidden">
                 <img
                   src={post.image}
                   alt={post.title}
-                //   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               
-              <div className="p-6">
+              <div className="flex flex-col flex-grow p-6">
                 <div className="flex items-center gap-4 mb-3">
-                  <span className="text-sm px-3 py-1 bg-primary/10 text-primary rounded-full">
+                  <span className="text-sm px-3 py-1 dark:bg-white/50 font-medium bg-primary text-primary rounded-full">
                     {post.category}
                   </span>
-                  <span className="text-sm text-muted-foreground">
+                  <span className="text-sm dark:text-secondary font-medium text-black">
                     {post.readTime}
                   </span>
                 </div>
 
-                <h2 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                <h2 className="text-xl font-semibold mb-2 dark:text-primary text-black transition-colors">
                   {post.title}
                 </h2>
 
-                <p className="text-muted-foreground line-clamp-2 mb-4">
+                <p className="dark:text-secondary text-black line-clamp-2 mb-4">
                   {post.excerpt}
                 </p>
 
-                <div className="flex items-center justify-between">
-                  <time className="text-sm text-muted-foreground">
+                <div className="flex items-center justify-between mt-auto">
+                  <time className="text-sm dark:text-secondary text-black font-medium">
                     {new Date(post.date).toLocaleDateString('en-US', {
                       year: 'numeric',
                       month: 'long',
@@ -89,7 +93,7 @@ export default function BlogPage() {
                     })}
                   </time>
                   
-                  <span className="text-primary font-medium group-hover:translate-x-1 transition-transform duration-200">
+                  <span className="dark:text-secondary text-black font-medium group-hover:translate-x-1 transition-transform duration-200">
                     Read more →
                   </span>
                 </div>
