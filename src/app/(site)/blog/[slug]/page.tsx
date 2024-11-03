@@ -136,6 +136,7 @@ export default function BlogPost() {
                 </div>
               ),
             },
+            // ... existing code ...
             block: {
               normal: ({children}: {children: React.ReactNode}) => (
                 <p className="mb-4 text-black dark:text-primary">{children}</p>
@@ -150,14 +151,15 @@ export default function BlogPost() {
                   {children}
                 </h2>
               ),
-            },
+            } as Record<string, any>,
             marks: {
-              link: ({children, value}: {children: React.ReactNode, value: {href: string}}) => (
+              link: ({children, value}: {children: React.ReactNode, value: any}) => (
                 <a href={value.href} className="text-primary hover:underline">
                   {children}
                 </a>
               ),
-            },
+            } as Record<string, any>,
+// ... existing code ...
           }}
         />
       </div>
