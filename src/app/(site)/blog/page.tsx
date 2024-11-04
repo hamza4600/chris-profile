@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { getAllBlogPosts } from '@/sanity/lib/blog';
 import Link from 'next/link'
 
 // Dummy data
@@ -35,7 +36,11 @@ const blogs = [
   },
 ] as const;
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  
+  const blogPosts = await getAllBlogPosts();
+  console.log(blogPosts);
+  
   return (
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="text-center mb-12">

@@ -28,6 +28,26 @@ export const postType = defineType({
       type: 'reference',
       to: {type: 'author'},
     }),
+    // time to read
+    defineField({
+      name: 'timeToRead',
+      type: 'number',
+      description: 'Time to read in minutes',
+    }),
+    
+    // card realted data like title, description, image, tags, categories, publishedAt
+    defineField({
+      name: 'cardData',
+      type: 'object',
+      description: 'Card data for the post used on the blog page',
+      fields: [
+        defineField({name: 'title', type: 'string'}),
+        defineField({name: 'description', type: 'text'}),
+        defineField({name: 'image', type: 'image'}),
+        defineField({name: 'categories', type: 'array', of: [{type: 'reference', to: {type: 'category'}}]}),
+      ],
+    }),
+
     defineField({
       name: 'mainImage',
       type: 'image',
@@ -54,6 +74,24 @@ export const postType = defineType({
     defineField({
       name: 'body',
       type: 'blockContent',
+    }),
+    // // tags
+    // defineField({
+    //   name: 'tags',
+    //   type: 'array',
+    //   of: [{type: 'string'}],
+    // }),
+    //related categories
+    defineField({
+      name: 'relatedCategories',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'category'}}],
+    }),
+    // related posts
+    defineField({
+      name: 'relatedPosts',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'post'}}],
     }),
   ],
   preview: {

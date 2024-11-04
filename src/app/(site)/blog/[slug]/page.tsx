@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { PortableText } from '@portabletext/react'
 import { CalendarDays, Clock, ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
+import { getBlogPostBySlug } from '@/sanity/lib/blog'
 
 // Dummy data - replace with your actual data fetching logic
 const post = {
@@ -59,7 +60,15 @@ const post = {
   tags: ["Web Development", "Next.js", "React", "TypeScript"]
 }
 
-export default function BlogPost() {
+export default async function BlogPost({ params }: { params: { slug: string } }) {
+  const blogPost = await getBlogPostBySlug(params.slug);
+
+  if (!blogPost) {
+    return <div>Blog post not found</div>;
+  }
+
+  console.log(blogPost);
+
   return (
     <article className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
       {/* Back Button */}
