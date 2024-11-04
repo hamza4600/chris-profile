@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { getAllBlogPosts } from '@/sanity/lib/blog';
+import { urlFor } from '@/sanity/lib/image';
 import Link from 'next/link'
 
 // Dummy data
@@ -39,7 +40,6 @@ const blogs = [
 export default async function BlogPage() {
   
   const blogPosts = await getAllBlogPosts();
-  console.log(blogPosts);
   
   return (
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -51,10 +51,10 @@ export default async function BlogPage() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {blogs.map((post) => (
+        {blogPosts.map((post: any, i: number) => (
           <Link 
-            href={`/blog/${post.slug}`} 
-            key={post.id}
+            href={`/blog/${post?.slug?.current}`} 
+            key={i}
             className="group flex"
           >
             <article className="flex flex-col bg-white dark:bg-zinc-900/50 rounded-lg w-full overflow-hidden 
@@ -65,8 +65,8 @@ export default async function BlogPage() {
               transition-shadow duration-300 border border-zinc-200 dark:border-zinc-800">
               <div className="relative aspect-video w-full overflow-hidden">
                 <img
-                  src={post.image}
-                  alt={post.title}
+                  src={urlFor(post?.cardData?.image?.asset?._ref).url()}
+                  alt={post?.cardData?.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -74,24 +74,24 @@ export default async function BlogPage() {
               <div className="flex flex-col flex-grow p-6">
                 <div className="flex items-center gap-4 mb-3">
                   <span className="text-sm px-3 py-1 dark:bg-white/50 font-medium bg-primary text-primary rounded-full">
-                    {post.category}
+                    {post?.cardData?.categories[0]?.title}
                   </span>
                   <span className="text-sm dark:text-secondary font-medium text-black">
-                    {post.readTime}
+                    {post?.timeToRead} min
                   </span>
                 </div>
 
                 <h2 className="text-xl font-semibold mb-2 dark:text-primary text-black transition-colors">
-                  {post.title}
+                  {post?.cardData?.title}
                 </h2>
 
                 <p className="dark:text-secondary text-black line-clamp-2 mb-4">
-                  {post.excerpt}
+                  {post?.cardData?.description}
                 </p>
 
                 <div className="flex items-center justify-between mt-auto">
                   <time className="text-sm dark:text-secondary text-black font-medium">
-                    {new Date(post.date).toLocaleDateString('en-US', {
+                    {new Date(post?.publishedAt).toLocaleDateString('en-US', {
                       year: 'numeric',
                       month: 'long',
                       day: 'numeric'
