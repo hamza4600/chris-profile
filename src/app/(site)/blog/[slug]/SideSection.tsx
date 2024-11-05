@@ -46,23 +46,23 @@ const topics = [
 
 export default function SideSection() {
   return (
-    <aside className="space-y-8">
+    <aside className="space-y-8 font-satoshi">
       {/* Recent Posts Section */}
-      <section className="border p-4 rounded-xl border-gray-200 dark:border-gray-800 pb-8">
-        <h2 className="text-xl font-semibold mb-4 dark:text-primary text-black">Recent Posts</h2>
-        <div className="space-y-4">
+      <section className="border md:p-8 p-4 rounded-xl border-gray-200 dark:border-gray-800 pb-8">
+        <h2 className="text-[22px] leading-[30px] font-semibold mb-4 dark:text-primary text-black">Recent Posts</h2>
+        <div className="space-y-6">
           {recentPosts.map(post => (
             <div key={post.id} className="flex items-center gap-3">
-              <div className="relative w-10 h-10 rounded-full overflow-hidden bg-secondary">
+              <div className="relative h-12 w-12 rounded-full overflow-hidden bg-secondary">
                 <img 
                   src={post.author.image} 
                   alt={post.author.name}
-                  className="object-cover h-10 w-10"
+                  className="object-cover h-12 w-12"
                 />
               </div>
               <div>
                 <h3 className="text-sm font-medium dark:text-primary text-black">{post.title}</h3>
-                <p className="text-xs dark:text-secondary text-black">{post.date}</p>
+                <p className="text-xs dark:text-secondary text-black mt-2">{post.author.name} {post.date}</p>
               </div>
             </div>
           ))}
@@ -70,13 +70,13 @@ export default function SideSection() {
       </section>
 
       {/* Explore Topics Section */}
-      <section className="border p-4 rounded-xl border-gray-200 dark:border-gray-800 pb-8">
-        <h2 className="text-xl font-semibold mb-4 dark:text-primary text-black">Explore Topics</h2>
-        <div className="space-y-2">
+      <section className="border md:p-8 p-4 rounded-xl border-gray-200 dark:border-gray-800 pb-8">
+        <h2 className="text-[22px] leading-[30px] font-semibold mb-4 dark:text-primary text-black">Explore Topics</h2>
+        <div className="space-y-6 mt-10">
           {topics.map(topic => (
             <div key={topic.name} className="flex items-center justify-between">
-              <span className="text-sm capitalize dark:text-primary text-black">{topic.name}</span>
-              <span className="w-6 h-6 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs flex items-center justify-center">
+              <span className="text-sm capitalize dark:text-primary text-gray-600">{topic.name}</span>
+              <span className="w-6 h-6 rounded-full border border-gray-300 dark:border-gray-700 text-gray-200 text-xs flex items-center justify-center">
                 {topic.count}
               </span>
             </div>
