@@ -7,6 +7,8 @@ import Link from 'next/link'
 import { getBlogPostBySlug } from '@/sanity/lib/blog'
 import SideSection from './SideSection'
 import { urlFor } from '@/sanity/lib/image'
+import { TwitterShare, LinkedinShare} from "react-share-kit"
+import ShareLinks from './ShareLinks'
 
 // Dummy data - replace with your actual data fetching logic
 const post = {
@@ -235,18 +237,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
           </div>
 
           {/* Share Links */}
-          <div className="mt-8 pt-8 border-t">
-            <h2 className="text-lg font-semibold mb-4">Share this article</h2>
-            <div className="flex gap-4">
-              <button className="p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors">
-                <TwitterIcon className="w-5 h-5" />
-              </button>
-              <button className="p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors">
-                <LinkedInIcon className="w-5 h-5" />
-              </button>
-              {/* Add more social share buttons as needed */}
-            </div>
-          </div>
+          <ShareLinks blogPost={params?.slug} />
         </article>
 
         {/* Side Section */}
