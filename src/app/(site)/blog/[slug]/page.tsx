@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import Image from 'next/image'
-import { PortableText } from '@portabletext/react'
+import { PortableText, PortableTextBlock, PortableTextComponentProps, PortableTextMarkComponentProps } from '@portabletext/react'
 import { CalendarDays, Clock, ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
 import { getBlogPostBySlug } from '@/sanity/lib/blog'
@@ -64,6 +64,8 @@ const post = {
   tags: ["Web Development", "Next.js", "React", "TypeScript"],
 };
 
+export const revalidate = 0;
+
 export default async function BlogPost({ params }: { params: { slug: string } }) {
   let blogPost = await getBlogPostBySlug(params.slug);
 
@@ -74,7 +76,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
   blogPost = blogPost[0];
   
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
       <Link
         href="/blog"
         className="inline-flex items-center dark:text-primary text-black dark:hover:text-primary/80 hover:text-black/80 font-medium mb-8 group"
@@ -140,68 +142,77 @@ export default async function BlogPost({ params }: { params: { slug: string } })
           </div>
 
           {/* Content */}
-          <div className="prose prose-lg dark:prose-invert max-w-none">
+          <div className="prose prose-lg max-w-none dark:prose-invert">
             <PortableText
               value={blogPost?.body}
               components={{
-                types: {
-                  image: ({
-                    value,
-                  }: {
-                    value: { url: string; alt: string };
-                  }) => (
-                    <div className="relative aspect-video my-8">
-                      <Image
-                        src={value.url}
-                        alt={value.alt || ""}
-                        fill
-                        className="object-cover rounded-lg"
-                      />
-                    </div>
-                  ),
-                },
-                // ... existing code ...
                 block: {
-                  normal: ({ children }: { children: React.ReactNode }) => (
-                    <p className="mb-4 text-black dark:text-primary">
+                  normal: ({ value, children }: PortableTextComponentProps<PortableTextBlock>) => (
+                    <p className="mb-4 text-zinc-900 dark:text-zinc-100 leading-relaxed">
                       {children}
                     </p>
                   ),
-                  h1: ({ children }: { children: React.ReactNode }) => (
-                    <h1 className="md:text-[38px] leading-[1.2em] tracking-[-0.7px] font-normal text-[30px] dark:text-primary text-black mb-4">
+                  h1: ({ value, children }: PortableTextComponentProps<PortableTextBlock>) => (
+                    <h1 className="md:text-[38px] leading-[1.2em] tracking-[-0.7px] font-normal text-[30px] text-zinc-900 dark:text-zinc-100 mb-6">
                       {children}
                     </h1>
                   ),
-                  h2: ({ children }: { children: React.ReactNode }) => (
-                    <h2 className="text-xl font-bold mb-4 text-black dark:text-primary">
+                  h2: ({ value, children }: PortableTextComponentProps<PortableTextBlock>) => (
+                    <h2 className="text-2xl font-normal mb-4 text-zinc-900 dark:text-zinc-100">
                       {children}
                     </h2>
                   ),
-                  listItem: ({ children }: { children: React.ReactNode }) => (
-                    <li className="mb-2 text-black dark:text-primary">{children}</li>
+                  h3: ({ value, children }: PortableTextComponentProps<PortableTextBlock>) => (
+                    <h3 className="text-xl font-normal mb-3 text-zinc-900 dark:text-zinc-100">
+                      {children}
+                    </h3>
                   ),
-                  // list
-                  list: ({ children }: { children: React.ReactNode }) => (
-                    <ul className="mb-4 text-black dark:text-primary">{children}</ul>
+                  h4: ({ value, children }: PortableTextComponentProps<PortableTextBlock>) => (
+                    <h4 className="text-lg font-normal mb-2 text-zinc-900 dark:text-zinc-100">
+                      {children}
+                    </h4>
                   ),
-                } as Record<string, any>,
+                  blockquote: ({ value, children }: PortableTextComponentProps<PortableTextBlock>) => (
+                    <blockquote className="border-l-4 border-blue-500 pl-4 py-1 my-6 italic text-zinc-800 dark:text-zinc-200">
+                      {children}
+                    </blockquote>
+                  ),
+                  list: ({ value, children }: PortableTextComponentProps<PortableTextBlock>) => {
+                    const listStyle = value.listItem === 'number' ? 'list-decimal' : 'list-disc';
+                    return (
+                      <ul className={`mb-6 ${listStyle} pl-6 space-y-2 text-zinc-900 dark:text-zinc-100`}>
+                        {children}
+                      </ul>
+                    );
+                  },
+                  listItem: ({ value, children }: PortableTextComponentProps<PortableTextBlock>) => (
+                    <li className="mb-2 text-zinc-900 dark:text-zinc-100">
+                      {children}
+                    </li>
+                  ),
+                },
                 marks: {
-                  link: ({
-                    children,
-                    value,
-                  }: {
-                    children: React.ReactNode;
-                    value: any;
-                  }) => (
-                    <a
-                      href={value.href}
-                      className="text-primary hover:underline"
-                    >
+                  link: ({ children, value }: PortableTextMarkComponentProps<any>) => (
+                    <a href={value?.href} className="text-blue-500 hover:underline">
                       {children}
                     </a>
                   ),
-                } as Record<string, any>,
-                // ... existing code ...
+                  strong: ({ children }: { children: React.ReactNode }) => (
+                    <strong className="font-semibold text-zinc-900 dark:text-zinc-100">
+                      {children}
+                    </strong>
+                  ),
+                  em: ({ children }: { children: React.ReactNode }) => (
+                    <em className="italic text-zinc-900 dark:text-zinc-100">
+                      {children}
+                    </em>
+                  ),
+                  code: ({ children }: { children: React.ReactNode }) => (
+                    <code className="bg-zinc-100 dark:bg-zinc-800 px-1.5 py-0.5 rounded text-zinc-900 dark:text-zinc-100">
+                      {children}
+                    </code>
+                  ),
+                }
               }}
             />
           </div>
