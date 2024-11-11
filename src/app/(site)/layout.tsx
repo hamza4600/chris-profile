@@ -7,6 +7,7 @@ import Footer from "@/components/footer";
 import { Providers } from "./providers";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import type { Viewport } from 'next'
+import { domainURL } from "@/constants";
 
 const hankenGrotesk = Hanken_Grotesk({
   subsets: ["latin"],
@@ -14,40 +15,40 @@ const hankenGrotesk = Hanken_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Hamza Khan | Full Stack Developer & Designer",
-  description: "Experienced web developer and designer specializing in creating beautiful, responsive, and user-friendly websites. Proficient in React, Next.js, TypeScript, and modern web technologies. Passionate about crafting digital experiences that blend creativity with functionality.",
+  // title: "Hamza Khan | Full Stack Developer & Designer",
+  // description: "Experienced web developer and designer specializing in creating beautiful, responsive, and user-friendly websites. Proficient in React, Next.js, TypeScript, and modern web technologies. Passionate about crafting digital experiences that blend creativity with functionality.",
   alternates: {
     types: {
-      'application/rss+xml': 'https://hamza-v2.vercel.app/feed.xml',
+      'application/rss+xml': `${domainURL}/feed.xml`,
     },
   },
-  keywords: "Full Stack Developer, Web Developer, Web Designer, React, Next.js, TypeScript, frontend development, UI/UX design",
-  authors: [{ name: "Hamza Khan", url: "https://www.yourwebsite.com" }],
+  // keywords: "Full Stack Developer, Web Developer, Web Designer, React, Next.js, TypeScript, frontend development, UI/UX design",
+  authors: [{ name: "Hamza Khan", url: domainURL }],
   icons: {
     icon: "/icon.png",
   },
-  openGraph: {
-    title: "Hamza Khan | Full Stack Developer & Designer",
-    description: "Experienced full stack developer and designer specializing in creating beautiful, responsive, and user-friendly websites. Proficient in React, Next.js, TypeScript, and modern web technologies.",
-    url: "https://www.yourwebsite.com",
-    siteName: "Hamza Khan's Portfolio",
-    images: [
-      {
-        url: "https://hamza-v2.vercel.app/hamza.jpg",
-        width: 1800,
-        height: 945,
-        alt: "Hamza Khan - Web Developer & Designer",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
+  // openGraph: {
+  //   title: "Hamza Khan | Full Stack Developer & Designer",
+  //   description: "Experienced full stack developer and designer specializing in creating beautiful, responsive, and user-friendly websites. Proficient in React, Next.js, TypeScript, and modern web technologies.",
+  //   url: domainURL,
+  //   siteName: "Hamza Khan's Portfolio",
+  //   images: [
+  //     {
+  //       url: `${domainURL}/hamza.jpg`,
+  //       width: 1800,
+  //       height: 945,
+  //       alt: "Hamza Khan - Web Developer & Designer",
+  //     },
+  //   ],
+  //   locale: "en_US",
+  //   type: "website",
+  // },
   twitter: {
     card: "summary_large_image",
     title: "Hamza Khan | Full Stack Developer & Designer",
     description: "Experienced full stack developer and designer specializing in creating beautiful, responsive, and user-friendly websites.",
-    images: ["https://hamza-v2.vercel.app/hamza.jpg"],
-    creator: "@your_twitter_handle",
+    images: [`${domainURL}/hamza.jpg`],
+    creator: "@hamza4600",
   },
   robots: {
     index: true,

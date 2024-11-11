@@ -147,3 +147,4 @@ export const experience = [
 ]
 
 export const calendlyUrl = "https://calendly.com/hamza4600/30min";
+export const domainURL = "https://www.hkdev.co";

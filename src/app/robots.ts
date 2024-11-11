@@ -1,6 +1,5 @@
 import type { MetadataRoute } from 'next'
-
-const baseUrl = 'https://hamza-v2.vercel.app'
+import { domainURL } from "@/constants";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -72,12 +71,12 @@ export default function robots(): MetadataRoute.Robots {
     ],
     // Multiple sitemaps can be specified if needed
     sitemap: [
-      `${baseUrl}/sitemap.xml`,
+      `${domainURL}/sitemap.xml`,
       // Add more sitemaps if you have them, like:
       // `${baseUrl}/blog-sitemap.xml`,
       // `${baseUrl}/work-sitemap.xml`
     ],
     // Host directive helps specify the preferred domain version
-    host: baseUrl
+    host: domainURL
   }
 }

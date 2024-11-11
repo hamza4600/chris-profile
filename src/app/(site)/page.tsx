@@ -4,7 +4,9 @@ import SchemaOrg from "@/components/Schema/SchemaOrg";
 import IconAutoScroll from "@/components/section/IconAutoScroll";
 import IntroSection from "@/components/section/IntroSection1";
 import ShinningSectionText from "@/components/section/ShinningSectionText";
+import { domainURL } from "@/constants";
 import { getHomePageData, getHomePageSeoData } from "@/sanity/lib/homePage";
+import { Metadata } from "next";
 
 import dynamic from "next/dynamic";
 const ParallaxSection = dynamic(() => import("@/components/section/ParallexSec"));
@@ -55,6 +57,55 @@ const icons = [
 //     },
 //   };
 // }
+
+export const metadata: Metadata = {
+  title: "Hamza Khan | Full Stack Developer & Web Developer",
+  description: "Experienced full stack developer specializing in creating websites, e-commerce stores, SAAS products and AI solutions. Proficient in modern web technologies Full Stack Development , AI Development E-Commerce Development , SAAS Development.",
+  keywords: "Full Stack Development, AI Development, E-Commerce Development, SAAS Development, web development",
+  alternates: {
+    types: {
+      'application/rss+xml': `${domainURL}/feed.xml`,
+    },
+  },
+  authors: [{ name: "Hamza Khan", url: domainURL }],
+  icons: {
+    icon: "/icon.png",
+  },
+  openGraph: {
+    title: "Hamza Khan | Full Stack Developer & Web Developer",
+    description: "Experienced full stack developer specializing in creating websites, e-commerce stores, SAAS products and AI solutions. Proficient in modern web technologies Full Stack Development , AI Development E-Commerce Development , SAAS Development.",
+    url: domainURL,
+    siteName: "Hamza Khan's Portfolio",
+    images: [
+      {
+        url: `${domainURL}/hamza.jpg`,
+        width: 1800,
+        height: 945,
+        alt: "Hamza Khan - Web Developer & Designer",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hamza Khan | Full Stack Developer & Web Developer",
+    description: "Experienced full stack developer specializing in creating websites, e-commerce stores, SAAS products and AI solutions.",
+    images: [`${domainURL}/hamza.jpg`],
+    creator: "@hamza4600",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
 
 
 export default async function Home() {

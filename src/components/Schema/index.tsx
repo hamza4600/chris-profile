@@ -1,7 +1,8 @@
 import { urlFor } from '@/sanity/lib/image'
 import { Person, WithContext, Organization, WebSite, Article } from 'schema-dts'
+import { domainURL } from "@/constants";
 
-export const baseUrl = 'https://hamza-v2.vercel.app'
+export const baseUrl = domainURL
 
 // Base organization schema
 export const organizationSchema: WithContext<Organization> = {
@@ -21,13 +22,17 @@ export const authorSchema: WithContext<Person> = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Hamza Khan',
-  jobTitle: 'Frontend Developer',
+  jobTitle: 'Full Stack Developer & AI Developer',
   url: baseUrl,
   image: `${baseUrl}/hamza.jpg`,
   sameAs: [
     'https://github.com/hamza4600',
     'https://www.linkedin.com/in/hamza-khan-tanoli-845099205/'
-  ]
+  ],
+  worksFor: {
+    '@type': 'Organization',
+    name: 'HK Dev Solutions'
+  },
 }
 
 // Generate case study schema

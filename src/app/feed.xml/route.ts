@@ -1,7 +1,9 @@
 import { client } from '@/sanity/lib/client';
 import RSS from 'rss';
+import { domainURL } from "@/constants";
 
-const baseUrl = 'https://hamza-v2.vercel.app'
+const baseUrl = domainURL
+
 const feed = new RSS({
     title: 'Hamza Khan | Full Stack Developer & Designer',
     description: 'A cool website that everyone should check out !',

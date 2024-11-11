@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import { client } from '@/sanity/lib/client' // Your Sanity client
-
+import { domainURL } from "@/constants";
 async function getBlogPosts() {
   const query = `*[_type == "post"] {
     slug,
@@ -20,7 +20,7 @@ async function getCaseStudies() {
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://hamza-v2.vercel.app'
+  const baseUrl = domainURL
 
   // Get dynamic blog posts
   const posts = await getBlogPosts()
