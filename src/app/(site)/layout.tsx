@@ -45,8 +45,8 @@ export const metadata: Metadata = {
   // },
   twitter: {
     card: "summary_large_image",
-    title: "Hamza Khan | Full Stack Developer & Designer",
-    description: "Experienced full stack developer and designer specializing in creating beautiful, responsive, and user-friendly websites.",
+    title: "Hamza Khan | Building Digital Success Stories | Full Stack & AI Expert",
+    description: "Your trusted partner in creating powerful web solutions & AI innovations that drive real business growth.",
     images: [`${domainURL}/hamza.jpg`],
     creator: "@hamza4600",
   },

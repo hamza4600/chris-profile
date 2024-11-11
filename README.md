@@ -39,7 +39,7 @@ Added for better SEO
 /blog
 /blog/slug
 /category
-
+adding a multi language option  
 ## Next Phase Todos 
 /testimonoals
 /services
@@ -55,3 +55,4 @@ Ai genarted testimonial
 https://gublootech.com/testimonials
 https://commerce-ui.com/.
 https://hawk-style.com/en/presentations-for-services-and-products/
+https://neilpatel.com/nl/

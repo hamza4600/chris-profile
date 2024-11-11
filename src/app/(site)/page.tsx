@@ -59,7 +59,7 @@ const icons = [
 // }
 
 export const metadata: Metadata = {
-  title: "Hamza Khan | Full Stack Developer & Web Developer",
+  title: "Hamza Khan | Turning Ideas into Digital Reality | Full Stack & AI Developer",
   description: "Experienced full stack developer specializing in creating websites, e-commerce stores, SAAS products and AI solutions. Proficient in modern web technologies Full Stack Development , AI Development E-Commerce Development , SAAS Development.",
   keywords: "Full Stack Development, AI Development, E-Commerce Development, SAAS Development, web development",
   alternates: {
@@ -72,8 +72,8 @@ export const metadata: Metadata = {
     icon: "/icon.png",
   },
   openGraph: {
-    title: "Hamza Khan | Full Stack Developer & Web Developer",
-    description: "Experienced full stack developer specializing in creating websites, e-commerce stores, SAAS products and AI solutions. Proficient in modern web technologies Full Stack Development , AI Development E-Commerce Development , SAAS Development.",
+    title: "Hamza Khan | Building Digital Success Stories | Full Stack & AI Expert",
+    description:  "Your vision, my code - Creating powerful digital experiences that drive growth. Join 20+ satisfied clients who've transformed their online presence.",
     url: domainURL,
     siteName: "Hamza Khan's Portfolio",
     images: [
@@ -89,8 +89,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hamza Khan | Full Stack Developer & Web Developer",
-    description: "Experienced full stack developer specializing in creating websites, e-commerce stores, SAAS products and AI solutions.",
+    title: "Hamza Khan | Building Digital Success Stories | Full Stack & AI Expert",
+    description: "Your trusted partner in creating powerful web solutions & AI innovations that drive real business growth.",
     images: [`${domainURL}/hamza.jpg`],
     creator: "@hamza4600",
   },
