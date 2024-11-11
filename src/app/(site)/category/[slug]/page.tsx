@@ -86,20 +86,22 @@ export default function TravelPage() {
 
             <div className="p-6">
               <h2 className="text-xl font-semibold mb-2 dark:text-primary text-black">{post.title}</h2>
-              <p className="dark:text-secondary text-black font-medium mb-4">{post.description}</p>
+              <p className="dark:text-secondary text-gray-600 mb-4">{post.description}</p>
 
               <div className="flex items-center justify-between">
-                <div className="flex items-center">
+                  <div className="flex items-center gap-2">
                   <img
                     src={post.author.avatar}
                     alt={post.author.name}
-                    className="w-8 h-8 rounded-full mr-2"
+                    className="w-8 h-8 rounded-full"
                   />
-                  <span className="dark:text-secondary text-gray-700">{post.author.name}</span>
+                  <div className="flex gap-2">
+                    <span className="dark:text-secondary text-gray-700">{post.author.name}</span>
+                    <span className="text-gray-500">{post.date}</span>
+                  </div>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <span className="text-gray-500">{post.date}</span>
-                  <span className="text-blue-500">{post.category}</span>
+                  <span className="text-blue-500 bg-blue-300/30 px-2 py-1 rounded-full text-xs">{post.category}</span>
                 </div>
               </div>
             </div>
