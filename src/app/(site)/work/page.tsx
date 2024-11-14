@@ -3,8 +3,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { urlFor } from '@/sanity/lib/image'
 
-export const revalidate = 60
-
 interface CaseStudy {
   caseStudyCardData: {
     title: string

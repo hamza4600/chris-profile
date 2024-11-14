@@ -75,7 +75,7 @@ const MobileNav: React.FC = () => {
                   </span>
                 </Link>
               ))}
-              <GetInTouch />
+              {/* <GetInTouch /> */}
             </nav>
           </motion.div>
         )}

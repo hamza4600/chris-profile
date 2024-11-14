@@ -50,7 +50,7 @@ const DesktopNav = () => {
           />
         )
       })}
-      <GetInTouch />
+      {/* <GetInTouch /> */}
     </div>
   )
 }
