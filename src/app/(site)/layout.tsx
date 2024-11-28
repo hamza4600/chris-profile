@@ -7,7 +7,7 @@ import Footer from "@/components/footer";
 import { Providers } from "./providers";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import type { Viewport } from 'next'
-import { domainURL } from "@/constants";
+import { domainURL, googleSiteVerification } from "@/constants";
 
 const hankenGrotesk = Hanken_Grotesk({
   subsets: ["latin"],
@@ -50,6 +50,10 @@ export const metadata: Metadata = {
     images: [`${domainURL}/hamza.jpg`],
     creator: "@hamza4600",
   },
+  // Add verification here
+  verification: {
+    google: googleSiteVerification,
+  },
   robots: {
     index: true,
     follow: true,
@@ -63,7 +67,7 @@ export const metadata: Metadata = {
   },
 };
 
- 
+
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -113,6 +117,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${satoshiVariable.variable} ${hankenGrotesk.variable} font-sans`}>
         <link rel="icon" href="/icon.png" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <main id="main" className="flex flex-nowrap font-satoshi overflow-visible flex-col items-center justify-start dark:bg-black bg-[#ffffff]">
           <Providers>
             <Navbar />

@@ -30,11 +30,12 @@ Added for better SEO
 /feed.xml
 /robots.txt
 /manifest.ts
-/profile
-/icon
 /LDA for all pages 
 
 ## Todo Pages 
+changes the gifs to viedos so they look great 
+
+multi language like spanish , german , french , arabic
 /work page 
 /blog
 /blog/slug
