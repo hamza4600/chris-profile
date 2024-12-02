@@ -15,15 +15,17 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: {locale: string};
 }) {
+  
+  // Enable static rendering
+  setRequestLocale(locale);
+  
   let messages;
   try {
     messages = (await import(`../../../../dictionaries/${locale}.json`)).default;
   } catch (error) {
     notFound();
   }
-  // Enable static rendering
-  setRequestLocale(locale);
-  
+
   return (
     <html lang={locale}>
       <main id="main" className="flex flex-nowrap font-satoshi overflow-visible flex-col items-center justify-start dark:bg-black bg-[#ffffff]">
