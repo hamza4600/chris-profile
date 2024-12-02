@@ -1,0 +1,10 @@
+{
+    "navigation": {
+      "home": "Home",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "common": {
+      "welcome": "Welcome to my portfolio"
+    }
+  }

@@ -3,6 +3,7 @@ import DesktopNav from "./DesktopNav";
 import ThemeToggle from "../Atoms/ToogleTheme";
 import Image from "next/image";
 import Link from "next/link";
+// import LangSelector from "./langSelector";
 
 const Navbar = () => {
   return (
@@ -21,6 +22,7 @@ const Navbar = () => {
         <ThemeToggle />
         <MobileNav />
         <DesktopNav />
+        {/* <LangSelector /> */}
       </div>
     </div>
   );

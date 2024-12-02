@@ -1,41 +1,7 @@
-## Remains in the App 
-  
-AI tools and services 
-
-Setting MInor UI Ux points 
-
-Adding Right Content 
-trending keywords 
-eye catching stores 
-all external links 
-All Case Studies 
-
-Deploy it on domain  
-Adding Form for clients 
-
-SaaS
-Real Estate
-AI & Web3
-Legal and Law 
-
-content should be in the wat like we can tell all about us and easy what we want to target and waht we want to get Client , Industries 
-
-in LDA we will add SEO same in with title , descritpion and img or separte section fot it in future 
-
-in the feed.xml I am using herossection also 
-adding data in constalts like all socila links and urls
-
-Added for better SEO
-/sitemap.xml
-/feed.xml
-/robots.txt
-/manifest.ts
-/LDA for all pages 
-
 ## Todo Pages 
 changes the gifs to viedos so they look great 
 
-multi language like spanish , german , french , arabic
+multi language like spanish , french,  german  , arabic
 /work page 
 /blog
 /blog/slug

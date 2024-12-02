@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
 import { Hanken_Grotesk } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/navbar";
 import localFont from "next/font/local";
-import Footer from "@/components/footer";
 import { Providers } from "./providers";
-import { GoogleAnalytics } from '@next/third-parties/google'
 import type { Viewport } from 'next'
 import { domainURL, googleSiteVerification } from "@/constants";
 
@@ -15,34 +11,15 @@ const hankenGrotesk = Hanken_Grotesk({
 });
 
 export const metadata: Metadata = {
-  // title: "Hamza Khan | Full Stack Developer & Designer",
-  // description: "Experienced web developer and designer specializing in creating beautiful, responsive, and user-friendly websites. Proficient in React, Next.js, TypeScript, and modern web technologies. Passionate about crafting digital experiences that blend creativity with functionality.",
   alternates: {
     types: {
       'application/rss+xml': `${domainURL}/feed.xml`,
     },
   },
-  // keywords: "Full Stack Developer, Web Developer, Web Designer, React, Next.js, TypeScript, frontend development, UI/UX design",
   authors: [{ name: "Hamza Khan", url: domainURL }],
   icons: {
     icon: "/icon.png",
   },
-  // openGraph: {
-  //   title: "Hamza Khan | Full Stack Developer & Designer",
-  //   description: "Experienced full stack developer and designer specializing in creating beautiful, responsive, and user-friendly websites. Proficient in React, Next.js, TypeScript, and modern web technologies.",
-  //   url: domainURL,
-  //   siteName: "Hamza Khan's Portfolio",
-  //   images: [
-  //     {
-  //       url: `${domainURL}/hamza.jpg`,
-  //       width: 1800,
-  //       height: 945,
-  //       alt: "Hamza Khan - Web Developer & Designer",
-  //     },
-  //   ],
-  //   locale: "en_US",
-  //   type: "website",
-  // },
   twitter: {
     card: "summary_large_image",
     title: "Hamza Khan | Building Digital Success Stories | Full Stack & AI Expert",
@@ -73,7 +50,6 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
-  // we have dark and light what to do 
 }
 
 const satoshiVariable = localFont({
@@ -114,7 +90,7 @@ export default function RootLayout({
 }>) {
   console.log("Layout rendered");
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html suppressHydrationWarning>
       <body className={`${satoshiVariable.variable} ${hankenGrotesk.variable} font-sans`}>
         <link rel="icon" href="/icon.png" />
         <link rel="icon" href="/favicon.ico" />
@@ -123,13 +99,10 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <main id="main" className="flex flex-nowrap font-satoshi overflow-visible flex-col items-center justify-start dark:bg-black bg-[#ffffff]">
           <Providers>
-            <Navbar />
             {children}
-            <Footer />
           </Providers>
         </main>
       </body>
-      <GoogleAnalytics gaId="G-QW2SED8TZZ" />
     </html>
   );
 }

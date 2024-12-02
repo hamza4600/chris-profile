@@ -60,8 +60,8 @@ const icons = [
 
 export const metadata: Metadata = {
   title: "Hamza Khan | Turning Ideas into Digital Reality | Full Stack & AI Developer",
-  description: "Experienced full stack developer specializing in creating websites, e-commerce stores, SAAS products and AI solutions. Proficient in modern web technologies Full Stack Development , AI Development E-Commerce Development , SAAS Development.",
-  keywords: "Full Stack Development, AI Development, E-Commerce Development, SAAS Development, web development",
+  description: "Experienced full stack developer specializing in creating websites, e-commerce stores, SAAS products and AI solutions, Legal and Law. Proficient in modern web technologies Full Stack Development , AI Development E-Commerce Development , SAAS Development, Legal and Law.",
+  keywords: "Full Stack Development, AI Development, E-Commerce Development, SAAS Development, web development, Legal and Law",
   alternates: {
     types: {
       'application/rss+xml': `${domainURL}/feed.xml`,

@@ -149,3 +149,20 @@ export const experience = [
 export const calendlyUrl = "https://calendly.com/hamza4600/30min";
 export const domainURL = "https://www.hkdev.co";
 export const googleSiteVerification = "n6ArufZOpEvqIJUWuqMzjUXkX4GmOwFz1DrP44b9G44";
+
+export const locales = ['en', 'ar', 'fr'];
+export const defaultLocale = 'en';
+export const langSelectorOptions = [
+    {
+        name: "English",
+        value: "en",
+    },
+    {
+        name: "Arabic",
+        value: "ar",
+    },
+    {
+        name: "French",
+        value: "fr",
+    },
+]
