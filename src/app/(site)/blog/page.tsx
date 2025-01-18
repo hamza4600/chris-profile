@@ -3,44 +3,11 @@ import { getAllBlogPosts } from '@/sanity/lib/blog';
 import { urlFor } from '@/sanity/lib/image';
 import Link from 'next/link'
 
-// Dummy data
-const blogs = [
-  {
-    id: 1,
-    title: "Understanding Modern Web Development",
-    excerpt: "An in-depth look at the latest trends and technologies in web development, including Next.js, React, and TypeScript.",
-    date: "2024-03-15",
-    readTime: "5 min read",
-    category: "Development",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069&auto=format&fit=crop",
-    slug: "understanding-modern-web-development"
-  },
-  {
-    id: 2,
-    title: "The Future of AI in Web Design",
-    excerpt: "Exploring how artificial intelligence is reshaping the way we approach web design and user experience.",
-    date: "2024-03-10",
-    readTime: "8 min read",
-    category: "AI & Design",
-    image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop",
-    slug: "future-of-ai-in-web-design"
-  },
-  {
-    id: 3,
-    title: "Optimizing Website Performance",
-    excerpt: "Essential techniques and best practices for improving your website's speed and performance.",
-    date: "2024-03-05",
-    readTime: "6 min read",
-    category: "Performance",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop",
-    slug: "optimizing-website-performance"
-  },
-] as const;
-
+export const revalidate = 60;
 export default async function BlogPage() {
-  
+    console.log("BlogPage rendered");
   const blogPosts = await getAllBlogPosts();
-  
+    console.log(blogPosts);
   return (
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="text-center mb-12">
@@ -74,7 +41,7 @@ export default async function BlogPage() {
               <div className="flex flex-col flex-grow p-6">
                 <div className="flex items-center gap-4 mb-3">
                   <span className="text-sm px-3 py-1 dark:bg-white/50 font-medium bg-primary text-primary rounded-full">
-                    {post?.cardData?.categories[0]?.title}
+                    {post?.cardData?.categories?.[0]?.title}
                   </span>
                   <span className="text-sm dark:text-secondary font-medium text-black">
                     {post?.timeToRead} min
