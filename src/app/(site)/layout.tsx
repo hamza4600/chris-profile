@@ -4,6 +4,8 @@ import localFont from "next/font/local";
 import { Providers } from "./providers";
 import type { Viewport } from 'next'
 import { domainURL, googleSiteVerification } from "@/constants";
+import Footer from '@/components/footer';
+import Navbar from '@/components/navbar';
 
 const hankenGrotesk = Hanken_Grotesk({
   subsets: ["latin"],
@@ -99,7 +101,9 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <main id="main" className="flex flex-nowrap font-satoshi overflow-visible flex-col items-center justify-start dark:bg-black bg-[#ffffff]">
           <Providers>
+            <Navbar />
             {children}
+            <Footer />
           </Providers>
         </main>
       </body>

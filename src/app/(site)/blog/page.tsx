@@ -65,7 +65,7 @@ export default async function BlogPage() {
               transition-shadow duration-300 border border-zinc-200 dark:border-zinc-800">
               <div className="relative aspect-video w-full overflow-hidden">
                 <img
-                  src={urlFor(post?.cardData?.image?.asset?._ref).url()}
+                  src={urlFor(post?.cardData?.image?.asset?._ref)?.url()}
                   alt={post?.cardData?.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />

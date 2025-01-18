@@ -5,7 +5,7 @@ import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
 // import HappyClient from "./HappyClient";
 // import { calendlyUrl } from "@/constants";
-import {useTranslations} from 'next-intl';
+// import {useTranslations} from 'next-intl';
 
 interface IntroSection1Props {
   title: string;
@@ -18,9 +18,9 @@ interface IntroSection1Props {
 }
 
 const IntroSection = ({ title, description, heroImage }: IntroSection1Props) => {
-  const t = useTranslations('common');
+  // const t = useTranslations('common');
 
-  console.log(t("welcome"));
+  // console.log(t("welcome"));
   return (
     <div className="pt-6 md:pt-24 md:pb-16 pb-10 px-8 max-w-[1800px] mx-auto">
       <div className="flex flex-col items-center justify-center gap-6 sm:gap-9">
