@@ -8,6 +8,7 @@ const ShareLinks = ({ blogPost }: { blogPost: any }) => {
     <div className="mt-8 pt-8 border-t">
       <h2 className="text-lg font-semibold mb-4">Share this article</h2>
       <div className="flex gap-4">
+        
         {/* whatsapp */}
         <WhatsappShare
           size={40}

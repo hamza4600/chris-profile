@@ -119,7 +119,7 @@ export default async function Home() {
   ]
 
   return (
-    <main className="min-h-screen w-full max-w-[1080px]">
+    <main className="min-h-screen w-full max-w-7xl">
       <SchemaOrg schemas={schemas} />
       <IntroSection 
         title={heroSection.heading} 

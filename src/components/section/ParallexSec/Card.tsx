@@ -35,7 +35,7 @@ const Card: React.FC<CardProps> = ({ item }) => {
     return (
         <Link
             href={`/work/${slug.current}`}
-            className="w-full max-w-[1080px] rounded-[24px] shadow-md opacity-100 md:px-10 px-4 md:py-[60px] py-[20px] dark:bg-gradient-to-b dark:from-[#091319] dark:to-[#0F0F0F] bg-[#fbfbfb] text-white dark:text-white border dark:border-white/[0.14] border-gray-200"
+            className="w-full max-w-7xl rounded-[24px] shadow-md opacity-100 md:px-10 px-4 md:py-[60px] py-[20px] dark:bg-gradient-to-b dark:from-[#091319] dark:to-[#0F0F0F] bg-[#fbfbfb] text-white dark:text-white border dark:border-white/[0.14] border-gray-200"
         >
             <div className="flex justify-between max-md:flex-col">
                 <div className="flex flex-col lg:justify-between h-full lg:min-h-[380px] lg:max-w-[480px] w-full">

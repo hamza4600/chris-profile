@@ -34,7 +34,7 @@ const WorkWithMe = () => {
 
 const Footer = () => {
   return (
-    <footer className="w-full flex flex-col max-w-[1080px] px-6 pb-[30px] sm:pb-[100px] relative">
+    <footer className="w-full flex flex-col max-w-7xl px-6 pb-[30px] sm:pb-[100px] relative">
       {/* <div className="md:pt-[40px] sm:pt-[68px] pt-[20px] pb-[68px] sm:pb-[120px]">
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center gap-12">

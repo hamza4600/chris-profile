@@ -64,7 +64,7 @@ const CaseStudyPage = async (props: { params: { case_study: string } }) => {
   const imgUrl = heroSection.image ? urlFor(heroSection.image)?.url() : '';
 
   return (
-    <div className="min-h-screen mx-auto max-w-[1080px] px-6 md:px-8 pt-8 sm:pt-16 mb-12">
+    <div className="min-h-screen mx-auto max-w-7xl px-6 md:px-8 pt-8 sm:pt-16 mb-12">
       <SchemaOrg schemas={schemas} />
       {
         heroSection && (

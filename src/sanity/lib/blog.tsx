@@ -26,18 +26,24 @@ export async function getBlogPostBySlug(slug: string) {
   const blogPost = await client.fetch(
     `*[_type == "post" && slug.current == $slug][0] {
         ...,
-        // cardData {
-        //     ...,
-        //     categories[]-> {
-        //         title
-        //     }
-        // },
         timeToRead,
         publishedAt,
         author->{
             name,
             image,
             bio
+        },
+        relatedPosts[]->{
+            slug,
+            publishedAt,
+            author->{
+                name,
+                image,
+                bio
+            },
+            cardData{
+                ...,
+            }
         }
     }`,
     { slug }
