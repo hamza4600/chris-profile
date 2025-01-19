@@ -23,7 +23,7 @@ export default function SideSection({relatedPosts}: {relatedPosts: any}) {
             <Link href={`/blog/${post.slug.current}`} key={post.id} title={post?.cardData?.title} className="flex items-center gap-3">
               <div className="relative h-12 w-12 rounded-full bg-secondary">
                 <img 
-                  src={post?.author?.image  ? urlFor(post?.author?.image).url() : "/images/avatar.png"} 
+                  src={post?.cardData?.image  ? urlFor(post?.cardData?.image).url() : "/images/avatar.png"} 
                   alt={post?.author?.name}
                   className="object-cover h-12 w-12 rounded"
                 />
