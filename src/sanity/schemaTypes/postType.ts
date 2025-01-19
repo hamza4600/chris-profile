@@ -43,7 +43,7 @@ export const postType = defineType({
       fields: [
         defineField({name: 'title', type: 'string'}),
         defineField({name: 'description', type: 'text'}),
-        defineField({name: 'image', type: 'image'}),
+        defineField({name: 'image', description: 'image for the post card', type: 'image'}),
         defineField({name: 'categories', type: 'array', of: [{type: 'reference', to: {type: 'category'}}]}),
       ],
     }),
@@ -51,6 +51,7 @@ export const postType = defineType({
     defineField({
       name: 'mainImage',
       type: 'image',
+      description: 'main image for the post used on the blog page',
       options: {
         hotspot: true,
       },

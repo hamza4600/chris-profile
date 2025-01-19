@@ -24,7 +24,22 @@ export async function getAllBlogPosts() {
 // get a single blog post by slug
 export async function getBlogPostBySlug(slug: string) {
   const blogPost = await client.fetch(
-    `*[_type == "post" && slug.current == $slug]`,
+    `*[_type == "post" && slug.current == $slug][0] {
+        ...,
+        // cardData {
+        //     ...,
+        //     categories[]-> {
+        //         title
+        //     }
+        // },
+        timeToRead,
+        publishedAt,
+        author->{
+            name,
+            image,
+            bio
+        }
+    }`,
     { slug }
   );
   return blogPost;
@@ -33,7 +48,7 @@ export async function getBlogPostBySlug(slug: string) {
 // get seo data for a blog post by slug
 export async function getBlogPostSeoBySlug(slug: string) {
   const seoData = await client.fetch(
-    `*[_type == "post" && slug.current == $slug]{seo}`,
+    `*[_type == "post" && slug.current == $slug][0]{seo}`,
     { slug }
   );
   return seoData;

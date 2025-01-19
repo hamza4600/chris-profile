@@ -4,6 +4,34 @@ import { urlFor } from '@/sanity/lib/image';
 import Link from 'next/link'
 
 export const revalidate = 60;
+
+// add page seo 
+export async function generateMetadata() {
+  return {
+    title: "Blog | Web Development & Technology Insights",
+    description: "Explore in-depth articles about web development, design patterns, technology trends, and software engineering best practices. Stay updated with our latest insights and tutorials.",
+    openGraph: {
+      title: "Blog | Web Development & Technology Insights",
+      description: "Explore in-depth articles about web development, design patterns, technology trends, and software engineering best practices.",
+      type: "website",
+      // images: [
+      //   {
+      //     url: "/og-blog.jpg", // Make sure to add this image to your public folder
+      //     width: 1200,
+      //     height: 630,
+      //     alt: "Blog Header Image",
+      //   },
+      // ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Blog | Web Development & Technology Insights",
+      description: "Explore in-depth articles about web development, design patterns, technology trends, and software engineering best practices.",
+    },
+    keywords: "web development, software engineering, technology, coding tutorials, design patterns, tech insights",
+  };
+}
+
 export default async function BlogPage() {
     console.log("BlogPage rendered");
   const blogPosts = await getAllBlogPosts();
