@@ -23,6 +23,7 @@ const caseStudyDetailsQuery = `*[_type == "caseStudy" && slug.current == $slug]{
     heroSection,
     seo,
     content,
+    videoUrl,
     image,
     slug,
     conclusion,

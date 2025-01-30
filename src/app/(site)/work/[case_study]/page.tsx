@@ -21,7 +21,7 @@ interface SeoData {
 }
 
 // revalidate 60
-// export const revalidate = 600;
+// export const revalidate = 60;
 export async function generateMetadata(
   { params }: { params: { case_study: string } }
 ): Promise<Metadata> {
@@ -73,8 +73,22 @@ const CaseStudyPage = async (props: { params: { case_study: string } }) => {
         )
       }
       {
-        imgUrl && (
-          <MainImage image={imgUrl} title={heroSection.alt} />
+        videoUrl ? (
+          <video
+            src={videoUrl}
+            className="w-full h-auto"
+            autoPlay
+            // muted
+            loop
+            controls
+            playsInline
+          >
+            Your browser does not support the video tag.
+          </video>
+        ) : (
+          imgUrl && (
+            <MainImage image={imgUrl} title={heroSection.alt} />
+          )
         )
       }
       {
