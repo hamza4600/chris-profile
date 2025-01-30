@@ -43,7 +43,7 @@ export async function generateMetadata(
 const CaseStudyPage = async (props: { params: { case_study: string } }) => {
 
   const data: any = await getCaseStudyDetailsBySlug(props.params.case_study);
-  const { heroSection, content, image, conclusion, duration, previewLink, otherCaseStudies , seo} = data;
+  const { heroSection, content, image, conclusion, duration, previewLink, otherCaseStudies , seo, videoUrl} = data;
 
   // Generate schemas
   const schemas = [
@@ -63,6 +63,7 @@ const CaseStudyPage = async (props: { params: { case_study: string } }) => {
 
   const imgUrl = heroSection.image ? urlFor(heroSection.image)?.url() : '';
 
+  console.log(videoUrl, "videoUrl====");
   return (
     <div className="min-h-screen mx-auto max-w-7xl px-6 md:px-8 pt-8 sm:pt-16 mb-12">
       <SchemaOrg schemas={schemas} />

@@ -67,6 +67,13 @@ export const caseStudyType = defineType({
                 },
             ],
         },
+        //viedo Url 
+        {
+            name: "videoUrl",
+            description: "Video Url for the case study",
+            title: "Video Url",
+            type: "url",
+        },
         {
             name: "content",
             title: "Content",
