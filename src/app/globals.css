@@ -14,6 +14,18 @@
     --token-bd5d9edd-4c5f-46bd-bac6-12bf742c548d: rgb(20, 20, 20);
     --token-3a1a7f69-d83d-458f-97e1-646d59db42e1: rgb(0, 85, 255);
 }
+h1:empty,
+h2:empty,
+h3:empty,
+h4:empty,
+h5:empty,
+h6:empty,
+p:empty,
+/* ul:empty, */
+/* li:empty, */
+span:empty {
+  display: none;
+}
 
 html,
 body,

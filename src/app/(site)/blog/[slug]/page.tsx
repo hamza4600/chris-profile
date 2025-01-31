@@ -9,7 +9,7 @@ import ShareLinks from './ShareLinks'
 import { Metadata } from 'next'
 import { Author, MainBlogContent } from './_components'
 
-export const revalidate = 60;
+// export const revalidate = 60;
 
 // add page seo 
 export async function generateMetadata(
@@ -115,7 +115,9 @@ export default async function BlogPost({ params }: { params: { slug: string } })
         </article>
 
         {/* Side Section */}
-        <SideSection relatedPosts={blogPost.relatedPosts} />
+        {blogPost?.relatedPosts?.length > 0 && (
+          <SideSection relatedPosts={blogPost.relatedPosts} />
+        )}
       </div>
     </div>
   );
