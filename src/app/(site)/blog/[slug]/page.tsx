@@ -10,7 +10,7 @@ import { Metadata } from 'next'
 import { Author, MainBlogContent } from './_components'
 import BlogSchema from '@/components/Schema/BlogSchema'
 
-// export const revalidate = 60;
+export const revalidate = 600;
 
 // add page seo 
 export async function generateMetadata(
@@ -49,7 +49,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
       name: blogPost?.author?.name,
     },
   }
-
+  console.log(blogPost?.relatedCaseStudies)
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
       <BlogSchema schemas={schemas} />
@@ -127,7 +127,10 @@ export default async function BlogPost({ params }: { params: { slug: string } })
 
         {/* Side Section */}
         {blogPost?.relatedPosts?.length > 0 && (
-          <SideSection relatedPosts={blogPost.relatedPosts} />
+          <SideSection 
+            relatedPosts={blogPost.relatedPosts} 
+            relatedCaseStudies={blogPost.relatedCaseStudies}
+          />
         )}
       </div>
     </div>

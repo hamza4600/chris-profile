@@ -34,6 +34,7 @@ export const caseStudyType = defineType({
             name: "caseStudyCardData",
             title: "Case Study Card Data",
             type: "caseStudyCardData",
+            description: "This is the data that will be used to display on the case study card",
         },
         // hero section that have title , decription , image
         {
@@ -112,6 +113,13 @@ export const caseStudyType = defineType({
             title: "Other Case Studies",
             type: "array",
             of: [{ type: "reference", to: [{ type: "caseStudy" }] }],
+        },
+        // related posts
+        {
+            name: "relatedPosts",
+            title: "Related Posts",
+            type: "array",
+            of: [{ type: "reference", to: [{ type: "post" }] }],
         },
     ],
     preview: {

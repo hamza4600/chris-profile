@@ -32,6 +32,10 @@ const caseStudyDetailsQuery = `*[_type == "caseStudy" && slug.current == $slug]{
     otherCaseStudies[]->{
         caseStudyCardData,
         slug
+    },
+    relatedPosts[]->{
+        cardData,
+        slug
     }
 }[0]`
 

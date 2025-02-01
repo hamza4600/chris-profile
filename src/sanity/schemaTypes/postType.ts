@@ -84,16 +84,24 @@ export const postType = defineType({
     //   of: [{type: 'string'}],
     // }),
     //related categories
-    defineField({
-      name: 'relatedCategories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
-    }),
+    // defineField({
+    //   name: 'relatedCategories',
+    //   type: 'array',
+    //   of: [{type: 'reference', to: {type: 'category'}}],
+    // }),
     // related posts
     defineField({
       name: 'relatedPosts',
       type: 'array',
       of: [{type: 'reference', to: {type: 'post'}}],
+      validation: (Rule) => Rule.max(4),
+    }),
+    //related Case Studies
+    defineField({
+      name: 'relatedCaseStudies',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'caseStudy'}}],
+      validation: (Rule) => Rule.max(4),
     }),
   ],
   preview: {

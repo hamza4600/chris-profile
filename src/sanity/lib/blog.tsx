@@ -44,6 +44,13 @@ export async function getBlogPostBySlug(slug: string) {
             cardData{
                 ...,
             }
+        },
+        relatedCaseStudies[]->{
+            slug,
+            publishedAt,
+            caseStudyCardData{
+                ...,
+            }
         }
     }`,
     { slug }
