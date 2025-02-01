@@ -42,14 +42,14 @@ const OtherCaseStudies: React.FC<OtherCaseStudiesProps> = ({ otherCaseStudies })
                   <div className="relative w-full h-auto">
                     <Image
                       src={urlFor(caseStudy.caseStudyCardData.image).url()}
-                      alt={caseStudy.caseStudyCardData.title}
+                      alt={caseStudy.caseStudyCardData.description}
                       width={500}
                       height={300}
-                      className="w-full h-48 object-cover"
+                      className="w-full  object-cover md:h-[300px] sm:h-[200px]"
                       priority
                       />
                       </div>
-                  <div className="p-6">
+                  <div className="p-3 md:p-6">
                     <h3 className="text-xl font-semibold mb-2 dark:text-white text-black">{
                        truncateText(caseStudy.caseStudyCardData.title, 30)
                     }</h3>

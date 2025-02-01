@@ -58,7 +58,7 @@ const Footer = () => {
       <div className="flex items-start max-md:flex-col max-md:gap-8 max-md:text-[12px] justify-between dark:text-white text-black">
         <div className="flex sm:gap-4 gap-2 items-center justify-between sm:w-auto w-full">
           <p>Hamza Khan ©
-            <span className="font-bold ml-1">2024</span>
+            <span className="font-bold ml-1">{new Date().getFullYear()}</span>
           </p>
           {/* <WorkWithMe /> */}
         </div>

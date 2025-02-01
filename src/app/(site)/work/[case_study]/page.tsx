@@ -63,7 +63,6 @@ const CaseStudyPage = async (props: { params: { case_study: string } }) => {
 
   const imgUrl = heroSection.image ? urlFor(heroSection.image)?.url() : '';
 
-  console.log(videoUrl, "videoUrl====");
   return (
     <div className="min-h-screen mx-auto max-w-7xl px-6 md:px-8 pt-8 sm:pt-16 mb-12">
       <SchemaOrg schemas={schemas} />
@@ -76,9 +75,9 @@ const CaseStudyPage = async (props: { params: { case_study: string } }) => {
         videoUrl ? (
           <video
             src={videoUrl}
-            className="w-full h-auto"
+            className="w-full h-auto rounded-lg mt-8 md:mt-12"
             autoPlay
-            // muted
+            muted
             loop
             controls
             playsInline

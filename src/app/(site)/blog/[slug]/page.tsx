@@ -8,6 +8,7 @@ import { urlFor } from '@/sanity/lib/image'
 import ShareLinks from './ShareLinks'
 import { Metadata } from 'next'
 import { Author, MainBlogContent } from './_components'
+import BlogSchema from '@/components/Schema/BlogSchema'
 
 // export const revalidate = 60;
 
@@ -40,8 +41,18 @@ export default async function BlogPost({ params }: { params: { slug: string } })
     return <div>Blog post not found</div>;
   }
 
+  const schemas = {
+    title: blogPost?.cardData?.title,
+    description: blogPost?.cardData?.description,
+    publishedAt: blogPost?.cardData?.publishedAt,
+    author: {
+      name: blogPost?.author?.name,
+    },
+  }
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+      <BlogSchema schemas={schemas} />
       <Link
         href="/blog"
         className="inline-flex items-center dark:text-primary text-black dark:hover:text-primary/80 hover:text-black/80 font-medium mb-8 group"

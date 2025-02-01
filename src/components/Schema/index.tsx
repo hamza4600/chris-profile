@@ -22,7 +22,7 @@ export const authorSchema: WithContext<Person> = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Hamza Khan',
-  jobTitle: 'Full Stack Developer & AI Developer',
+  jobTitle: 'Full Stack Developer & AI Developer Shopify Expert ',
   url: baseUrl,
   image: `${baseUrl}/hamza.jpg`,
   sameAs: [

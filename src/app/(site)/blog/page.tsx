@@ -8,11 +8,11 @@ export const revalidate = 60;
 // add page seo 
 export async function generateMetadata() {
   return {
-    title: "Blog | Web Development & Technology Insights",
-    description: "Explore in-depth articles about web development, design patterns, technology trends, and software engineering best practices. Stay updated with our latest insights and tutorials.",
+    title: "Blog | Full-Stack Developer Insights JavaScript, Shopify, AI Expert & Web Development | Hamza Khan",
+    description: "Explore in-depth articles about web development, Shopify, AI, JavaScript, design patterns, technology trends, and software engineering best practices. Stay updated with our latest insights and tutorials.",
     openGraph: {
-      title: "Blog | Web Development & Technology Insights",
-      description: "Explore in-depth articles about web development, design patterns, technology trends, and software engineering best practices.",
+      title: "Blog | Full-Stack Developer Insights JavaScript, Shopify, AI Expert & Web Development | Hamza Khan",
+      description: "Explore 10+ years of hands-on expertise in JavaScript, Shopify, and AI. Stay updated with our latest insights and tutorials.",
       type: "website",
       // images: [
       //   {
@@ -25,17 +25,16 @@ export async function generateMetadata() {
     },
     twitter: {
       card: "summary_large_image",
-      title: "Blog | Web Development & Technology Insights",
-      description: "Explore in-depth articles about web development, design patterns, technology trends, and software engineering best practices.",
+      title: "Blog | Full-Stack Developer Insights JavaScript, Shopify, AI Expert & Web Development | Hamza Khan",
+      description: "Explore in-depth articles about web development, Shopify, AI, JavaScript, design patterns, technology trends, and software engineering best practices. Stay updated with our latest insights and tutorials.",
     },
-    keywords: "web development, software engineering, technology, coding tutorials, design patterns, tech insights",
+    keywords: "web development, software engineering, technology, coding tutorials, design patterns, tech insights Shopify Expert, AI Expert, JavaScript Expert, Full-Stack Developer",
   };
 }
 
 export default async function BlogPage() {
-    console.log("BlogPage rendered");
   const blogPosts = await getAllBlogPosts();
-    console.log(blogPosts);
+
   return (
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="text-center mb-12">

@@ -1,6 +1,7 @@
 import { urlFor } from '@/sanity/lib/image';
 import { PortableText, PortableTextBlock, PortableTextComponentProps, PortableTextMarkComponentProps } from '@portabletext/react'
 import styles from './style.module.css';
+
 export const MainBlogContent = ({ blogPost }: { blogPost: any }) => {
     return (
         <div className={`${styles.container} prose prose-lg  mx-auto dark:prose-invert prose-headings:font-medium`}>
