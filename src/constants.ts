@@ -19,6 +19,11 @@ export const links = [
         name: "FAQ",
         href: "/#faq",
     },
+    {
+        id: 5,
+        name: "Blog",
+        href: "/blog",
+    },
 ];
 
 export const skills = [

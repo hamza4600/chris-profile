@@ -30,7 +30,7 @@ export const MainBlogContent = ({ blogPost }: { blogPost: any }) => {
                         ),
                         h3: ({ children }) => (
                             <h3 className="text-xl md:text-2xl mb-4 mt-10
-                               leading-[1.25] tracking-[-0.4px]
+                               leading-[1.25] tracking-[-0.4px] 
                                text-zinc-900 dark:text-zinc-100">
                                 {children}
                             </h3>
