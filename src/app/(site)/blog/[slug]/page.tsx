@@ -49,9 +49,9 @@ export default async function BlogPost({ params }: { params: { slug: string } })
       name: blogPost?.author?.name,
     },
   }
-  console.log(blogPost?.relatedCaseStudies)
+
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-6 pb-12 md:pt-12 md:pb-12">
       <BlogSchema schemas={schemas} />
       <Link
         href="/blog"
@@ -67,7 +67,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
 
           {/* Header */}
           <header className="mb-8">
-            <h1 className="md:text-[38px] leading-[1.2em] tracking-[-0.7px] font-normal text-[30px] dark:text-primary text-black mb-4">
+            <h1 className="md:text-[38px] leading-[1.2em] tracking-[-0.7px] font-normal text-[28px] dark:text-primary text-black mb-4">
               {blogPost?.title}
             </h1>
 

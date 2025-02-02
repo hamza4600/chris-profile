@@ -18,7 +18,7 @@ export default function SideSection({relatedPosts, relatedCaseStudies}: {related
       {/* Recent Posts Section */}
       <section className="border md:p-4 p-2 rounded-xl border-gray-200 dark:border-gray-800 pb-8">
         <h2 className="text-[22px] leading-[30px] font-semibold mb-4 dark:text-primary text-black">Recent Posts</h2>
-        <div  className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-1 sm:grid-cols-2 gap-2">
+        <div  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 sm:grid-cols-2 gap-2">
           {relatedPosts.map((post: any) => (
             <Link href={`/blog/${post.slug.current}`} key={post.id} title={post?.cardData?.title} className="flex items-center gap-3 p-2 rounded-md flex-col">
               <div className="relative rounded-full bg-secondary aspect-w-1 aspect-h-1 w-full lg:h-[150px] md:h-[200px] sm:h-[170px] h-[150px]">
@@ -42,7 +42,7 @@ export default function SideSection({relatedPosts, relatedCaseStudies}: {related
         relatedCaseStudies && (
           <section className="border md:p-4 p-2 rounded-xl border-gray-200 dark:border-gray-800 pb-8 sticky top-2">
         <h2 className="text-[22px] leading-[30px] font-semibold mb-4 dark:text-primary text-black">Case Studies</h2>
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-1 sm:grid-cols-2 gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 sm:grid-cols-2 gap-2">
           {relatedCaseStudies.map((caseStudy: any) => (
             <Link href={`/work/${caseStudy.slug.current}`} key={caseStudy.id} title={caseStudy?.caseStudyCardData?.title} className="flex items-center gap-3 p-2 rounded-md flex-col">
               <div className="relative rounded-full bg-secondary aspect-w-1 aspect-h-1 w-full lg:h-[150px] md:h-[200px] sm:h-[170px] h-[150px]">

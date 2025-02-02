@@ -18,6 +18,12 @@ adding a multi language option
 ## Adding all images locally
 
 Ai genarted testimonial 
+Setting Hover on navbar 
+Adding blog on the site 
+on HOve of Case Study it should py animation of scroll 
+Main viedo for Site 
+Viedo as whole where we show all project and services 
+Icons for the services that I will do 
 
 https://gublootech.com/testimonials
 https://commerce-ui.com/.

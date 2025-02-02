@@ -23,21 +23,21 @@ export const MainBlogContent = ({ blogPost }: { blogPost: any }) => {
                             </h1>
                         ),
                         h2: ({ children }) => (
-                            <h2 className="text-2xl md:text-3xl mb-4 mt-12
+                            <h2 className="text-2xl md:text-3xl mb-4 mt-8 md:mt-12
                                leading-[1.2] tracking-[-0.6px]
                                text-zinc-900 dark:text-zinc-100">
                                 {children}
                             </h2>
                         ),
                         h3: ({ children }) => (
-                            <h3 className="text-xl md:text-2xl mb-4 mt-10
+                            <h3 className="text-xl md:text-2xl mb-4 mt-6 md:mt-10
                                leading-[1.25] tracking-[-0.4px] 
                                text-zinc-900 dark:text-zinc-100">
                                 {children}
                             </h3>
                         ),
                         h4: ({ children }) => (
-                            <h4 className="text-lg md:text-xl mb-3 mt-8
+                            <h4 className="text-lg md:text-xl mb-3 mt-8 md:mt-10
                                leading-[1.3] tracking-[-0.3px]
                                text-zinc-900 dark:text-zinc-100">
                                 {children}

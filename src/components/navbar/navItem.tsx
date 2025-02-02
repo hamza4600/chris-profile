@@ -30,13 +30,14 @@ const NavItem: FC<MenuItemProps> = ({
             >
                 <Link
                     href={path}
-                    className="text-black dark:text-white  px-3 py-2"
-                    aeria-label={name}>
+                    className="text-black dark:text-white px-3 py-2"
+                    aria-label={name}
+                >
                     {name}
                 </Link>
 
                 {selected && (
-                    <motion.span
+                    <motion.div
                         className="absolute bottom-[-5px] left-0 w-full bg-blue-500 h-[2px]"
                         layoutId="underline"
                         aria-hidden="true"
