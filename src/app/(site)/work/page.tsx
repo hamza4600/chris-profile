@@ -17,6 +17,7 @@ interface CaseStudy {
   }
 }
 
+
 export default async function CaseStudiesPage() {
   const caseStudies = await getAllCaseStudies()
 
