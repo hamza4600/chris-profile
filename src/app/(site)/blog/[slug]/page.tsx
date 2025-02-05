@@ -25,7 +25,14 @@ export async function generateMetadata(
     openGraph: {
       title: blogPost?.seo?.title || 'Blog Post',
       description: blogPost?.seo?.description || 'A detailed blog post',
-      images: [{ url: blogPost?.seo?.image ? urlFor(blogPost.seo.image).url() : '' }],
+      images : [
+        {
+          url: blogPost?.seo?.image ? urlFor(blogPost.seo.image).url() : '',
+          width: 1200,
+          height: 950,
+          alt: blogPost?.seo?.title || 'Blog Post',
+        }
+      ]
     },
     twitter: {
       title: blogPost?.seo?.title || 'Blog Post',

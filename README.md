@@ -29,3 +29,7 @@ https://gublootech.com/testimonials
 https://commerce-ui.com/.
 https://hawk-style.com/en/presentations-for-services-and-products/
 https://neilpatel.com/nl/
+
+Adding Lda schema for pages
+
+https://www.clio.com/blog/ai-legal-document-review/

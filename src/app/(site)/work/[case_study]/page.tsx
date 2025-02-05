@@ -36,7 +36,11 @@ export async function generateMetadata(
     openGraph: {
       title: caseStudyData?.seo.title || 'Case Study',
       description: caseStudyData?.seo.description || 'A detailed case study of our work',
-      images: [{ url: caseStudyData?.seo.image ? urlFor(caseStudyData.seo.image).url() : '' }],
+      images: [{ url: caseStudyData?.seo.image ? urlFor(caseStudyData.seo.image).url() : '',
+        width: 1200,
+        height: 950,
+        alt: caseStudyData?.seo.title || 'Case Study',
+      }],
     },
   };
 }
