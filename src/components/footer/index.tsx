@@ -39,9 +39,9 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center gap-12">
             <div className="flex flex-col sm:gap-2.5 gap-8">
-              <h1 className="md:text-[38px] text-[30px] font-normal leading-[1.2em] tracking-[-0.7px] dark:text-primary text-black sm:text-start text-center">
+              <h2 className="md:text-[38px] text-[30px] font-normal leading-[1.2em] tracking-[-0.7px] dark:text-primary text-black sm:text-start text-center">
                 Ready to Start Your Project?
-              </h1>
+              </h2>
               <p className="dark:text-secondary text-black text-center text-[20px] md:text-[24px] font-normal leading-[1.2em] tracking-[-0.5px]">
                 Let&apos;s bring your design vision to life.
               </p>

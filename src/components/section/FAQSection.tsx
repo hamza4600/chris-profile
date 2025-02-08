@@ -111,9 +111,9 @@ const FAQSection = ({ sectionTitle, faqItems }: { sectionTitle: string, faqItems
 
   return (
     <section id="faq" className="py-12 md:py-16 px-6 sm:px-8 flex flex-col sm:gap-12 gap-8">
-    <h1 className="text-3xl md:text-4xl text-black dark:text-primary sm:text-start text-center">
+    <h2 className="text-3xl md:text-4xl text-black dark:text-primary sm:text-start text-center">
       {sectionTitle}
-    </h1>
+    </h2>
     <div className="space-y-4 sm:space-y-6">
       {faqItems.map((item, index) => (
         <FAQAccordion

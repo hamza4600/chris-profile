@@ -33,10 +33,13 @@ const HappyClient: React.FC = () => {
               alt={avatar.alt}
               className="w-full h-full object-cover"
               decoding="async"
+              width={100}
+              height={100}
             />
           </div>
         ))}
       </div>
+
       <p className="font-light text-[16px] dark:text-primary text-quaternary">15+ happy clients</p>
     </div>
   );

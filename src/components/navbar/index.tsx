@@ -11,7 +11,8 @@ const Navbar = () => {
       <Link href="/">
         <Image
           decoding="async"
-          src="https://framerusercontent.com/images/3dpALmvrIR88qPmbDlYoTyJSig.png"
+          src="/icon.png"
+          // src="/HK-LOGO.svg"
           className="w-[48px] h-[45x] object-cover object-center"
           alt="Logo"
           width={48}

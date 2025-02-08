@@ -26,6 +26,8 @@ export default function SideSection({relatedPosts, relatedCaseStudies}: {related
                   src={post?.cardData?.image  ? urlFor(post?.cardData?.image).url() : "/images/avatar.png"} 
                   alt={post?.author?.name}
                   className="object-cover rounded w-full h-full"
+                  width={550}
+                  height={356}
                 />
               </div>
               <div>

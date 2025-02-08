@@ -105,8 +105,11 @@ export default async function BlogPost({ params }: { params: { slug: string } })
               src={urlFor(blogPost?.mainImage?.asset?._ref).url()}
               alt={blogPost?.title}
               className="object-cover"
+              width={1050}
+              height={550}
             />
           </div>
+
 
           {/* Content */}
           <MainBlogContent blogPost={blogPost} />

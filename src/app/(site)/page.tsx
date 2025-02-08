@@ -4,6 +4,7 @@ import SchemaOrg from "@/components/Schema/SchemaOrg";
 import IconAutoScroll from "@/components/section/IconAutoScroll";
 import IntroSection from "@/components/section/IntroSection1";
 import ShinningSectionText from "@/components/section/ShinningSectionText";
+import Testimonial from "@/components/section/testimonial";
 import { domainURL } from "@/constants";
 import { getHomePageData, getHomePageSeoData } from "@/sanity/lib/homePage";
 import { Metadata } from "next";
@@ -59,8 +60,8 @@ const icons = [
 // }
 
 export const metadata: Metadata = {
-  title: "Hamza Khan | Turning Ideas into Digital Reality | Full Stack & AI Developer",
-  description: "Experienced full stack developer specializing in creating websites, e-commerce stores, SAAS products and AI solutions, Legal and Law. Proficient in modern web technologies Full Stack Development , AI Development E-Commerce Development , SAAS Development, Legal and Law.",
+  title: "Full Stack Developer | AI, Web3 & E-commerce Solutions - Hamza Khan",
+  description: "Discover Hamza Khan's expertise in crafting innovative digital solutions, blending design with technology to elevate startups and brands.",
   keywords: "Full Stack Development, AI Development, E-Commerce Development, SAAS Development, web development, Legal and Law",
   alternates: {
     types: {
@@ -134,6 +135,7 @@ export default async function Home() {
         sectionTitle={caseStudiesSection.sectionTitle}
         caseStudies={caseStudiesSection.featuredCaseStudies} 
       />
+      <Testimonial />
       <SkillsSection />
       <ExperienceSection />
       <FAQSection 

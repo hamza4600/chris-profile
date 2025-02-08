@@ -3,8 +3,8 @@ import React from "react";
 import Button from "../Atoms/Button";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
-// import HappyClient from "./HappyClient";
-// import { calendlyUrl } from "@/constants";
+import HappyClient from "./HappyClient";
+import { calendlyUrl } from "@/constants";
 // import {useTranslations} from 'next-intl';
 
 interface IntroSection1Props {
@@ -44,20 +44,19 @@ const IntroSection = ({ title, description, heroImage }: IntroSection1Props) => 
             <p className="text-[18px] sm:text-2xl dark:text-secondary text-quaternary text-center max-w-full sm:max-w-[500px]">{description}</p>
           </div>
         </div>
-        {/* <HappyClient /> */}
-        <div className="flex gap-3 items-center flex-row">
-          {/* it will be work page  */}
-          {/* <a href="/#work"> 
+        <HappyClient />
+        {/* <div className="flex gap-3 items-center flex-row">
+          <a href="/#work"> 
             <Button size="large" className="font-normal text-sm sm:text-base px-3 py-2 sm:px-4 sm:py-3">
               See my work
             </Button>
-          </a> */}
-          {/* <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">
+          </a>
+          <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">
             <Button size="large" className="font-normal text-sm sm:text-base px-3 py-2 sm:px-4 sm:py-3">
             Contact me
           </Button>
-          </a> */}
-        </div>
+          </a> 
+        </div> */}
       </div>
     </div>
   );

@@ -22,10 +22,11 @@ export default function robots(): MetadataRoute.Robots {
         allow: [
           '/',
           '/work/*',
-        //   '/about',
+          '/blog/*',
         //   '/contact',
         //   '/blog/*',
           '/sitemap.xml',
+
           '/robots.txt'
         ],
         disallow: [

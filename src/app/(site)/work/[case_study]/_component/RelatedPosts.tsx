@@ -18,7 +18,7 @@ const RelatedPosts = ({ relatedPosts }: { relatedPosts: any }) => {
                          <div className="border border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                             
                         <div className="border border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                            <img src={urlFor(post.cardData.image).url()} alt={post.cardData.title} className="w-full h-full object-cover" />
+                            <img src={urlFor(post.cardData.image).url()} alt={post.cardData.title} className="w-full h-full object-cover" width={550} height={356} />
                         </div>
                         <div className="p-3 md:p-6">
                             <h3 className="text-xl font-semibold dark:text-primary text-black" title={post.cardData.title}>{truncateText(post.cardData.title, 60)}</h3>

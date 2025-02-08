@@ -62,9 +62,12 @@ export default async function BlogPage() {
                   src={urlFor(post?.cardData?.image?.asset?._ref)?.url()}
                   alt={post?.cardData?.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  width={550}
+                  height={356}
                 />
               </div>
               
+
               <div className="flex flex-col flex-grow p-6">
                 <div className="flex items-center gap-4 mb-3">
                   <span className="text-sm px-3 py-1 dark:bg-white/50 font-medium bg-primary text-primary rounded-full">
