@@ -2,34 +2,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
+import Icons from '@/icons/icons';
 
 interface IconAutoScrollProps {
   icons?: { name: string, url: string }[];
   speed?: number;
 }
-
-const Icons = [
-  { name: "React", url: "https://www.codingcrafts.io/wp-content/uploads/2025/01/cross-link-react.svg" },
-  { name: "Kotlin", url: "https://www.codingcrafts.io/wp-content/uploads/2025/01/kotlin-original-ico.svg" },
-  { name: "Python", url: "https://www.codingcrafts.io/wp-content/uploads/2025/01/cross-link-python.svg" },
-  { name: "Node.js", url: "https://www.codingcrafts.io/wp-content/uploads/2025/01/cross-link-node-js.svg" },
-  { name: "AWS", url: "https://www.codingcrafts.io/wp-content/uploads/2025/01/cross-link-aws.svg" },
-  { name: "Next.js", url: "https://www.codingcrafts.io/wp-content/uploads/2025/01/cross-link-next-js.svg" },
-  { name: "Golang", url: "https://www.codingcrafts.io/wp-content/uploads/2025/01/Golang-ico.svg" },
-  { name: "JavaScript", url: "https://www.codingcrafts.io/wp-content/uploads/2025/01/cross-link-javascript.svg" },
-  { name: "React Native", url: "https://www.codingcrafts.io/wp-content/uploads/2025/01/cross-link-react-native.svg" },
-  { name: "Laravel", url: "https://www.codingcrafts.io/wp-content/uploads/2025/01/laravel-developer-ico.svg" },
-  { name: "REST API", url: "https://www.codingcrafts.io/wp-content/uploads/2025/01/cross-link-rest-api.svg" },
-  { name: "Azure", url: "https://www.codingcrafts.io/wp-content/uploads/2025/01/microsoft-azure-ico.svg" },
-  { name: "Flutter", url: "https://www.codingcrafts.io/wp-content/uploads/2025/01/cross-link-flutter.svg" },
-  { name: "Firebase", url: "https://www.codingcrafts.io/wp-content/uploads/2025/01/cross-link-firebase.svg" },
-  { name: "Angular", url: "https://www.codingcrafts.io/wp-content/uploads/2025/01/angular-ico.svg" },
-  { name: "Nest.js", url: "https://www.codingcrafts.io/wp-content/uploads/2025/01/nestjs-ico.svg" },
-  { name: "MongoDB", url: "https://www.codingcrafts.io/wp-content/uploads/2025/01/cross-link-mongodb.svg" },
-  { name: "Ruby on Rails", url: "https://www.codingcrafts.io/wp-content/uploads/2025/01/cross-link-ruby-on-rails.svg" },
-  { name: "GraphQL", url: "https://www.codingcrafts.io/wp-content/uploads/2025/01/cross-link-graphql.svg" },
-  { name: "Docker", url: "https://www.codingcrafts.io/wp-content/uploads/2025/01/cross-link-docker.svg" }
-];
 
 const IconAutoScroll: React.FC<IconAutoScrollProps> = ({ icons = Icons, speed = 2 }) => {
   const { theme } = useTheme();

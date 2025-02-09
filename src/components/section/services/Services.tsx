@@ -40,16 +40,19 @@ const services = [
         link: "/service/frontend-development",
         description: "Modern web interfaces with pixel-perfect implementation and responsive design.",
         specs: ["React/Next.js", "TypeScript", "Web Components", "Tailwind CSS", "Performance Optimization"],
-        imgSrc: "https://diffco.us/wp-content/themes/diffconew/static-template/build/images/about-us-v4/s-5.png",
+        imgSrc: "/icons/s-5.webp",
         chatLink: "#modalGetQuote"
+
+
     },
     {
         title: "Back-end Development",
         link: "/service/backend-development",
         description: "Robust server-side solutions handling complex business logic and high traffic loads.",
         specs: ["Node.js/Deno", "Python/Django", "Golang", "GraphQL", "PostgreSQL/MongoDB"],
-        imgSrc: "https://diffco.us/wp-content/themes/diffconew/static-template/build/images/about-us-v4/s-2.svg",
+        imgSrc: "/icons/s-2.svg",
         chatLink: "#modalGetQuote"
+
       },
     {
       title: "SaaS Development",
@@ -57,31 +60,34 @@ const services = [
       description: "Build scalable cloud-based solutions with modern architecture and seamless integrations.",
 
       specs: ["AWS/GCP/Azure", "Microservices", "Docker & Kubernetes", "CI/CD Pipelines"],
-      imgSrc: "https://diffco.us/wp-content/themes/diffconew/static-template/build/images/about-us-v4/s-3.svg",
+      imgSrc: "/icons/s-3.svg",
       chatLink: "#modalGetQuote"
     },
+
     {
         title: "AI & Machine Learning",
         link: "/service/ai-development",
         description: "Smart solutions powered by predictive analytics and intelligent automation.",
         specs: ["LLM Integration", "TensorFlow/PyTorch", "Computer Vision", "ChatGPT API", "MLOps"],
-        imgSrc: "https://diffco.us/wp-content/themes/diffconew/static-template/build/images/about-us-v4/s-4.svg",
+        imgSrc: "/icons/s-4.svg",
         chatLink: "#modalGetQuote"
       },
+
     {
       title: "E-commerce Solutions",
       link: "/service/e-commerce",
       description: "Create high-converting online stores with secure payment gateways and inventory management.",
       specs: ["Shopify Plus", "Stripe/PayPal", "Headless Commerce","WooCommerce"],
-      imgSrc: "https://diffco.us/wp-content/themes/diffconew/static-template/build/images/about-us-v4/s-1.svg",
+      imgSrc: "/icons/s-1.svg",
       chatLink: "#modalGetQuote"
     },
+
     {
       title: "Compliance Solutions",
       link: "/service/compliance",
       description: "Ensure regulatory adherence and data protection across your digital ecosystem.",
       specs: ["GDPR", "HIPAA", "PCI-DSS", "SOC 2", "ISO 27001"],
-      imgSrc: "https://diffco.us/wp-content/themes/diffconew/static-template/build/images/about-us-v4/s-6.svg",
+      imgSrc: "/icons/s-6.svg",
       chatLink: "#modalGetQuote"
     },
     

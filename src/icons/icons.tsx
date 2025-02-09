@@ -48,15 +48,42 @@ export const Rss = () => {
 }
 
 export const stackIcons = [
-    { name: 'ReactJs', component: ReactJs },
-    { name: 'NextJs', component: NextJs },
-    { name: 'NodeJs', component: NodeJs },
-    { name: 'Apollo', component: Apollo },
-    { name: 'SaaS', component: SaaS },
-    { name: 'Redux', component: Redux },
-    { name: 'Typescript', component: Typescript },
-    { name: 'Gatsby', component: Gatsby },
-    { name: 'Nuxtjs', component: Nuxtjs },
-    { name: 'Angular', component: Angular },
-    { name: 'Vue', component: Vue },
+    { name: 'ReactJs', component: ReactJs, type: 'icon' },
+    { name: 'NextJs', component: NextJs, type: 'icon' },
+    { name: 'NodeJs', component: NodeJs, type: 'icon' },
+    { name: 'Apollo', component: Apollo, type: 'icon' },
+    { name: 'SaaS', component: SaaS, type: 'icon' },
+    { name: 'Redux', component: Redux, type: 'icon' },
+    { name: 'Typescript', component: Typescript, type: 'icon' },
+
+    { name: 'Gatsby', component: Gatsby, type: 'icon' },
+    { name: 'Nuxtjs', component: Nuxtjs, type: 'icon' },
+    { name: 'Angular', component: Angular, type: 'icon' },
+    { name: 'Vue', component: Vue, type: 'icon' },
+
 ]
+
+const Icons = [
+    { name: "React", url: "/icons/cross-link-react.svg" },
+    { name: "Kotlin", url: "/icons/kotlin-original-ico.svg" },
+    { name: "Python", url: "/icons/cross-link-python.svg" },
+    { name: "Node.js", url: "/icons/cross-link-node-js.svg" },
+    { name: "AWS", url: "/icons/cross-link-aws.svg" },
+    { name: "Next.js", url: "/icons/cross-link-next-js.svg" },
+    { name: "Golang", url: "/icons/Golang-ico.svg" },
+    { name: "JavaScript", url: "/icons/cross-link-javascript.svg" },
+    { name: "React Native", url: "/icons/cross-link-react-native.svg" },
+    { name: "Laravel", url: "/icons/laravel-developer-ico.svg" },
+    { name: "REST API", url: "/icons/cross-link-rest-api.svg" },
+    { name: "Azure", url: "/icons/microsoft-azure-ico.svg" },
+    { name: "Flutter", url: "/icons/cross-link-flutter.svg" },
+    { name: "Firebase", url: "/icons/cross-link-firebase.svg" },
+    { name: "Angular", url: "/icons/angular-ico.svg" },
+    { name: "Nest.js", url: "/icons/nestjs-ico.svg" },
+    { name: "MongoDB", url: "/icons/cross-link-mongodb.svg" },
+    { name: "Ruby on Rails", url: "/icons/cross-link-ruby-on-rails.svg" },
+    { name: "GraphQL", url: "/icons/cross-link-graphql.svg" },
+    { name: "Docker", url: "/icons/cross-link-docker.svg" }
+];
+
+export default Icons;
