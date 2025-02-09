@@ -6,6 +6,30 @@ import { urlFor } from "@/sanity/lib/image";
 import HappyClient from "./HappyClient";
 import { calendlyUrl } from "@/constants";
 // import {useTranslations} from 'next-intl';
+export const AIDevelopmentBadge = () => {
+  const badgeStyles = {
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '236px',
+    height: '32px',
+    fontWeight: 500,
+    fontSize: '13px',
+    lineHeight: '24px',
+    padding: '4px 16px',
+    textAlign: 'center',
+    background: 'linear-gradient(90.22deg, rgba(255, 189, 18, .12) 0, rgba(224, 61, 61, .12) 53.72%, rgba(205, 33, 233, .12) 101.11%)',
+    borderRadius: '20px',
+    pointerEvents: 'none'
+  };
+  return (
+    <span style={badgeStyles as React.CSSProperties} className="text-[#131426] dark:text-white">
+      Now developing faster with AI
+      <svg>
+        <use xlinkHref="#developing-faster-ai" />
+      </svg>
+    </span>
+  );
+};
 
 interface IntroSection1Props {
   title: string;
@@ -44,6 +68,7 @@ const IntroSection = ({ title, description, heroImage }: IntroSection1Props) => 
             <p className="text-[18px] sm:text-2xl dark:text-secondary text-quaternary text-center max-w-full sm:max-w-[500px]">{description}</p>
           </div>
         </div>
+        <AIDevelopmentBadge />
         <HappyClient />
         {/* <div className="flex gap-3 items-center flex-row">
           <a href="/#work"> 

@@ -3,7 +3,9 @@ import { authorSchema } from "@/components/Schema";
 import SchemaOrg from "@/components/Schema/SchemaOrg";
 import IconAutoScroll from "@/components/section/IconAutoScroll";
 import IntroSection from "@/components/section/IntroSection1";
-import ShinningSectionText from "@/components/section/ShinningSectionText";
+import { IndustrySection } from "@/components/section/services/IndustrySection";
+import ServicesSection2 from "@/components/section/services/Services";
+// import ShinningSectionText from "@/components/section/ShinningSectionText";
 import Testimonial from "@/components/section/testimonial";
 import { domainURL } from "@/constants";
 import { getHomePageData, getHomePageSeoData } from "@/sanity/lib/homePage";
@@ -14,32 +16,33 @@ const ParallaxSection = dynamic(() => import("@/components/section/ParallexSec")
 const SkillsSection = dynamic(() => import("@/components/section/SkillsSection"));
 const ExperienceSection = dynamic(() => import("@/components/section/ExperienceSection"));
 const FAQSection = dynamic(() => import("@/components/section/FAQSection"));
+// const ServicesSection = dynamic(() => import("@/components/section/services"));
 
 // import { urlFor } from "@/sanity/lib/image";
 // import { Metadata } from "next";
 
-const icons = [
-  "https://framerusercontent.com/images/hqIVsN8SplywoxNsCXdrELqh3Uc.png",
-  "https://framerusercontent.com/images/ZCcbDAFfIHYrHLOqtVLKQXAIGY.png",
-  "https://framerusercontent.com/images/PFfPRPqCnleo77thxuLEpUUjB0.png",
-  "https://framerusercontent.com/images/Qs7RpNfTc6MXJVwxIY8QzQDhQ.png",
-  "https://framerusercontent.com/images/vXxrIZDFEdcYsaqEYWnpcVYilU.png",
-  "https://framerusercontent.com/images/T9PpAagNI1pVt63DYJjSH5ViE.png",
-  "https://framerusercontent.com/images/neJyiCkJGsL33q9aEvjzzHMKHo.png",
-  "https://framerusercontent.com/images/9BXsOCAIoUWa18SOvVKxbkahg.png",
-  "https://framerusercontent.com/images/UhyrGjyOSvUkVZWBmysfZCg6s4.png",
-  "https://framerusercontent.com/images/axEbQrKhpYjJigPMinun2ajkc.png",
-  "https://framerusercontent.com/images/hqIVsN8SplywoxNsCXdrELqh3Uc.png",
-  "https://framerusercontent.com/images/ZCcbDAFfIHYrHLOqtVLKQXAIGY.png",
-  "https://framerusercontent.com/images/PFfPRPqCnleo77thxuLEpUUjB0.png",
-  "https://framerusercontent.com/images/Qs7RpNfTc6MXJVwxIY8QzQDhQ.png",
-  "https://framerusercontent.com/images/vXxrIZDFEdcYsaqEYWnpcVYilU.png",
-  "https://framerusercontent.com/images/T9PpAagNI1pVt63DYJjSH5ViE.png",
-  "https://framerusercontent.com/images/neJyiCkJGsL33q9aEvjzzHMKHo.png",
-  "https://framerusercontent.com/images/9BXsOCAIoUWa18SOvVKxbkahg.png",
-  "https://framerusercontent.com/images/UhyrGjyOSvUkVZWBmysfZCg6s4.png",
-  "https://framerusercontent.com/images/axEbQrKhpYjJigPMinun2ajkc.png",
-]
+// const icons = [
+//   "https://framerusercontent.com/images/hqIVsN8SplywoxNsCXdrELqh3Uc.png",
+//   "https://framerusercontent.com/images/ZCcbDAFfIHYrHLOqtVLKQXAIGY.png",
+//   "https://framerusercontent.com/images/PFfPRPqCnleo77thxuLEpUUjB0.png",
+//   "https://framerusercontent.com/images/Qs7RpNfTc6MXJVwxIY8QzQDhQ.png",
+//   "https://framerusercontent.com/images/vXxrIZDFEdcYsaqEYWnpcVYilU.png",
+//   "https://framerusercontent.com/images/T9PpAagNI1pVt63DYJjSH5ViE.png",
+//   "https://framerusercontent.com/images/neJyiCkJGsL33q9aEvjzzHMKHo.png",
+//   "https://framerusercontent.com/images/9BXsOCAIoUWa18SOvVKxbkahg.png",
+//   "https://framerusercontent.com/images/UhyrGjyOSvUkVZWBmysfZCg6s4.png",
+//   "https://framerusercontent.com/images/axEbQrKhpYjJigPMinun2ajkc.png",
+//   "https://framerusercontent.com/images/hqIVsN8SplywoxNsCXdrELqh3Uc.png",
+//   "https://framerusercontent.com/images/ZCcbDAFfIHYrHLOqtVLKQXAIGY.png",
+//   "https://framerusercontent.com/images/PFfPRPqCnleo77thxuLEpUUjB0.png",
+//   "https://framerusercontent.com/images/Qs7RpNfTc6MXJVwxIY8QzQDhQ.png",
+//   "https://framerusercontent.com/images/vXxrIZDFEdcYsaqEYWnpcVYilU.png",
+//   "https://framerusercontent.com/images/T9PpAagNI1pVt63DYJjSH5ViE.png",
+//   "https://framerusercontent.com/images/neJyiCkJGsL33q9aEvjzzHMKHo.png",
+//   "https://framerusercontent.com/images/9BXsOCAIoUWa18SOvVKxbkahg.png",
+//   "https://framerusercontent.com/images/UhyrGjyOSvUkVZWBmysfZCg6s4.png",
+//   "https://framerusercontent.com/images/axEbQrKhpYjJigPMinun2ajkc.png",
+// ]
 
 // export async function generateMetadata(
 //   { params }: { params: { case_study: string } }
@@ -128,9 +131,13 @@ export default async function Home() {
         heroImage={heroSection.heroImage}
       />
       <section className="md:pb-8 pb-4 px-6 pt-6 md:pt-8 sm:px-8">
-        <IconAutoScroll icons={icons} />
+        <IconAutoScroll />
       </section>
-      <ShinningSectionText />
+      {/* <ShinningSectionText /> */}
+      {/* <ServicesSection /> */}
+      <ServicesSection2 />
+      <IndustrySection />
+      
       <ParallaxSection 
         sectionTitle={caseStudiesSection.sectionTitle}
         caseStudies={caseStudiesSection.featuredCaseStudies} 

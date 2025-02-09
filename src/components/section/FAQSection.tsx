@@ -2,30 +2,6 @@
 import React, { useState} from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const faqData = [
- 
-  {
-    question: "How do you approach challenging projects?",
-    answer: "Software and solution development can be complex. We are equipped to work using agile, waterfall, or a client-driven development approach, adapting to the unique needs of each project.",
-  },
-  {
-    question: "How long does it typically take to develop an application?",
-    answer: "The timeline for application development varies based on complexity and features. Simple apps may take weeks, while complex ones can take months or longer.",
-  },
-  // {
-  //   question: "Do you offer custom application development services?",
-  //   answer: "Yes, I specialize in custom application development. We tailor our solutions to meet your unique business needs and objectives.",
-  // },
-  {
-    question: "How does you handle confidentiality and sensitive information?",
-    answer: "We prioritize confidentiality, implementing stringent measures to protect all sensitive information shared with us during the project lifecycle.",
-  },
-  {
-    question: "Can you integrate third-party services or APIs into our application?",
-    answer: "Yes, I integrate third-party services, APIs, and data sources to enhance functionality and deliver seamless user experiences.",
-  },
-];
-
 const ChevronIcon: React.FC = () => (
   <svg
     className={`transform transition-transform duration-300`}
