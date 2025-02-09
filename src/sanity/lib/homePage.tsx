@@ -43,6 +43,16 @@ export interface HomePageData {
       answer: string;
     }>;
   };
+  blogsSection: {
+    sectionTitle: string;
+    blogs: Array<{
+      _id: string;
+      cardData: any;
+      title: string;
+      slug: string;
+    }>;
+  };
+
 }
 
 const homePageQuery = groq`
@@ -88,9 +98,19 @@ const homePageQuery = groq`
         question,
         answer
       }
+    },
+    blogsSection {
+      sectionTitle,
+      blogs[]-> {
+        _id,
+        cardData,
+        title,
+        slug
+      }
     }
   }
 `;
+
 
 export async function getHomePageData(): Promise<HomePageData> {
   try {

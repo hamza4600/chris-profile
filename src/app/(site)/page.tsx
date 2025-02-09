@@ -1,6 +1,7 @@
 import { generateHomePageSchema } from "@/components/Schema";
 import { authorSchema } from "@/components/Schema";
 import SchemaOrg from "@/components/Schema/SchemaOrg";
+import HomePageBlogSec from "@/components/section/HomePageBlogSec";
 import IconAutoScroll from "@/components/section/IconAutoScroll";
 import IntroSection from "@/components/section/IntroSection1";
 import { IndustrySection } from "@/components/section/services/IndustrySection";
@@ -20,29 +21,6 @@ const FAQSection = dynamic(() => import("@/components/section/FAQSection"));
 
 // import { urlFor } from "@/sanity/lib/image";
 // import { Metadata } from "next";
-
-// const icons = [
-//   "https://framerusercontent.com/images/hqIVsN8SplywoxNsCXdrELqh3Uc.png",
-//   "https://framerusercontent.com/images/ZCcbDAFfIHYrHLOqtVLKQXAIGY.png",
-//   "https://framerusercontent.com/images/PFfPRPqCnleo77thxuLEpUUjB0.png",
-//   "https://framerusercontent.com/images/Qs7RpNfTc6MXJVwxIY8QzQDhQ.png",
-//   "https://framerusercontent.com/images/vXxrIZDFEdcYsaqEYWnpcVYilU.png",
-//   "https://framerusercontent.com/images/T9PpAagNI1pVt63DYJjSH5ViE.png",
-//   "https://framerusercontent.com/images/neJyiCkJGsL33q9aEvjzzHMKHo.png",
-//   "https://framerusercontent.com/images/9BXsOCAIoUWa18SOvVKxbkahg.png",
-//   "https://framerusercontent.com/images/UhyrGjyOSvUkVZWBmysfZCg6s4.png",
-//   "https://framerusercontent.com/images/axEbQrKhpYjJigPMinun2ajkc.png",
-//   "https://framerusercontent.com/images/hqIVsN8SplywoxNsCXdrELqh3Uc.png",
-//   "https://framerusercontent.com/images/ZCcbDAFfIHYrHLOqtVLKQXAIGY.png",
-//   "https://framerusercontent.com/images/PFfPRPqCnleo77thxuLEpUUjB0.png",
-//   "https://framerusercontent.com/images/Qs7RpNfTc6MXJVwxIY8QzQDhQ.png",
-//   "https://framerusercontent.com/images/vXxrIZDFEdcYsaqEYWnpcVYilU.png",
-//   "https://framerusercontent.com/images/T9PpAagNI1pVt63DYJjSH5ViE.png",
-//   "https://framerusercontent.com/images/neJyiCkJGsL33q9aEvjzzHMKHo.png",
-//   "https://framerusercontent.com/images/9BXsOCAIoUWa18SOvVKxbkahg.png",
-//   "https://framerusercontent.com/images/UhyrGjyOSvUkVZWBmysfZCg6s4.png",
-//   "https://framerusercontent.com/images/axEbQrKhpYjJigPMinun2ajkc.png",
-// ]
 
 // export async function generateMetadata(
 //   { params }: { params: { case_study: string } }
@@ -111,11 +89,12 @@ export const metadata: Metadata = {
   },
 };
 
+export const revalidate = 600;
 
 export default async function Home() {
   
   const homePageData = await getHomePageData();
-  const { heroSection, caseStudiesSection, skillsSection, experienceSection, faqSection} = homePageData;
+  const { heroSection, caseStudiesSection, faqSection, blogsSection} = homePageData;
 
   const schemas = [
     generateHomePageSchema(homePageData),
@@ -144,6 +123,7 @@ export default async function Home() {
       />
       <Testimonial />
       <SkillsSection />
+      <HomePageBlogSec blogs={blogsSection} />
       <ExperienceSection />
       <FAQSection 
         sectionTitle={faqSection.sectionTitle}
