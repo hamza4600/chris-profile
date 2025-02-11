@@ -110,6 +110,7 @@ const CaseStudyPage = async (props: { params: { case_study: string } }) => {
           <Link
             href={previewLink as string}
             target="_blank"
+             rel="noopener noreferrer"
           >
             <Button size="medium" className=" font-medium">
               Preview Project
