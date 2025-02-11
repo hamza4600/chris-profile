@@ -116,7 +116,6 @@ export default async function Home() {
       {/* <ServicesSection /> */}
       <ServicesSection2 />
       <IndustrySection />
-      
       <ParallaxSection 
         sectionTitle={caseStudiesSection.sectionTitle}
         caseStudies={caseStudiesSection.featuredCaseStudies} 

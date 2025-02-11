@@ -1,10 +1,8 @@
 /** @type {import('next').NextConfig} */
-// import createNextIntlPlugin from 'next-intl/plugin';
-// const withNextIntl = createNextIntlPlugin();
 
 const nextConfig = {
   images: {
-    domains: ['cdn.sanity.io'],
+    domains: ['cdn.sanity.io', 'pub-f3904ae1bf834a09a44d1c4ad718470e.r2.dev'],
     remotePatterns: [
       {
         hostname: 'framerusercontent.com',

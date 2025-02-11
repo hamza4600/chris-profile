@@ -33,12 +33,13 @@ const HomePageBlogSec = ({ blogs }: { blogs: any }) => {
                             <div className="relative w-full h-full overflow-hidden">
                             <Image
                                 src={urlFor(blog.cardData.image).url()}
-                                alt={blog.title}
+                                alt={truncateText(blog.title, 100)}
                                 width={550}
                                 height={356}
                                 className="w-full h-full md:h-[215px] object-cover transition-transform duration-300 hover:scale-105"
                                 />
                                 </div>
+
                             <div className="p-3 md:p-4">
 
 

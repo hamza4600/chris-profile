@@ -1,8 +1,8 @@
 import Link from "next/link";
 // import Button from "../Atoms/Button";
 // import { calendlyUrl } from "@/constants";
-import { Rss } from "@/icons/icons";
 import { domainURL } from "@/constants";
+import { Rss } from "lucide-react";
 
 const links = [
   {

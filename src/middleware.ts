@@ -1,0 +1,41 @@
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
+
+const prod = process.env.NODE_ENV === "production";
+
+export async function middleware(request: NextRequest) {
+  const nonce = crypto.randomUUID();
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set("x-nonce", nonce);
+
+  const response = NextResponse.next({
+    request: {
+      headers: requestHeaders,
+    },
+  });
+
+  response.headers.set(
+    "Content-Security-Policy",
+    `default-src 'self';` +
+      `script-src 'self' '${
+        prod ? "" : "unsafe-eval"
+      }' 'nonce-${nonce}' 'unsafe-inline' https://*.vercel.live https://*.vercel.app https://vercel.live https://*.googleapis.com https://*.gstatic.com https://*.google.com https://cdn.sanity.io https://pub-f3904ae1bf834a09a44d1c4ad718470e.r2.dev/ https://www.googletagmanager.com https://www.google-analytics.com;` +
+      `style-src 'self' 'unsafe-inline' 'nonce-${nonce}';` +
+      `img-src 'self' data: blob: https://*.cloudflare.com https://cdn.sanity.io https://pub-f3904ae1bf834a09a44d1c4ad718470e.r2.dev https://*.framerusercontent.com https://www.google-analytics.com https://www.googletagmanager.com https://*.your-other-image-domains.com;` +
+      `media-src 'self' data: blob: https://*.cloudflare.com https://*.googleapis.com https://cdn.sanity.io https://pub-f3904ae1bf834a09a44d1c4ad718470e.r2.dev;` +
+      `font-src 'self';` +
+      `connect-src 'self' https://*.googleapis.com https://*.gstatic.com https://*.vercel.live https://cdn.sanity.io https://pub-f3904ae1bf834a09a44d1c4ad718470e.r2.dev https://www.google-analytics.com https://www.googletagmanager.com;` +
+      `frame-src 'self' https://*.google.com https://vercel.live https://cdn.sanity.io https://pub-f3904ae1bf834a09a44d1c4ad718470e.r2.dev;` +
+      `object-src 'none';` +
+      `base-uri 'self';` +
+      `form-action 'self';` +
+      `frame-ancestors 'none';` +
+      `upgrade-insecure-requests`
+  );
+
+  return response;
+}
+
+export const config = {
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
+};

@@ -42,7 +42,7 @@ const OtherCaseStudies: React.FC<OtherCaseStudiesProps> = ({ otherCaseStudies })
               <div className="relative w-full h-auto">
                 <Image
                   src={urlFor(caseStudy.caseStudyCardData.image).url()}
-                  alt={caseStudy.caseStudyCardData.description}
+                  alt={truncateText(caseStudy.caseStudyCardData.title, 100)}
                   width={500}
                   height={300}
                   className="w-full  object-cover md:h-[300px] sm:h-[200px]"

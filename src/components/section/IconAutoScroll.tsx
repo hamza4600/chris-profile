@@ -11,6 +11,7 @@ interface IconAutoScrollProps {
 
 const IconAutoScroll: React.FC<IconAutoScrollProps> = ({ icons = Icons, speed = 2 }) => {
   const { theme } = useTheme();
+  const isDark = theme === 'dark';
 
   return (
     <section aria-label="Icon Auto Scroll"
@@ -41,11 +42,7 @@ const IconAutoScroll: React.FC<IconAutoScrollProps> = ({ icons = Icons, speed = 
           {[...icons, ...icons, ...icons].map((icon, index) => (
             <div
               key={`${icon.name}-${index}`}
-              className="inline-block mx-4 dark:text-primary text-black rounded-full p-2"
-              style={{
-                flex: '0 0 auto',
-                backgroundColor: theme === 'dark' ? 'rgba(0, 0, 0, 0.1)' : '#1a1a1a',
-              }}
+              className={`inline-block mx-4 dark:text-primary text-black rounded-full p-2 flex-none ${isDark ? 'bg-[rgba(0, 0, 0, 0.1)]' : 'bg-[#1a1a1a]'}`}
             >
               <img src={icon.url} alt={icon.name} width={40} height={40} title={icon.name} />
             </div>

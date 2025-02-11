@@ -61,7 +61,7 @@ const Testimonial = () => {
                             <video 
                                 controls
                                 preload="none"
-                                title={testimonial.name + " testimonial"} 
+                                title={testimonial.name + " testimonial"}
                                 src={testimonial.video} 
                                 className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
                                     playingVideo === testimonial.name ? 'opacity-100 z-10' : 'opacity-0 z-0'

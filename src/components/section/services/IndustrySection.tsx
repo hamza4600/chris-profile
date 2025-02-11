@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 const IndustryTabs = ({ tabs }: { tabs: any }) => {
   return (
-    <div className="mt-12 mb-0 md:mb-20 md:mt-20">
+    <div className="mt-12 mb-0 md:mb-0 md:mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
@@ -51,46 +51,37 @@ const IndustryTabs = ({ tabs }: { tabs: any }) => {
 const industries = [
   {
     title: "Healthcare",
-    notActiveIcon: "https://diffco.us/wp-content/uploads/2024/08/ic-ch-1.svg",
-    activeIcon: "https://diffco.us/wp-content/uploads/2024/08/ic-ch-1-active.svg"
+    activeIcon: "/icons/ic-ch-1-active.svg"
   },
   {
     title: "Finance",
-    notActiveIcon: "https://diffco.us/wp-content/uploads/2024/08/ic-ch-2.svg",
-    activeIcon: "https://diffco.us/wp-content/uploads/2024/08/ic-ch-2-active.svg"
+    activeIcon: "/icons/ic-ch-2-active.svg"
   },
   {
     title: "Technology",
-    notActiveIcon: "https://diffco.us/wp-content/uploads/2024/08/ic-ch-3.svg",
-    activeIcon: "https://diffco.us/wp-content/uploads/2024/08/ic-ch-3-active.svg"
+    activeIcon: "/icons/ic-ch-3-active.svg"
   },
   {
     title: "Retail",
-    notActiveIcon: "https://diffco.us/wp-content/uploads/2024/08/ic-ch-4.svg",
-    activeIcon: "https://diffco.us/wp-content/uploads/2024/08/ic-ch-4-active.svg"
+    activeIcon: "/icons/ic-ch-4-active.svg"
   },
-
 
   {
     title: "SaaS",
-    notActiveIcon: "https://diffco.us/wp-content/uploads/2024/08/ic-ch-5.svg",
-    activeIcon: "https://diffco.us/wp-content/uploads/2024/08/ic-ch-5-active.svg"
+    activeIcon: "/icons/ic-ch-5-active.svg"
   },
   {
     title: "Business",
-    notActiveIcon: "https://diffco.us/wp-content/uploads/2024/08/ic-ch-6.svg",
-    activeIcon: "https://diffco.us/wp-content/uploads/2024/08/ic-ch-6-active.svg"
+    activeIcon: "/icons/ic-ch-6-active.svg"
   },
   {
     title: "Media ",
-    notActiveIcon: "https://diffco.us/wp-content/uploads/2024/08/ic-ch-7.svg",
-    activeIcon: "https://diffco.us/wp-content/uploads/2024/08/ic-ch-7-active.svg"
+    activeIcon: "/icons/ic-ch-7-active.svg"
   },
 
   {
     title: "AI",
-    notActiveIcon: "https://diffco.us/wp-content/uploads/2024/08/ic-ch-8.svg",
-    activeIcon: "https://diffco.us/wp-content/uploads/2024/08/ic-ch-8-active.svg"
+    activeIcon: "/icons/ic-ch-8-active.svg"
   }
 ];
 // Usage example

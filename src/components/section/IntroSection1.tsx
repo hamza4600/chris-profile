@@ -7,26 +7,20 @@ import HappyClient from "./HappyClient";
 import { calendlyUrl } from "@/constants";
 // import {useTranslations} from 'next-intl';
 export const AIDevelopmentBadge = () => {
-  const badgeStyles = {
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    width: '236px',
-    height: '32px',
-    fontWeight: 500,
-    fontSize: '13px',
-    lineHeight: '24px',
-    padding: '4px 16px',
-    textAlign: 'center',
-    background: 'linear-gradient(90.22deg, rgba(255, 189, 18, .12) 0, rgba(224, 61, 61, .12) 53.72%, rgba(205, 33, 233, .12) 101.11%)',
-    borderRadius: '20px',
-    pointerEvents: 'none'
-  };
   return (
-    <span style={badgeStyles as React.CSSProperties} className="text-[#131426] dark:text-white">
+    <span className="
+      inline-flex justify-between items-center
+      w-[236px] h-8 px-4 py-1
+      text-sm font-medium leading-6
+      text-[#131426] dark:text-white
+      rounded-[20px] pointer-events-none
+      bg-gradient-to-r from-[rgba(255,189,18,0.12)] via-[rgba(224,61,61,0.12)] to-[rgba(205,33,233,0.12)]
+      dark:from-[rgba(255,189,18,0.2)] dark:via-[rgba(224,61,61,0.2)] dark:to-[rgba(205,33,233,0.2)]
+    ">
       Now developing faster with AI
-      <svg>
+      {/* <svg>
         <use xlinkHref="#developing-faster-ai" />
-      </svg>
+      </svg> */}
     </span>
   );
 };
