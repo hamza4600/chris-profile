@@ -40,9 +40,9 @@ const Card: React.FC<CardProps> = ({ item }) => {
             <div className="flex justify-between max-md:flex-col">
                 <div className="flex flex-col lg:justify-between h-full lg:min-h-[380px] lg:max-w-[480px] w-full">
                     <div>
-                        <h4 className="md:text-[20px] text-[16px] mb-2 w-fit rounded-full px-3 py-1 dark:bg-[hsla(0,0%,10%,1)] bg-[#fbfbfb] dark:text-primary text-black border dark:border-white/[0.14] border-gray-200">
+                        <div className="md:text-[20px] text-[16px] mb-2 w-fit rounded-full px-3 py-1 dark:bg-[hsla(0,0%,10%,1)] bg-[#fbfbfb] dark:text-primary text-black border dark:border-white/[0.14] border-gray-200">
                             {subtitle}
-                        </h4>
+                        </div>
                         <h3 className="md:text-[30px] text-[20px] sm:text-[26px] -tracking-[0.5px] sm:leading-[1.4em] dark:text-white text-black">
                             {title}
                         </h3>

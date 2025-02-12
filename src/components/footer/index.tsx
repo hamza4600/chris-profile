@@ -26,7 +26,7 @@ const links = [
 const WorkWithMe = () => {
   return (
     <div className="flex items-center gap-2 border-gray-200 dark:border-gray-800  cursor-pointer  border rounded-full px-3 py-2">
-        <div className="animate-pulse-green w-2 h-2 scale-100 rounded-full bg-[rgb(120,227,122)]" title="Open for work"></div>
+      <div className="animate-pulse-green w-2 h-2 scale-100 rounded-full bg-[rgb(120,227,122)]" title="Open for work"></div>
       <p className="max-md:text-center max-md:w-full">Open for work</p>
     </div>
   )
@@ -68,8 +68,14 @@ const Footer = () => {
               {link.name}
             </Link>
           ))}
-          <a href="/feed.xml" target="_blank" rel="noopener noreferrer">
+          <a 
+            href="/feed.xml" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="Subscribe to our RSS feed"
+          >
             <Rss />
+            <span className="sr-only">Subscribe to our RSS feed</span>
           </a>
         </div>
       </div>

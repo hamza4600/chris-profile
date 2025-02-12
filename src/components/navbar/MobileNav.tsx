@@ -17,7 +17,12 @@ const MobileNav: React.FC = () => {
 
   return (
     <div className="lg:hidden">
-      <button onClick={toggleMenu} className="z-50 relative">
+      <button
+        type="button"
+        onClick={toggleMenu} 
+        className="z-50 relative"
+        aria-label={isOpen ? "Close menu" : "Open menu"}
+      >
         <motion.svg
           className={"z-[5000] relative"}
           width="24"

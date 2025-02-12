@@ -28,6 +28,7 @@ const ThemeToggle = () => {
                 className="sr-only"
                 checked={theme === 'dark'}
                 onChange={toggleTheme}
+                aria-label="Toggle dark mode"
             />
             <div className="w-14 h-7 bg-gray-200 rounded-full shadow-inner transition-colors duration-300 ease-in-out dark:bg-gray-600"></div>
             <div className={`absolute left-1 top-1 w-5 h-5 bg-white rounded-full transition-transform duration-300 ease-in-out flex items-center justify-center ${theme === 'dark' ? 'translate-x-7' : ''}`}>

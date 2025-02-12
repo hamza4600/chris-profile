@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const ServiceCard = ({ title, link, description, specs, imgSrc, chatLink }: { title: string, link: string, description: string, specs: string[], imgSrc: string, chatLink: string }) => {
   return (
@@ -6,27 +7,35 @@ const ServiceCard = ({ title, link, description, specs, imgSrc, chatLink }: { ti
       <div className="flex-1">
         <h4 className="text-xl font-semibold mb-2 ">
           {title}
-
         </h4>
-        <h5 className="text-gray-700 dark:text-gray-300 mb-4">{description}</h5>
+        <p className="text-gray-700 dark:text-gray-300 mb-4">{description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
 
           {specs.map((spec, index) => (
             <span key={index} className="bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-full">{spec}</span>
           ))}
         </div>
-        <div className="flex gap-4">
-          {/* {chatLink && (
-            <a href={chatLink} className="bg-[#000000] text-white px-4 py-2 rounded-lg hover:bg-[#111111]">
-              Let&apos;s chat
-            </a>
-          )} */}
-          {/* {link && (
-            <a href={link} className="border border-gray-200 dark:border-gray-800 text-gray-800 dark:text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-300">
-              Learn more
-            </a>
-          )} */}
-        </div>
+        {/* <div className="flex gap-2 mt-4">
+          <Link
+            href={link}
+            className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            aria-label={`Learn more about ${title}`}
+          >
+            Learn More
+            <span className="sr-only"> about {title}</span>
+          </Link>
+          
+          {chatLink && (
+            <Link
+              href={chatLink}
+              className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+              aria-label={`Start chat consultation for ${title}`}
+            >
+              Chat Now
+              <span className="sr-only"> to discuss {title}</span>
+            </Link>
+          )}
+        </div> */}
       </div>
       <div className="flex-shrink-0 dark:bg-white">
         <img src={imgSrc} alt={title} className="w-32 md:w-48 h-auto" />
