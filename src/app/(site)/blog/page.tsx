@@ -9,7 +9,7 @@ export const revalidate = 60;
 export async function generateMetadata() {
   return {
     title: "Blog | Full-Stack Developer Insights JavaScript, Shopify, AI Expert & Web Development | Hamza Khan",
-    description: "Explore in-depth articles about web development, Shopify, AI, JavaScript, design patterns, technology trends, and software engineering best practices. Stay updated with our latest insights and tutorials.",
+    description: "Stay ahead with expert insights on AI, web development, cybersecurity, and digital transformation in our regularly updated blog..",
     openGraph: {
       title: "Blog | Full-Stack Developer Insights JavaScript, Shopify, AI Expert & Web Development | Hamza Khan",
       description: "Explore 10+ years of hands-on expertise in JavaScript, Shopify, and AI. Stay updated with our latest insights and tutorials.",

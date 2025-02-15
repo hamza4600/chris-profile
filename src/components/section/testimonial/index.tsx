@@ -60,7 +60,9 @@ const Testimonial = () => {
                         <div key={testimonial.name} className="relative border-2 border-none rounded-xl overflow-hidden">
                             <video 
                                 controls
-                                preload="none"
+                                preload="metadata"
+                                poster={testimonial.image}
+                                playsInline
                                 title={testimonial.name + " testimonial"}
                                 src={testimonial.video} 
                                 className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${

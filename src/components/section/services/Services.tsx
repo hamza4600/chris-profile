@@ -5,9 +5,9 @@ const ServiceCard = ({ title, link, description, specs, imgSrc, chatLink }: { ti
   return (
     <div className="bg-white dark:bg-[#111111] shadow-lg rounded-2xl p-4 md:p-6 flex flex-col-reverse items-center gap-3 border border-gray-200 dark:border-gray-800">
       <div className="flex-1">
-        <h4 className="text-xl font-semibold mb-2 ">
+        <span className="text-xl font-semibold mb-2 ">
           {title}
-        </h4>
+        </span>
         <p className="text-gray-700 dark:text-gray-300 mb-4">{description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
 
