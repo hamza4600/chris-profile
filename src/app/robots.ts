@@ -5,79 +5,59 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
-        // Default rule for all bots
         userAgent: '*',
         allow: '/',
         disallow: [
-          '/studio/*',    // Prevent crawling of Sanity Studio
-          '/api/*',       // Prevent crawling of API routes
-          '/admin/*',     // Prevent crawling of admin pages
-          '/_next/*',     // Prevent crawling of Next.js system files
-          '/private/*',   // Prevent crawling of private pages
+          '/studio',       // Block Sanity Studio
+          '/api',          // Block API routes
+          '/admin',        // Block admin panels
+          '/_next',        // Block Next.js internals
+          '/private',      // Block private areas
+          '/*?*',          // Block all URLs with query parameters
+          '/*.json$',      // Block JSON files
         ]
       },
       {
-        // Specific rules for Google
         userAgent: 'Googlebot',
         allow: [
           '/',
-          '/work/*',
-          '/blog/*',
-        //   '/contact',
-        //   '/blog/*',
+          '/work',         // Allow work section
+          '/blog',         // Allow blog section
           '/sitemap.xml',
-
           '/robots.txt'
         ],
         disallow: [
-          '/studio/*',
-          '/api/*',
-          '/_next/*',
-          '/*.json$',     // Prevent crawling of JSON files
-          '/*?*',         // Prevent crawling of URLs with query parameters
+          '/studio',
+          '/api',
+          '/_next',
+          '/private'
         ]
       },
       {
-        // Bing specific rules
-        userAgent: 'Bingbot',
-        allow: ['/'],
-        disallow: ['/studio/*', '/api/*']
-      },
-      {
-        // Rules for other major search engines
         userAgent: [
+          'Bingbot',
           'DuckDuckBot',
-          'Yandexbot',
-          'Slurp',        // Yahoo
+          'YandexBot',
+          'Slurp',
           'Baiduspider'
         ],
-        allow: ['/'],
-        disallow: ['/studio/*', '/api/*']
+        allow: '/',
+        disallow: [
+          '/studio',
+          '/api',
+          '/private'
+        ]
       },
       {
-        // Block archive.org bot from studio
         userAgent: 'ia_archiver',
-        disallow: ['/studio/*']
-      },
-      {
-        // Block social media bots from studio
-        userAgent: [
-          'facebookexternalhit',
-          'twitterbot',
-          'linkedinbot'
-        ],
-        allow: ['/'],
-        disallow: ['/studio/*']
+        disallow: '/studio'
       }
     ],
-    // Multiple sitemaps can be specified if needed
     sitemap: [
       `${domainURL}/sitemap.xml`,
-      // Add more sitemaps if you have them, like:
-      // `${baseUrl}/blog-sitemap.xml`,
-      // `${baseUrl}/work-sitemap.xml`
-    ],
-    // Host directive helps specify the preferred domain version
-    host: domainURL
+      // Add other sitemaps if needed:
+      // `${domainURL}/blog-sitemap.xml`,
+      // `${domainURL}/work-sitemap.xml`
+    ]
   }
 }
