@@ -9,10 +9,16 @@ export const links = [
         name: "Skills",
         href: "/#skills",
     },
+    // {
+    //     id: 3,
+    //     name: "Experience",
+    //     href: "/#experience",
+    // },
+    // testimonials
     {
         id: 3,
-        name: "Experience",
-        href: "/#experience",
+        name: "Testimonials",
+        href: "/#testimonials",
     },
     {
         id: 4,

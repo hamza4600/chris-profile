@@ -64,7 +64,7 @@ const IntroSection = ({ title, description, heroImage }: IntroSection1Props) => 
         </div>
         <AIDevelopmentBadge />
         <HappyClient />
-        {/* <div className="flex gap-3 items-center flex-row">
+        <div className="flex gap-3 items-center flex-row">
           <a href="/#work"> 
             <Button size="large" className="font-normal text-sm sm:text-base px-3 py-2 sm:px-4 sm:py-3">
               See my work
@@ -75,7 +75,7 @@ const IntroSection = ({ title, description, heroImage }: IntroSection1Props) => 
             Contact me
           </Button>
           </a> 
-        </div> */}
+        </div>
       </div>
     </div>
   );

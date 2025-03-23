@@ -1,5 +1,5 @@
 import MobileNav from "./MobileNav";
-import DesktopNav from "./DesktopNav";
+import DesktopNav, { GetInTouch } from "./DesktopNav";
 import ThemeToggle from "../Atoms/ToogleTheme";
 import Image from "next/image";
 import Link from "next/link";
@@ -21,6 +21,7 @@ const Navbar = () => {
       </Link>
       <div className="flex items-center gap-4">
         <ThemeToggle />
+        <GetInTouch />
         <MobileNav />
         <DesktopNav />
         {/* <LangSelector /> */}

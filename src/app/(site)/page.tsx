@@ -123,7 +123,7 @@ export default async function Home() {
       <Testimonial />
       <SkillsSection />
       <HomePageBlogSec blogs={blogsSection} />
-      <ExperienceSection />
+      {/* <ExperienceSection /> */}
       <FAQSection 
         sectionTitle={faqSection.sectionTitle}
         faqItems={faqSection.faqItems}
