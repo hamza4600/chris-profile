@@ -10,7 +10,7 @@ import { Metadata } from 'next'
 import { Author, MainBlogContent } from './_components'
 import BlogSchema from '@/components/Schema/BlogSchema'
 
-export const revalidate = 600;
+export const revalidate = 60;
 
 // add page seo 
 export async function generateMetadata(

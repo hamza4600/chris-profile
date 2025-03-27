@@ -92,10 +92,14 @@ export const MainBlogContent = ({ blogPost }: { blogPost: any }) => {
                     },
                     types: {
                         image: ({ value }: { value: any }) => {
+                            const imageUrl = value._upload?.file 
+                                ? value._upload.file // Handle direct uploads
+                                : urlFor(value).url(); // Handle Sanity images
+
                             return (
                                 <div className="my-8 relative">
                                     <img
-                                        src={urlFor(value).url()}
+                                        src={imageUrl}
                                         alt={value.alt || 'Blog post image'}
                                         className="rounded-lg w-full"
                                         loading="lazy"
