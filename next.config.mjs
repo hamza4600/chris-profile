@@ -7,6 +7,20 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/work/marketing-digital',
+        destination: '/work/marketeq-digital-website-development', // Replace with your new destination URL
+        permanent: true,
+      },
+      {
+        source: '/blog/ai-agents-cyber',
+        destination: '/blog', // Replace with your new destination URL
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
