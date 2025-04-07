@@ -73,6 +73,7 @@ const homePageQuery = groq`
         _id,
         title,
         slug,
+        showOnHomePage,
         caseStudyCardData,
       }
     },

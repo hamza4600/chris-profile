@@ -35,10 +35,12 @@ interface ParallaxItemProps {
   };
 
 const ParallaxSection: React.FC<{ caseStudies: any[], sectionTitle: string }> = ({ caseStudies, sectionTitle }) => {
+  const filteredCaseStudies = caseStudies.filter((item) => item.showOnHomePage);
+  
   return (
       <section id="work" className="relative font-satoshi flex flex-col gap-8">
         {/* <h2 className="text-center text-3xl font-bold">{sectionTitle}</h2> */}
-        {caseStudies.map((item, index) => (
+        {filteredCaseStudies.map((item, index) => (
           <ParallaxItem key={index} index={index}>
             <Card item={item} />
           </ParallaxItem>
