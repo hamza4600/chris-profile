@@ -6,10 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
     "@next/third-parties": "^15.0.1",
+    "@opennextjs/cloudflare": "^1.0.4",
     "@portabletext/react": "^3.1.0",
     "@sanity/icons": "^3.4.0",
     "@sanity/image-url": "^1.0.2",
@@ -18,6 +22,7 @@
     "gsap": "^3.12.5",
     "lucide-react": "^0.454.0",
     "next": "14.2.6",
+    "next-intl": "^4.1.0",
     "next-sanity": "^9.8.7",
     "next-themes": "^0.3.0",
     "react": "^18",
@@ -26,7 +31,8 @@
     "rss": "^1.2.2",
     "sanity": "^3.62.2",
     "schema-dts": "^1.1.2",
-    "styled-components": "^6.1.13"
+    "styled-components": "^6.1.13",
+    "wrangler": "^4.14.4"
   },
   "devDependencies": {
     "@types/node": "^20",
