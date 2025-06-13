@@ -71,8 +71,21 @@ const IntroSection = ({ title, description, heroImage }: IntroSection1Props) => 
                 Verified Expert
               </button>
               <div className="flex flex-col gap-6 items-center justify-center max-md:text-center max-w-full sm:max-w-[600px]">
-                <h1 className="text-[30px] sm:text-5xl  dark:text-primary text-quaternary text-shadow-lg text-center leading-[42px] sm:leading-[55px]">{title}</h1>
+                <h1 className="text-[30px] sm:text-5xl dark:text-primary text-quaternary text-shadow-lg text-center leading-[42px] sm:leading-[55px]">{title}</h1>
                 <p className="text-[18px] sm:text-2xl dark:text-secondary text-quaternary text-center max-w-full sm:max-w-[500px]">{description}</p>
+              </div>
+              <div className="w-full max-w-[560px] aspect-video rounded-lg overflow-hidden shadow-lg mt-4">
+                <iframe 
+                  width="100%" 
+                  height="100%" 
+                  src="https://www.youtube.com/embed/Bmv3yxn65hE?si=eepnU5Fp9ACkFVe8&loop=1&playlist=Bmv3yxn65hE" 
+                  title="YouTube video player" 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerPolicy="strict-origin-when-cross-origin" 
+                  allowFullScreen
+                  className="w-full h-full"
+                />
               </div>
             </div>
             <AIDevelopmentBadge />
@@ -83,10 +96,17 @@ const IntroSection = ({ title, description, heroImage }: IntroSection1Props) => 
                   See my work
                 </Button>
               </a>
-              <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">
+             
+              <a
+                href={calendlyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                id="contact-me-btn"
+                data-gtm="contact-me-btn1"
+              >
                 <Button size="large" className="font-normal text-sm sm:text-base px-3 py-2 sm:px-4 sm:py-3">
-                Contact me
-              </Button>
+                  Contact me
+                </Button>
               </a> 
             </div>
           </div>
