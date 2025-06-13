@@ -1,15 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 const IndustryTabs = ({ tabs }: { tabs: any }) => {
   return (
-    <div className="mt-12 mb-0 md:mb-0 md:mt-20">
+    <div className="mt-12 mb-4 md:mb-0 md:mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-
-            Our Expertise for Your Success
+          Smart Solutions for Every Industry
           </h2>
           <p className="text-lg text-gray-600 dark:text-white">
-            Using powerful, industry-specific software solutions, our team can help you achieve your business goals.
+          We build powerful software to help your business grow.
           </p>
         </div>
 

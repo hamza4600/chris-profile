@@ -24,7 +24,7 @@ p:empty,
 /* ul:empty, */
 /* li:empty, */
 span:empty {
-  display: none;
+    display: none;
 }
 
 html,
@@ -33,7 +33,7 @@ body,
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;  
+    scroll-behavior: smooth;
 }
 
 body {
@@ -72,5 +72,15 @@ body {
 #smooth-content {
     width: 100%;
     min-height: 100vh;
-  }
-  
+}
+
+.bg-overlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/07.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}

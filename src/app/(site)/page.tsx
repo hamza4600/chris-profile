@@ -6,7 +6,7 @@ import IconAutoScroll from "@/components/section/IconAutoScroll";
 import IntroSection from "@/components/section/IntroSection1";
 import { IndustrySection } from "@/components/section/services/IndustrySection";
 import ServicesSection2 from "@/components/section/services/Services";
-// import ShinningSectionText from "@/components/section/ShinningSectionText";
+import ShinningSectionText from "@/components/section/ShinningSectionText";
 import Testimonial from "@/components/section/testimonial";
 import { domainURL } from "@/constants";
 import { getHomePageData, getHomePageSeoData } from "@/sanity/lib/homePage";
@@ -17,7 +17,6 @@ const ParallaxSection = dynamic(() => import("@/components/section/ParallexSec")
 const SkillsSection = dynamic(() => import("@/components/section/SkillsSection"));
 const ExperienceSection = dynamic(() => import("@/components/section/ExperienceSection"));
 const FAQSection = dynamic(() => import("@/components/section/FAQSection"));
-// const ServicesSection = dynamic(() => import("@/components/section/services"));
 
 // import { urlFor } from "@/sanity/lib/image";
 // import { Metadata } from "next";
@@ -102,24 +101,24 @@ export default async function Home() {
   ]
 
   return (
-    <main className="min-h-screen w-full max-w-7xl">
+    <main className="min-h-screen w-full">
       <SchemaOrg schemas={schemas} />
       <IntroSection 
         title={heroSection.heading} 
         description={heroSection.subheading} 
         heroImage={heroSection.heroImage}
       />
+      <div className="max-w-7xl mx-auto">
       <section className="md:pb-8 pb-4 px-6 pt-6 md:pt-8 sm:px-8">
         <IconAutoScroll />
       </section>
       {/* <ShinningSectionText /> */}
-      {/* <ServicesSection /> */}
       <ServicesSection2 />
       <IndustrySection />
       <ParallaxSection 
         sectionTitle={caseStudiesSection.sectionTitle}
         caseStudies={caseStudiesSection.featuredCaseStudies} 
-      />
+        />
       <Testimonial />
       <SkillsSection />
       <HomePageBlogSec blogs={blogsSection} />
@@ -127,7 +126,8 @@ export default async function Home() {
       <FAQSection 
         sectionTitle={faqSection.sectionTitle}
         faqItems={faqSection.faqItems}
-      />
+        />
+        </div>
     </main>
   );
 }

@@ -67,7 +67,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <body className={`bg-white dark:bg-zinc-900 text-black dark:text-white ${satoshiVariable.variable} ${hankenGrotesk.variable} font-sans`}>
+      <body className={` dark:bg-zinc-900 text-black dark:text-white ${satoshiVariable.variable} ${hankenGrotesk.variable} font-sans`}>
         {children}
       </body>
       <GoogleAnalytics gaId="G-QW2SED8TZZ" />

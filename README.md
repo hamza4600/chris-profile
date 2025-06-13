@@ -9,7 +9,11 @@ multi language like spanish , french,  german  , arabic
 adding a multi language option  
 ## Next Phase Todos 
 /testimonoals
+
 /services
+and  all services Pages 
+https://diffco.us/solutions/ai-driven-software/
+
 
 
 ## Adding all constant on one file 

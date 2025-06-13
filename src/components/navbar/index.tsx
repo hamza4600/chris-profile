@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className="w-full max-w-7xl flex justify-between items-center py-8 px-4 md:px-[30px]">
+    <div className="flex justify-between items-center py-8 md:px-[30px] w-full max-w-7xl mx-auto">
       <Link href="/">
         <Image
           decoding="async"
@@ -20,7 +20,7 @@ const Navbar = () => {
         />
       </Link>
       <div className="flex items-center gap-4">
-        <ThemeToggle />
+        {/* <ThemeToggle /> */}
         {/* <GetInTouch /> */}
         <MobileNav />
         <DesktopNav />

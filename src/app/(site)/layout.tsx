@@ -4,6 +4,7 @@ import type { Viewport } from 'next'
 import { domainURL, googleSiteVerification } from "@/constants";
 import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
+import NavbarWrapper from "@/components/navbar/NavbWrapper";
 
 export const metadata: Metadata = {
   alternates: {
@@ -55,7 +56,7 @@ export default function RootLayout({
   return (
     <main id="main" className="flex flex-nowrap font-satoshi overflow-visible flex-col items-center justify-start dark:bg-black bg-[#ffffff]">
       <Providers>
-        <Navbar />
+        <NavbarWrapper />
         {children}
         <Footer />
       </Providers>
