@@ -14,9 +14,10 @@ export const revalidate = 60;
 
 // add page seo 
 export async function generateMetadata(
-  { params }: { params: { slug: string } }
+  { params }: { params: Promise<{ slug: string }> }
 ): Promise<Metadata> {
-  const blogPost = await getBlogPostSeoBySlug(params.slug);
+  const { slug } = await params;
+  const blogPost = await getBlogPostSeoBySlug(slug);
 
   return {
     title: blogPost?.seo?.title || 'Blog Post',
@@ -41,8 +42,9 @@ export async function generateMetadata(
   };
 }
 
-export default async function BlogPost({ params }: { params: { slug: string } }) {
-  let blogPost = await getBlogPostBySlug(params.slug);
+export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  let blogPost = await getBlogPostBySlug(slug);
 
   if (!blogPost) {
     return <div>Blog post not found</div>;
@@ -132,7 +134,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
             </div> */}
 
           {/* Share Links */}
-          <ShareLinks blogPost={params?.slug} />
+          <ShareLinks blogPost={slug} />
         </article>
 
         {/* Side Section */}

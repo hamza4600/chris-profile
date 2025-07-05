@@ -24,10 +24,10 @@ interface SeoData {
 export const revalidate = 600;
 
 export async function generateMetadata(
-  { params }: { params: { case_study: string } }
+  { params }: { params: Promise<{ case_study: string }> }
 ): Promise<Metadata> {
-
-  const caseStudyData: any | SeoData = await getCaseSeoBySlug(params.case_study);
+  const { case_study } = await params;
+  const caseStudyData: any | SeoData = await getCaseSeoBySlug(case_study);
 
   return {
     title: caseStudyData?.seo.title || 'Case Study',
@@ -45,9 +45,9 @@ export async function generateMetadata(
   };
 }
 
-const CaseStudyPage = async (props: { params: { case_study: string } }) => {
-
-  const data: any = await getCaseStudyDetailsBySlug(props.params.case_study);
+const CaseStudyPage = async (props: { params: Promise<{ case_study: string }> }) => {
+  const { case_study } = await props.params;
+  const data: any = await getCaseStudyDetailsBySlug(case_study);
   const { heroSection, content, image, conclusion, duration, previewLink, otherCaseStudies, relatedPosts, seo, videoUrl} = data;
 
   // Generate schemas
@@ -58,7 +58,7 @@ const CaseStudyPage = async (props: { params: { case_study: string } }) => {
   ]
 
   // if no slug return to home page
-  if (!props.params.case_study) {
+  if (!case_study) {
     return redirect('/');
   }
 
