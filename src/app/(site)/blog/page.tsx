@@ -8,10 +8,10 @@ export const revalidate = 60;
 // add page seo 
 export async function generateMetadata() {
   return {
-    title: "Blog | Full-Stack Developer Insights JavaScript, Shopify, AI Expert & Web Development | Hamza Khan",
+    title: "Blog | Full-Stack Developer Insights JavaScript, Shopify, AI Expert & Web Development | Chris Castanuela",
     description: "Stay ahead with expert insights on AI, web development, cybersecurity, and digital transformation in our regularly updated blog..",
     openGraph: {
-      title: "Blog | Full-Stack Developer Insights JavaScript, Shopify, AI Expert & Web Development | Hamza Khan",
+      title: "Blog | Full-Stack Developer Insights JavaScript, Shopify, AI Expert & Web Development | Chris Castanuela",
       description: "Explore 10+ years of hands-on expertise in JavaScript, Shopify, and AI. Stay updated with our latest insights and tutorials.",
       type: "website",
       // images: [
@@ -25,7 +25,7 @@ export async function generateMetadata() {
     },
     twitter: {
       card: "summary_large_image",
-      title: "Blog | Full-Stack Developer Insights JavaScript, Shopify, AI Expert & Web Development | Hamza Khan",
+      title: "Blog | Full-Stack Developer Insights JavaScript, Shopify, AI Expert & Web Development | Chris Castanuela",
       description: "Explore in-depth articles about web development, Shopify, AI, JavaScript, design patterns, technology trends, and software engineering best practices. Stay updated with our latest insights and tutorials.",
     },
     keywords: "web development, software engineering, technology, coding tutorials, design patterns, tech insights Shopify Expert, AI Expert, JavaScript Expert, Full-Stack Developer",

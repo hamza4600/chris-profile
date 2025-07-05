@@ -20,7 +20,7 @@ const Navbar = () => {
         />
       </Link>
       <div className="flex items-center gap-4">
-        {/* <ThemeToggle /> */}
+        <ThemeToggle />
         {/* <GetInTouch /> */}
         <MobileNav />
         <DesktopNav />

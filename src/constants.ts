@@ -147,18 +147,13 @@ export const experience = [
     },
     {
         name: "Frontend Developer",
-        position: "Gubloo Technologies",
+        position: "BumpUp Solutions",
         duration: "May 2022 - Dec 2022",
-    },
-    {
-        name: "Software Engineer",
-        position: "BlocTak Technologies",
-        duration: "March 2021 - April 2022",
     },
 ]
 
 export const calendlyUrl = "https://calendly.com/hamza4600/30min";
-export const domainURL = "https://www.hkdev.co";
+export const domainURL = "http://thechriscast.com";
 export const googleSiteVerification = "n6ArufZOpEvqIJUWuqMzjUXkX4GmOwFz1DrP44b9G44";
 
 export const locales = ['en', 'ar', 'fr'];

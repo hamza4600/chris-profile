@@ -3,7 +3,6 @@ import { Providers } from "./providers";
 import type { Viewport } from 'next'
 import { domainURL, googleSiteVerification } from "@/constants";
 import Footer from '@/components/footer';
-import Navbar from '@/components/navbar';
 import NavbarWrapper from "@/components/navbar/NavbWrapper";
 
 export const metadata: Metadata = {
@@ -12,16 +11,16 @@ export const metadata: Metadata = {
       'application/rss+xml': `${domainURL}/feed.xml`,
     },
   },
-  authors: [{ name: "Hamza Khan", url: domainURL }],
+  authors: [{ name: "Chris Castanuela", url: domainURL }],
   icons: {
     icon: "/icon.png",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hamza Khan | Building Digital Success Stories | Full Stack & AI Expert",
+    title: "Chris Castanuela | Building Digital Success Stories | Full Stack & AI Expert",
     description: "Your trusted partner in creating powerful web solutions & AI innovations that drive real business growth.",
     images: [`${domainURL}/hamza.jpg`],
-    creator: "@hamza4600",
+    creator: "@chris_castanuela",
   },
   // Add verification here
   verification: {

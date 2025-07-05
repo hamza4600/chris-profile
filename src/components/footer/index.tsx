@@ -8,15 +8,15 @@ import FooterService from "./FooterService";
 const links = [
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/hamza-khan-tanoli-845099205/",
+    href: "https://www.linkedin.com/in/christopher-castanuela/",
   },
   {
     name: "Github",
-    href: "https://github.com/hamza4600",
+    href: "https://github.com/Chriscastanuela",
   },
   {
     name: "Mail",
-    href: "mailto:info@hkdev.co",
+    href: "mailto:chris.devworks@gmail.com",
   },
   {
     name: "Sitemap",
@@ -26,7 +26,7 @@ const links = [
 
 const WorkWithMe = () => {
   return (
-    <a href={calendlyUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 border-gray-200 dark:border-gray-800  cursor-pointer  border rounded-full px-3 py-2">
+    <a href="mailto:chris.devworks@gmail.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 border-gray-200 dark:border-gray-800  cursor-pointer  border rounded-full px-3 py-2">
       <div className="animate-pulse-green w-2 h-2 scale-100 rounded-full bg-[rgb(120,227,122)]" title="Open for work"></div>
       <p className="max-md:text-center max-md:w-full">Open for work</p>
     </a>
@@ -36,7 +36,7 @@ const WorkWithMe = () => {
 const Footer = () => {
   return (
     <footer className="w-full flex flex-col max-w-7xl px-6 pb-[30px] sm:pb-[100px] relative">
-      {/* <div className="md:pt-[40px] sm:pt-[68px] pt-[20px] pb-[68px] sm:pb-[120px]">
+      <div className="md:pt-[40px] sm:pt-[68px] pt-[20px] pb-[68px] sm:pb-[120px]">
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center gap-12">
             <div className="flex flex-col sm:gap-2.5 gap-8">
@@ -48,18 +48,18 @@ const Footer = () => {
               </p>
             </div>
 
-            <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">
+            <a href="mailto:chris.devworks@gmail.com" target="_blank" rel="noopener noreferrer">
               <Button size="large" className="w-[227px] font-medium">
                 Get Started
               </Button>
             </a>
           </div>
         </div>
-      </div> */}
+      </div>
       <FooterService />
       <div className="flex items-start max-md:flex-col max-md:gap-8 max-md:text-[12px] justify-between dark:text-white text-black">
         <div className="flex sm:gap-4 gap-2 items-center justify-between sm:w-auto w-full">
-          <p>Hamza Khan ©
+          <p>Chris Castanuela ©
             <span className="font-bold ml-1">{new Date().getFullYear()}</span>
           </p>
           <WorkWithMe />

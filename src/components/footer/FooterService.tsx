@@ -83,7 +83,7 @@ const FooterService = () => {
                         {col.items.map((item) => (
                             <li
                                 key={item}
-                                className="bg-neutral-900/80 dark:bg-neutral-800/80 px-4 py-1.5 rounded-full text-sm w-fit"
+                                className="bg-gray-100 dark:bg-neutral-800/80 text-gray-800 dark:text-gray-200 px-4 py-1.5 rounded-full text-sm w-fit"
                             >
                                 {item}
                             </li>

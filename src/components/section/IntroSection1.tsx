@@ -2,10 +2,9 @@
 import React from "react";
 import Button from "../Atoms/Button";
 import Image from "next/image";
-import { urlFor } from "@/sanity/lib/image";
 import HappyClient from "./HappyClient";
-import { calendlyUrl } from "@/constants";
 import Navbar from "../navbar";
+
 export const AIDevelopmentBadge = () => {
   return (
     <span className="
@@ -36,30 +35,15 @@ const IntroSection = ({ title, description, heroImage }: IntroSection1Props) => 
 
   return (
     <div className="w-full">
-      <div className="px-8 max-w-[1800px] mx-auto relative min-h-[500px]" style={{
-        backgroundImage: "url('/Background1.png')",
-        backgroundPosition: "center center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        backgroundColor: "#f5f5f5",
-      }}>
-        <div 
-          className="absolute inset-0 z-0 opacity-20"
-          style={{
-            backgroundImage: "url('/07.jpg')",
-            backgroundPosition: "center center",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
-        />
+      <div className="px-8 max-w-[1800px] mx-auto relative min-h-[500px]">
         <div className="relative z-10">
           <Navbar />
           <div className="flex flex-col items-center justify-center gap-6 sm:gap-9 pt-6 md:pt-24 md:pb-16 pb-10">
             <div className="flex flex-col gap-6 items-center justify-center relative">
               <div className="w-[90px] h-[90px] mb-4 rounded-full overflow-hidden relative sm:w-[100px] sm:h-[100px]">
                 <Image
-                  src={ urlFor(heroImage).url() }
-                  alt="Hamza's avatar"
+                  src={ "/chris.png" }
+                  alt="Chris's avatar"
                   className="object-cover object-top"
                   fill
                   sizes="108px"
@@ -74,19 +58,6 @@ const IntroSection = ({ title, description, heroImage }: IntroSection1Props) => 
                 <h1 className="text-[30px] sm:text-5xl dark:text-primary text-quaternary text-shadow-lg text-center leading-[42px] sm:leading-[55px]">{title}</h1>
                 <p className="text-[18px] sm:text-2xl dark:text-secondary text-quaternary text-center max-w-full sm:max-w-[500px]">{description}</p>
               </div>
-              <div className="w-full max-w-[560px] aspect-video rounded-lg overflow-hidden shadow-lg mt-4">
-                <iframe 
-                  width="100%" 
-                  height="100%" 
-                  src="https://www.youtube.com/embed/Bmv3yxn65hE?si=eepnU5Fp9ACkFVe8&loop=1&playlist=Bmv3yxn65hE" 
-                  title="YouTube video player" 
-                  frameBorder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  referrerPolicy="strict-origin-when-cross-origin" 
-                  allowFullScreen
-                  className="w-full h-full"
-                />
-              </div>
             </div>
             <AIDevelopmentBadge />
             <HappyClient />
@@ -98,7 +69,7 @@ const IntroSection = ({ title, description, heroImage }: IntroSection1Props) => 
               </a>
              
               <a
-                href={calendlyUrl}
+                href="mailto:chris.devworks@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 id="contact-me-btn"

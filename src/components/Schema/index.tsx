@@ -8,12 +8,12 @@ export const baseUrl = domainURL
 export const organizationSchema: WithContext<Organization> = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Hamza Khan',
+    name: 'Chris Castanuela',
   url: baseUrl,
   logo: `${baseUrl}/icon.png`,
   sameAs: [
-    'https://github.com/hamza4600',
-    'https://www.linkedin.com/in/hamza-khan-tanoli-845099205/'
+    'https://github.com/Chriscastanuela',
+    'https://www.linkedin.com/in/christopher-castanuela/'
   ]
 }
 
@@ -21,18 +21,14 @@ export const organizationSchema: WithContext<Organization> = {
 export const authorSchema: WithContext<Person> = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  name: 'Hamza Khan',
+  name: 'Chris Castanuela',
   jobTitle: 'Full Stack Developer & AI Developer Shopify Expert ',
   url: baseUrl,
   image: `${baseUrl}/hamza.jpg`,
   sameAs: [
-    'https://github.com/hamza4600',
-    'https://www.linkedin.com/in/hamza-khan-tanoli-845099205/'
+    'https://github.com/Chriscastanuela',
+    'https://www.linkedin.com/in/christopher-castanuela/'
   ],
-  worksFor: {
-    '@type': 'Organization',
-    name: 'HK Dev Solutions'
-  },
 }
 
 // Generate case study schema
@@ -68,8 +64,8 @@ export function generateHomePageSchema(homePage: any): WithContext<WebSite> {
         author: authorSchema,
         publisher: organizationSchema,
         sameAs: [
-            'https://github.com/hamza4600',
-            'https://www.linkedin.com/in/hamza-khan-tanoli-845099205/'
+            'https://github.com/Chriscastanuela',
+            'https://www.linkedin.com/in/christopher-castanuela/'
         ]
     }
 }

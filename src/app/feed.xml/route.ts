@@ -5,11 +5,11 @@ import { domainURL } from "@/constants";
 const baseUrl = domainURL
 
 const feed = new RSS({
-    title: 'Hamza Khan | Full Stack Developer & Designer',
+    title: 'Chris Castanuela | Full Stack Developer & Designer',
     description: 'A cool website that everyone should check out !',
     site_url: baseUrl,
     feed_url: `${baseUrl}/feed.xml`,
-    copyright: `${new Date().getFullYear()} Hamza Khan | Full Stack Developer & Designer (hamza4600)`,
+    copyright: `${new Date().getFullYear()} Chris Castanuela | Full Stack Developer & Designer (chris_castanuela)`,
     language: 'en',
     pubDate: new Date(),
     custom_namespaces: {
