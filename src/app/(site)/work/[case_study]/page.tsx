@@ -123,11 +123,11 @@ const CaseStudyPage = async (props: { params: Promise<{ case_study: string }> })
           <OtherCaseStudies otherCaseStudies={otherCaseStudies} />
         )
       }
-      {
+      {/* {
         relatedPosts && (
           <RelatedPosts relatedPosts={relatedPosts} />
         )
-      }
+      } */}
     </div>
   );
 };

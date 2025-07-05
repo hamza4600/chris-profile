@@ -98,7 +98,7 @@ export default async function Home() {
         />
       {/* <Testimonial /> */}
       <SkillsSection />
-      <HomePageBlogSec blogs={blogsSection} />
+      {/* <HomePageBlogSec blogs={blogsSection} /> */}
       <ExperienceSection />
       <FAQSection 
         sectionTitle={faqSection.sectionTitle}
