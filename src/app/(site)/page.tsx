@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "Chris Castanuela's Portfolio",
     images: [
       {
-        url: `${domainURL}/hamza.jpg`,
+        url: `https://avatars.githubusercontent.com/u/62910433`,
         width: 1800,
         height: 945,
         alt: "Chris Castanuela - Web Developer & Designer",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Chris Castanuela | Building Digital Success Stories | Full Stack & AI Expert",
     description: "Your trusted partner in creating powerful web solutions & AI innovations that drive real business growth.",
-    images: [`${domainURL}/hamza.jpg`],
+    images: [`https://avatars.githubusercontent.com/u/62910433`],
     creator: "@chris_castanuela",
   },
   robots: {

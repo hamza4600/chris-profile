@@ -7,7 +7,7 @@ import NavItem from './navItem'
 export const GetInTouch = () => {
   return (
     <a
-      href={calendlyUrl}
+      href="mailto:chris.devworks@gmail.com"
       className="text-[16px] dark:text-white text-black dark:bg-[hsla(0,0%,10%,1)] leading-[1em] ml-1 relative hover:bg-gray-100 dark:hover:bg-[hsla(0,0%,13%,1)] dark:hover:text-white rounded-full px-4 py-3 border border-gray-200 dark:border-gray-800  cursor-pointer flex items-center gap-2 group bg-transparent "
     >
       {/* light small green dot  */}
