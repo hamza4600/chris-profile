@@ -1,19 +1,15 @@
 {
-  "name": "hamza-profile",
+  "name": "chris-profile",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "deploy": ".-cloudflare deploy",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+    "lint": "next lint"
   },
   "dependencies": {
     "@next/third-parties": "^15.0.1",
-    "@opennextjs/cloudflare": "^1.0.4",
     "@portabletext/react": "^3.1.0",
     "@sanity/icons": "^3.4.0",
     "@sanity/image-url": "^1.0.2",
@@ -31,8 +27,7 @@
     "rss": "^1.2.2",
     "sanity": "^3.62.2",
     "schema-dts": "^1.1.2",
-    "styled-components": "^6.1.13",
-    "wrangler": "^4.14.4"
+    "styled-components": "^6.1.13"
   },
   "devDependencies": {
     "@types/node": "^20",
